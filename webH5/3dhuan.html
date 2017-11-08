@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0; padding:0;
+        }
+        body,html{
+            height:100%; width:100%; background: rgba(0, 0, 0, 0.6);
+        }
+        #box{
+            width:133px; height:200px;top:50%;left:50%;
+            margin-top:-100px; margin-left:-67px; color:red;
+            position:absolute; transform-style:preserve-3d;
+            transform: rotateX(-20deg) rotateY(0deg); background:rgba(0,0,0,0.2);
+        }
+        #box div{
+            width:100%; height:100%; background:url("img2/1.jpg");
+            position:absolute; top:0; left:0;
+            transform:rotateY(0deg) translateZ(0px);
+            transition:1s all ease; border-radius:8px;
+            -webkit-box-shadow:0 0 10px #fff;
+            -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 60%);
+        }
+        #box:active div{
+            /*transform:rotateY(30deg) translateZ(300px);*/
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            var N=11;
+            for(var i=0; i<N; i++){
+                var oDiv=document.createElement('div');
+                oDiv.style.backgroundImage='url("img/'+(i+1)+'.jpg")';
+                oBox.appendChild(oDiv);
+                (function(i,oDiv){
+                    setTimeout(function(){
+                        oDiv.style.transition='0.4s all ease '+0.2*(N-i)+'s';
+                        oDiv.style.transform='rotateY('+(360/N*i)+'deg) translateZ(300px)';
+                    },0);
+                })(i,oDiv);
+            }
+            var aDiv=oBox.children;
+
+            aDiv[0].addEventListener('transitionend',function(){
+                var x=-20;
+                var y=0;
+                change(x,y);
+               document.onmousedown=function(ev){
+                   var disX=ev.clientX-y;
+                   var disY=ev.clientY+x;
+                   document.onmousemove=function(ev){
+                       y=ev.clientX-disX;
+                       x=disY-ev.clientY;
+                       change(x/10,y/5);
+                   };
+                   document.onmouseup=function(){
+                       document.onmousemove=null;
+                       document.onmouseup=null;
+                   };
+                   return false;
+               };
+            },false);
+            function change(x,y){
+                oBox.style.transform='rotateX('+(x)+'deg)';
+                for(var i=0; i<aDiv.length; i++){
+                    aDiv[i].style.transition='0s all ease';
+                    aDiv[i].style.transform='rotateY('+((360/N*i)+y)+'deg) translateZ(300px)';
+                    var scale=Math.abs(Math.abs((360/N*i)+y)%360-180)/180;
+                    //aDiv[i].innerHTML=scale;
+                    scale<0.3&&(scale=0.3);
+                    aDiv[i].style.opacity=scale;
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

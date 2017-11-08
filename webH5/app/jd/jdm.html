@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="bass.css">
+    <style>
+        html{
+            font-size:20px;
+        }
+        .jd{
+            width:16rem; margin:0 auto;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+        }
+        .jd-top{
+            width:16rem; height:1.8rem;
+            background:#aa111d;
+            position:fixed; top:0; left:50%;
+            margin-left:-8rem; z-index:20;
+            display: -webkit-box;
+        }
+        .morebox{
+            text-align: center; height:1.5rem; width:100%;
+            overflow: hidden;
+        }
+        .jd .conntent{
+            -webkit-box-flex: 1;
+             width:100%;
+        }
+        .jd .bottom{
+            height:1.5rem; background:#fff;
+            border-top:4px solid #ccc;
+            width:16rem; position:fixed; bottom:0; left:50%;
+            margin-left:-8rem;
+        }
+        .jd .bottom span{
+            width:50%; float:left; text-align: center;
+            line-height:1.5rem; color:#000;
+        }
+        .jd-top-log,.jd-top-log img{
+            width:3.5rem; height:1.8rem;
+        }
+        .jd-top .add{
+            width:2.5rem; line-height:1.8rem;
+            color:#fff; text-align: center;
+            font-size:0.8rem;
+        }
+        .jd-top .so{
+            -webkit-box-flex:1;
+        }
+        .jd-top .so input{
+            width:100%; height:1.2rem; background:#fff;
+            border-radius:15px; margin:5px;
+        }
+        #shopping{
+            position:relative;
+            width:16rem; overflow: hidden;
+        }
+        #shopping ul{
+            width:112rem; overflow: hidden;
+            transform:translateX(-16rem); height:6rem;
+            -webkit-transform:translateX(-16rem);
+        }
+        #shopping ul li{
+            width:16rem; line-height:6rem;
+            text-align: center; color:#fff; float:left;
+            font-size:2.5rem;
+        }
+        #shopping ul li img{
+            width:16rem; display: block;height:6rem;
+        }
+        .shopBox{
+            position:absolute;
+            width:5rem; bottom:8px; left:50%;
+            margin-left:-2.5rem; height:0.3rem;
+        }
+        .shopBox span{
+            width:0.3rem; height:0.3rem; margin:0 0.3rem; float: left;
+            border-radius: 50%; background:#fff;
+        }
+        .nav ul{
+            width:16rem; height:6.35rem; background:#f3f3f3;
+            padding-bottom:4px;
+        }
+        .nav li{
+            width:20%; height:50%; float:left; text-align: center;
+        }
+        .nav li span{
+            width:1.5rem; height:1.5rem; margin:0.5rem auto 0;
+            display: block; background:url("img/jg2.png") no-repeat;
+            background-size:contain;
+         }
+        .nav li a{
+            display:block; line-height:0.9rem;
+        }
+        .jdnew{
+            padding:0 6px 6px; width:calc(16rem - 12px); background:#f3f3f3;
+            height:1rem;
+         }
+        .jdnew .new{
+            width:100%; height:1rem; line-height:1rem;
+            background:#fff; border-radius:5px;
+            display:-webkit-box;
+        }
+        .jdnew .new .span1{
+            width:3rem; display: block; margin-left:5px;font-size:0.5rem;
+        }
+        .jdnew .new .span3{
+             width:2rem;display:block;font-size:0.5rem;
+         }
+        .jdnew .new .span2{
+           -webkit-box-flex: 1;display:block;height:1rem;
+            overflow: hidden;
+        }
+        .jdnew .new .ul2{
+            white-space: nowrap; text-overflow: ellipsis;
+            overflow: hidden; font-size:0.5rem; height:4rem;
+            line-height:1rem;
+        }
+        .Seckill .title{
+            width:16rem;
+        }
+        .Seckill h4{
+            line-height:1rem; width:2.5rem; margin:0 0.25rem 0 0.75rem;
+            font-size:0.5rem;
+        }
+        .Seckill .more{
+            line-height:1rem; width:3rem;
+        }
+        .Seckill .title .count{
+           margin-top:2px; line-height:0.9rem;
+        }
+        .Seckill .title .count b{
+            width:0.8rem; height:0.8rem; line-height:0.8rem; text-align: center;
+            color:#fff; background:#000; font-size:12px;
+        }
+        .move{
+            width:16rem; overflow: hidden;
+        }
+        .move .shop{
+            width:45rem; overflow: hidden; margin-bottom:10px;
+        }
+        .move .shop li{
+            width:4.5rem; height:5.6rem; text-align: center; float:left;
+        }
+        .move .shop li a{display:block; margin-top:10px;}
+        .move .shop li img{ width:4.5rem; height:4rem}
+        .move .shop li .span1{
+             display: block; text-align: center; line-height:11px; color:red;
+         }
+        .move .shop li .span1{
+            display: block; text-align: center; line-height:10px;
+        }
+        .Seckill .jd4{
+            width:16rem; height:6.5rem;
+        }
+        .Ranking{
+            width:16rem; overflow: hidden;
+        }
+        .Ranking a{
+            width:8rem; float:left;
+        }
+        .Ranking img{
+            width:100%;
+        }
+        .like{
+             width:16rem;
+         }
+        .like dt img{
+             width:16rem;
+         }
+        .like .dd1,.like .dd1 img{
+            width:8rem;
+        }
+        .like .dd2,.like .dd2 img{
+            width:4rem;
+        }
+        .gg1,.gg1 img{
+            width:16rem;
+        }
+        .moreLoad{
+            width:16rem; height:1rem; border-top:1px solid #999;
+            border-bottom:1px solid #999; background:#eee;
+            text-align:center; line-height:1rem;
+        }
+        .jd-footer{
+            width:16rem;
+        }
+        .jd-footer-links{
+            width:16rem; text-align: center;
+            border-bottom:1px solid #999;
+        }
+        .jd-footer-links li{
+            display:inline-block; width:2rem; height:0.8rem;border-right:1px solid #ccc; line-height:0.8rem; text-align: center; margin:9px 0;
+        }
+        .jd-footer-links .last{
+            border:none; width:2.5rem;
+        }
+        .jd-footer-platforms{
+            width:16rem; text-align: center;
+            border-bottom:1px solid #999;
+        }
+        .jd-footer-platforms li{
+            display:inline-block; width:2rem; height:0.8rem;line-height:0.8rem; text-align: center; margin:9px 0;
+        }
+        .jd-footer-copyright{
+            width:16rem; line-height:1rem; text-align: center;
+            margin-bottom:2rem;
+        }
+        .bdr dl dt{
+            height:1.25rem; width:16rem;
+            background:#f0f2f5;
+        }
+        .bdr dl dt span{
+            width:calc(8rem - 1.25rem);
+            height:1px; background:#666; float: left; margin-top:0.625rem;
+        }
+        .bdr dl dt b{
+            width:2.5rem; line-height:1.25rem; text-align: center;float: left;
+        }
+        .bdr dl dd.even{
+            border-bottom:0.02rem solid #f0f2f5;
+            border-right:0.02rem solid #f0f2f5;
+            width:calc(8rem - 2px); float: left;
+        }
+        .bdr dl dd.odd{
+            border-bottom:0.02rem solid #f0f2f5;
+            width:calc(8rem - 2px); float: left;
+        }
+        .bdr dl dd img{
+            width:100%;
+        }
+    </style>
+    <script>
+        (function(win,doc){
+            function fontSize(){
+                var x=20*doc.documentElement.clientWidth/320;
+                if(x>40){
+                    x=40;
+                }
+                doc.documentElement.style.fontSize=x+'px';
+            }
+            fontSize();
+            win.addEventListener('resize',fontSize,false);
+        })(window,document);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oShop=document.getElementById('shopping');
+            var oUl=oShop.getElementsByTagName('ul')[0];
+            var aLi=oUl.children;
+            var iNow=1;
+            var x=-aLi[0].offsetWidth;
+            var bready=false;
+            oUl.addEventListener('touchstart',function(ev){
+                //alert(1);
+                if(bready){
+                    return;
+                }
+                bready=true;
+                oUl.style.transition='none';
+                oUl.style.webkitTransition='none';
+                var disX=ev.targetTouches[0].pageX-x;
+                var downX=ev.targetTouches[0].pageX;
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                }
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    var upX=ev.changedTouches[0].pageX;
+                    oUl.style.transition='0.4s all linear';
+                    oUl.style.webkitTransition='0.4s all linear';
+                    if(Math.abs(upX-downX)>100){
+                        if(upX<downX){
+                            iNow++;
+                            if(iNow==aLi.length){
+                                iNow=aLi.length-1;
+                            }
+                        }else {
+                            iNow--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                        }
+                    }
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                    function tEnd(){
+                        bready=false;
+                        oUl.style.transition='none';
+                        oUl.style.webkitTransition='none';
+                        if(iNow==aLi.length-1){
+                            iNow=1;
+                        }
+                        if(iNow==0){
+                            iNow=aLi.length-2;
+                        }
+                        x=-iNow*aLi[0].offsetWidth;
+                        oUl.style.transform='translateX('+x+'px)';
+                        oUl.style.webkitTransform='translateX('+x+'px)';
+                    }
+                    oUl.addEventListener('transitionend',tEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                ev.preventDefault();
+            },false);
+            (function(){
+                function toDub(n){
+                    return n<10?'0'+n:''+n;
+                }
+
+                var oClock=document.getElementById('clock1');
+                var obNum=oClock.getElementsByTagName('b');
+                var time=null;
+                function clock(){
+                    var oDate=new Date();
+                    oDate.setFullYear(2016,oDate.getMonth(),oDate.getDate()+1);
+                    oDate.setHours(0,0,0,0);
+                    var t1=oDate.getTime();
+                    var arr=[];
+                    var oDate1=new Date();
+                    var t2=oDate1.getTime();
+
+                    var totle=parseInt((t1-t2)/1000);
+                    totle=totle%86400;
+                    var h=parseInt(totle/3600);
+                    totle=totle%3600;
+                    var m=parseInt(totle/60);
+                    var s=totle%60;
+
+                    arr=[toDub(h),toDub(m),toDub(s)];
+
+                    for(var i=0; i<obNum.length; i++){
+                        obNum[i].innerHTML=arr[i];
+                    }
+                    if(totle<0){
+                        clearInterval(time);
+                        for(var i=0; i<obNum.length; i++){
+                            obNum[i].innerHTML='00';
+                        }
+                    }
+                }
+                clock();
+
+                time=setInterval(clock,1000);
+            })();
+        },false);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oUl=document.querySelectorAll('.shop')[0];
+            var aLi=oUl.children;
+            var x=0;
+            var iNow=0;
+            oUl.addEventListener('touchstart',function(ev){
+                oUl.style.transition='none';
+                var disX=ev.targetTouches[0].pageX-x;
+                var downx=ev.targetTouches[0].pageX;
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                }
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    var upx=ev.changedTouches[0].pageX;
+                    if(Math.abs(upx-downx)>50){
+                        if(upx-downx<0){
+                            iNow++
+                            if(iNow>aLi.length-3){
+                                iNow=iNow=aLi.length-3;
+                            }
+                        }else{
+                            iNow--;
+                            if(iNow<0){
+                                iNow=0;
+                            }
+                        }
+                    }
+                    x=-aLi[0].offsetWidth*iNow;
+                    oUl.style.transition='0.4 all ease';
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                ev.preventDefault();
+            },false);
+        },false);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oUl2=document.getElementById('ul2');
+            var h=oUl2.children[0].offsetHeight;
+            var n=0;
+            setInterval(function(){
+                n=n%oUl2.children.length;
+                oUl2.style.transition='0.4s all ease';
+                oUl2.style.transform='translateY('+-n*h+'px)';
+                if(n==(oUl2.children.length-1)){
+                    oUl2.children[n].addEventListener('transitionend',function(){
+                        alert(1);
+                        oUl2.style.transition='none';
+                        oUl2.style.transform='translateY(0)';
+                    },false);
+                }
+                n++;
+            },2000);
+        },false);
+    </script>
+</head>
+<body>
+    <div class="jd">
+        <div class="jd-top">
+            <div class="jd-top-log">
+                <img src="img/logo.png"/>
+            </div>
+            <div class="so">
+                <input type="text" placeholder="家纺超级纺">
+            </div>
+            <div class="add">登录</div>
+        </div>
+        <div class="morebox">
+            <img src="img/roller.gif"/>
+        </div>
+        <div class="conntent">
+            <div id="shopping">
+                <ul>
+                    <li style="background:#933fff;">4</li>
+                    <li style="background:#5bff9e;"><img src="img/jd1.png"/></li>
+                    <li style="background:#2bd6ff;">1</li>
+                    <li style="background:#cdff5a;">2</li>
+                    <li style="background:#ff81f3;">3</li>
+                    <li style="background:#933fff;">4</li>
+                    <li style="background:#5bff9e;"><img src="img/jd1.png"/></li>
+                </ul>
+                <div class="shopBox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                    <li><span></span><a href="javaScript:;">京东超市</a></li>
+                </ul>
+            </div>
+            <div class="jdnew">
+                <div class="new">
+                    <span class="span1">京东快报：</span>
+                    <span class="span2">
+                        <ul class="ul2" id="ul2">
+                            <li>首发 免运费，跨店满减，京东物流品牌日</li>
+                            <li>免运费，跨店满减，京东物流品牌日</li>
+                            <li>跨店满减，京东物流品牌日</li>
+                            <li>京东物流品牌日</li>
+                        </ul>
+                    </span>
+                    <span class="span3">|更多</span>
+                </div>
+            </div>
+            <div class="Seckill">
+                <div class="title clearfix">
+                    <h4 class="fl">京东秒杀</h4>
+                    <span class="fl count clearfix" id="clock1">
+                        <b class="fl">0</b>
+                        <em class="fl">:</em>
+                        <b class="fl">0</b>
+                        <em class="fl">:</em>
+                        <b class="fl">0</b>
+                    </span>
+                    <a href="javaScript:;" class="more fr">更多秒杀&gt</a>
+                </div>
+                <div class="move">
+                    <ul class="shop clearfix">
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                        <li class="fl">
+                            <div>
+                                <a href="javaScript:;"><img src="img/jd3.png"/></a>
+                                <span class="span1">￥19.9</span>
+                                <span class="span2">￥49.8</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img src="img/jd4.png" class="jd4"/>
+                <div class="Ranking">
+                    <a href="javaScript:;"><img src="img/jd5.png"/></a>
+                    <a href="javaScript:;"><img src="img/jd5.png"/></a>
+                </div>
+                <dl class="like clearfix">
+                    <dt class="fl">
+                        <a href="javaScript:;"><img src="img/jd6.png"/></a>
+                    </dt>
+                    <dd class="dd1 fl"><a href="javaScript:;"><img src="img/jd7.png"/></a></dd>
+                    <dd class="dd1 fl"><a href="javaScript:;"><img src="img/jd7.png"/></a></dd>
+                    <dd class="dd1 fl"><a href="javaScript:;"><img src="img/jd7.png"/></a></dd>
+                    <dd class="dd1 fl"><a href="javaScript:;"><img src="img/jd7.png"/></a></dd>
+                    <dd class="dd2 fl"><a href="javaScript:;"><img src="img/jd8.png"/></a></dd>
+                    <dd class="dd2 fl"><a href="javaScript:;"><img src="img/jd8.png"/></a></dd>
+                    <dd class="dd2 fl"><a href="javaScript:;"><img src="img/jd8.png"/></a></dd>
+                    <dd class="dd2 fl"><a href="javaScript:;"><img src="img/jd8.png"/></a></dd>
+                </dl>
+                <a href="javaScript:;" class="gg1"><img src="img/jd9.png"/></a>
+            </div>
+            <div class="bdr clearfix">
+                <dl class="clearfix">
+                    <dt class="clearfix fl">
+                        <span></span>
+                        <b>为你推荐</b>
+                        <span></span>
+                    </dt>
+                    <dd class="even">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                    <dd class="odd">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                    <dd class="even">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                    <dd class="odd">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                    <dd class="even">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                    <dd class="odd">
+                        <img src="img/jd19.png"/>
+                    </dd>
+                </dl>
+            </div>
+            <p class="moreLoad"><a href="javaScript:;">点击继续加载</a></p>
+            <footer class="jd-footer">
+                <ul class="jd-footer-links">
+                    <li ><a href="javaScript:;">登录</a></li>
+                    <li><a href="javaScript:;">注册</a></li>
+                    <li><a href="javaScript:;">反馈</a></li>
+                    <li class="last"><a href="javaScript:;">回到顶部</a></li>
+                </ul>
+                <div class="jd-1px-line-up"></div>
+                <ul class="jd-footer-platforms">
+                    <li class="jd-footer-icon-apps"><a href="javaScript:;">客户端</a></li>
+                    <li class="jd-footer-icon-touchscreen"><a href="javaScript:;">触屏版</a></li>
+                    <li class="jd-footer-icon-pc"><a href="javaScript:;">电脑版</a></li>
+                </ul>
+                <div class="jd-1px-line-up"></div>
+                <div class="jd-footer-copyright">Copyright &copy; 2004-2016 京东JD.com 版权所有</div>
+                <div class="jd-footer-copyright-footer"></div>
+            </footer>
+        </div>
+        <div class="clearfix bottom">
+            <span>分类</span>
+            <span>购物车</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1836 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="base.css">
+<style>
+/*top*/
+.top{ min-width:1210px; background:#F7F7F7; border-bottom:1px solid #ccc;}
+.top-l a{line-height:30px; float:left;}
+.top-l span{float:left; width:12px; height:11px; background:url(img/jd1.png); margin:9px 3px 0 1px;}
+.top-l .s2{ width:12px; height:12px; background:url(img/jd3.png); margin:9px 6px 0 20px;}
+.top-l .s3{ width:10px; height:16px; background:url(img/jd2.png); margin:7px 8px 0 12px;}
+.top-r{padding-top:9px;}
+.top-r .a2{ padding:0 12px 0 7px; }
+.top-r .a3{padding:0 12px 0 11px; border-left:1px solid #ccc;}
+.top-r .a4,.top-r .a5{padding:0 12px 0 9px; border-left:1px solid #ccc;}
+.top-r .a4 span{ width:24px; height:11px; background:url(img/jd4.png); margin-right:4px;}
+.top-r .a5 span{ width:21px; height:11px; background:url(img/jd5.png); margin-right:7px;}
+.top-r .a6 {padding-left:36px;border-left:1px solid #ccc;}
+.top-r .a6 span{width:13px; height:22px; background:url(img/jd6.png); top:-4px; left:13px;}
+.top-r .a6 b{ width:7px; height:4px; background:url(img/jd7.png); margin:3px 8px;}
+.top-r .a7 b{ width:7px; height:4px; background:url(img/jd7.png); margin:3px 8px;}
+.top-r .a7{padding-left:11px; border-left:1px solid #ccc;}
+/*logo*/
+.logo h1 a{ display:block; width:160px; height:42px; background:url(img/jd8.png); margin:24px 0; text-indent:-9999em;}
+.logo .dd{width:95px; height:62px; background:url(img/jd9.png); position:absolute; top:18px; left:172px;}
+.logo .soso {margin-left:140px; margin-top:19px;}
+.logo .soso .so1{width:410px; height:30px; border:3px solid #E4393C; border-right:none; padding-left:6px;}
+.logo .soso .so2{ width:81px; line-height:36px; background:#EB6768; color:#FFF; text-align:center; font-size:16px; font-weight:bold;}
+.logo .soso .rmss a{line-height:24px; margin-right:11px;}
+.logo .soso .rmss i{line-height:24px; margin-right:8px;}
+.logo .myjd { margin-left:20px; margin-top:24px;}
+.logo .myjd .myjd-1{ background:#F7F7F7; border:1px solid #ccc; line-height:30px;}
+.logo .myjd .myjd-1 span{ width:17px; height:17px; background:url(img/jd10.png); margin:6px 7px 0 7px;}
+.logo .myjd .myjd-1 i{ border:5px solid transparent; border-top:5px solid #000; margin:12px 8px 0;}
+.logo .myjd .myjd-2{ background:#F7F7F7; border:1px solid #ccc; line-height:30px; margin-left:10px;}
+.logo .myjd .myjd-2 .s1{ width:20px; height:16px; background:url(img/jd11.png); margin:6px 5px 0 6px;}
+.logo .myjd .myjd-2 .i1{ border:5px solid transparent; border-left:5px solid #000; margin:9px 4px 0 8px;}
+.logo .myjd .myjd-2 .gws{top:-13px; left:21px;  height:19px;}
+.logo .myjd .myjd-2 .gws span{width:7px; height:19px; background:url(img/gdd.png) -45px -34px; float:left;}
+.logo .myjd .myjd-2 .gws i{ line-height:17px; background:#C50000; float:left; color:#FFF;}
+.logo .myjd .myjd-2 .gws b{ width:5px; height:17px; background:url(img/gdd.png) -47px -5px; float:left;}
+.logo .khd{border:1px solid #ccc; margin-top:10px;}
+.logo .khd img{ margin:3px 6px 2px 3px; }
+.logo .khd span{ margin-top:8px; line-height:16px; text-align:center; margin-right:5px;}
+/*商品分类*/
+.classify .ff{color:#fff; line-height:40px; background:#e4393c;display:block;width:210px;text-align:center;}
+.classify .upd{border:2px solid #e4393c;border-top:none; background:#fafafa;}
+.classify .upd li{padding-left:14px; line-height:29px; font-size:14px;width:192px;}
+.classify .upd .first{padding-top:2px;}
+
+.main{width:1000px;position:relative; }
+.main .nrj{position:absolute; top:-4px; left:149px;width:37px; height:23px; background:url(img/d4.png) no-repeat;}
+.main .main_h{background:url(img/d3.png);}
+.main .main_h a{line-height:40px; color:#fff;padding-left:28px; padding-right:27px;}
+.main .main_h a:hover, .main .main_h .head{background:#a40000;}
+.main .img{padding:10px 41px 11px 0;}
+
+.main_b .main_bl .xue{position:relative; display:block; margin:10px 10px 0;width:670px;}
+.main_b .main_bl .xue img{width:670px; height:240px;}
+.main_b .main_bl .xue .dingwei{position:absolute; bottom:7px; right:6px;}
+.main_b .main_bl .xue .dingwei i{width:22px; line-height:22px; background:#999; border-radius:10px; text-align:center; margin-left:5px; color:#fff;}
+.main_b .main_bl .xue .dingwei i:hover,.main_b .main_bl .xue .dingwei .cur{background:#e4393c;}
+
+.main_b .main_bl .xd{margin-left:10px; position:relative; width:670px;}
+.main_b .main_bl .xd a{border-bottom:1px solid #eee;border-left:1px solid #eee;}
+.main_b .main_bl .xd a img{width:232px; height:159px;}
+.main_b .main_bl .xd .xd2{width:202px;}
+.main_b .main_bl .xd .xd3{border-right:1px solid #eee;}
+.main_b .main_bl .xd .xyh{display:block;position:absolute; top:71px; left:8px; width:14px; height:23px; background:url(img/dj.png);}
+.main_b .main_bl .xd .dyh{display:block; position:absolute; top:71px; right:8px; width:14px; height:23px; background:url(img/xj.png);}
+.main_b .main_bl .xd .s1{top:17px; left:30px;}
+.main_b .main_bl .xd .s1 .p1{line-height:18px; font-weight:bold;}
+.main_b .main_bl .xd .s1 .p2{line-height:22px; font-size:16px; color:red; font-weight:bold;}
+.main_b .main_br{width:310px;}
+.main_b .main_br .hp{padding:10px 0; display:block;}
+.main_b .main_br .jdkb p{line-height:30px; border-bottom:2px solid #aaa;}
+.main_b .main_br .jdkb .jd{color:#666;font-weight:bold;}
+.main_b .main_br .jdkb .more{color:#005ea7;}
+.jdkb .kuang{ border:1px solid #f1f1f1;}
+.jdkb .kuang .kuang_l{border-right:1px solid #eee;}
+.jdkb .uni{margin:4px 0 4px 10px; width:143px;}
+.jdkb .kuang li{line-height:25px;}
+.jdkb .xtb{width:310px; border-left:1px solid #eee; border-top:1px solid #eee; margin-top:10px;}
+.jdkb .xtb li{border-right:1px solid #eee; border-bottom:1px solid #eee;width:76px;height:84px;}
+.jdkb .xtb .sj{width:0; border:3px solid transparent; border-top:3px solid #aaa; margin:0 auto; display:block;}
+.jdkb .xtb a{display:block;margin-top:10px;text-align:center;}
+.jdkb .xtb .ms{padding-top:4px; line-height:30px;text-align:center;display:block;}
+.jdkb .xtb .sec{height:82px;}
+/*生活的橱窗*/
+.chuang .bt h2{line-height:40px; font-size:22px;}
+.chuang .bt p{ margin-top:6px; margin-left:10px; line-height:38px; font-size:14px;}
+.chuang{overflow:hidden;}
+.tuij{width:1220px;}
+.tuij li{margin-right:10px; margin-bottom:10px; overflow:hidden;}
+.tuij .li1 .tm{width:120px; height:191px; background:#fff; opacity:0.5; top:0; left:0;}
+.tuij .li1 .zi{top:25px; left:20px;}
+.tuij .li1 .zi .p1{ line-height:30px; font-size:18px; font-weight:bold; }
+.tuij .li1 .zi .p2{ line-height:20px; font-size:12px; font-weight:bold; }
+.tuij .li1 .zi .p3{ line-height:17px; color:red; margin-bottom:20px; }
+.tuij .li1 .zi a{line-height:18px;}
+.tuij .li2{width:295px; height:190px; background:#FAFAFA;}
+.tuij .bz{ margin-top:27px; margin-left:20px; }
+.tuij .bz p{ line-height:26px; font-size:18px; font-weight:bold;}
+.tuij .bz i{ line-height:24px; font-size:12px; display:block;}
+.tuij .bz b{ line-height:18px; font-size:12px; padding:0 2px; background:#E4393C; color:#fff; display:block;}
+.tuij .li3{width:295px; height:190px;}
+.tuij .li3 .zi{margin-top:25px; margin-left:20px;}
+.tuij .li3 .zi .p1{ line-height:30px; font-size:18px; font-weight:bold; }
+.tuij .li3 .zi .p2{ line-height:20px; font-size:12px; font-weight:bold; }
+.tuij .li3 .zi .p3{ line-height:17px; color:red; margin-bottom:20px; }
+.tuij .li3 .zi a{line-height:18px;}
+.chuang .dp li{ background:#F7FAFF; width:395px; height:70px;}
+.chuang .dp li span{ line-height:18px; margin:19px 74px 0 70px;}
+.chuang .dp .li2{margin:0 12px;}
+/*家电通讯*/
+.jdtx .nav{height:48px; border-bottom:2px solid #ccc;}
+.jdtx .nav .tb{ width:26px; height:33px; background:url(img/jd17.png); margin-top:10px; margin-right:34px;}
+.jdtx .nav h2{ margin-top:15px; line-height:34px; font-size:22px; font-weight:bold; width:150px;}
+.jdtx .nav .a1{width:158px; margin-top:18px; line-height:30px; text-align:center;}
+.jdtx .nav a b{position:absolute; width:10px; height:5px; background:url(img/jd18.png); bottom:0; left:50%; margin-left:-5px; display:none;}
+.jdtx .nav a:hover,.jdtx .nav .cur{color:red; border-bottom:2px solid red;}
+.jdtx .nav a:hover b{display:block;}
+.jdtx .nav .cur b{display:block;}
+.jdtx .nav .a2{margin-top:18px; line-height:30px; margin-left:20px; color:#03F;}
+.jdtx .down .down-l{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; width:209px; height:356px; padding-top:5px;}
+.jdtx .down .down-l .d1 a{margin-left:5px; width:94px; line-height:25px;}
+.jdtx .down .down-l .a3{margin-left:60px;}
+.jdtx .down-r{width:1000px;}
+.jdtx .down-r li{border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.jdtx .down-r .li1{width:158px; height:180px; }
+.jdtx .down-r .li1 .a1{ margin-left:45px; display:block;}
+.jdtx .down-r li p{width:135px; line-height:18px; margin-left:10px;height:36px;}
+.jdtx .down-r li i{display:block; line-height:23px; margin-left:10px; color:red; font-family:"微软雅黑";}
+.jdtx .down-r .li3{width:157px; height:180px; }
+.jdtx .down-r .li3 .a1{ margin-left:38px; display:block;}
+.jdtx .down-r .li4{width:208px; height:180px; border-right:none;}
+ .jdtx .down-r .li4 a{border-bottom:1px dotted #ccc;}
+.jdtx .down-r .li4 .a9,.jdtx .down-r .li4 .a10{border:none;}
+.jdtx .down-r .li5 .a1{margin-top:24px; }
+.jdtx .down-r .li5{width:208px; height:180px; border-right:none;}
+.jdtx .down-r .li5 i{margin-top:6px; line-height:27px; margin-left:10px; color:#0CF; font-size:16px; display:block;}
+.jdtx .down-r .li5 p{width:110px; line-height:18px; margun-left:10px;}
+/*服装鞋包*/
+.fsxb .nav{height:48px; border-bottom:2px solid #ccc;}
+.fsxb .nav .tb{ width:26px; height:33px; background:url(img/3F.png); margin-top:10px; margin-right:34px;}
+.fsxb .nav h2{ margin-top:15px; line-height:34px; font-size:22px; font-weight:bold; width:150px;}
+.fsxb .nav .a1{width:158px; margin-top:18px; line-height:30px; text-align:center;}
+.fsxb .nav a b{position:absolute; width:10px; height:5px; background:url(img/jd18.png); bottom:0; left:50%; margin-left:-5px; display:none;}
+.fsxb .nav .a1:hover,.fsxb .nav .cur{color:red; border-bottom:2px solid red;}
+.fsxb .nav a:hover b{display:block;}
+.fsxb .nav .cur b{display:block;}
+.fsxb .nav .a2{margin-top:20px; line-height:22px; margin-left:20px; color:#987ABD; background:#F7EEFF; width:105px; }
+.fsxb .nav .a2 span{ width:31px; height:22px; background:url(img/jd25.png); margin-right:10px;}
+.fsxb .down .down-l{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; width:209px; height:356px; padding-top:5px;}
+.fsxb .down .down-l .d1 a{margin-left:5px; line-height:25px;}
+.fsxb .down .down-l .a3{position:absolute; top:7px; right:0;}
+.fsxb .down-r{width:1000px;}
+.fsxb .down-r li{ border-bottom:1px solid #ccc;}
+.fsxb .down-r .ul1 .li1{width:158px; height:180px; background:#E5DEFF;}
+.fsxb .down-r .ul1 .li1 .a1{ top:54px; right:0}
+.fsxb .down-r li p{padding-top:20px; line-height:20px; margin-left:10px;font-size:14px;}
+.fsxb .down-r li i{display:block; line-height:15px; margin-left:10px;}
+.fsxb .down-r li span{width:35px; height:18px; bottom:-1px; right:0; background:url(img/jd28.png);}
+.fsxb .down-r .ul2 .d1{ position:absolute; top:0; left:0;}
+.fsxb .down-r .ul4 .li1{width:208px; height:180px; border-right:none;}
+.fsxb .down-r .ul4 a{border-bottom:1px dotted #ccc;}
+.fsxb .down-r .ul4 .a9,.fsxb .down-r .ul4 .a10{border:none;}
+.fsxb .down-r .ul4 .li2{width:210px; height:180px; background:#FEFEFE;}
+.fsxb .down-r .ul4 .li2 .a1{ top:0; right:0}
+/*美容珠宝*/
+.mrzb .nav{height:48px; border-bottom:2px solid #ccc;}
+.mrzb .nav .tb{ width:26px; height:33px; background:url(img/4F.png); margin-top:10px; margin-right:34px;}
+.mrzb .nav h2{ margin-top:15px; line-height:34px; font-size:22px; font-weight:bold; width:150px;}
+.mrzb .nav .a1{width:158px; margin-top:18px; line-height:30px; text-align:center;}
+.mrzb .nav a b{position:absolute; width:10px; height:5px; background:url(img/jd18.png); bottom:0; left:50%; margin-left:-5px; display:none;}
+.mrzb .nav a:hover,.mrzb .nav .cur{color:red; border-bottom:2px solid red;}
+.mrzb .nav a:hover b{display:block;}
+.mrzb .nav .cur b{display:block;}
+.mrzb .nav .a2{margin-top:20px; line-height:22px; margin-left:20px; color:#987ABD; background:#F7EEFF; width:105px; }
+.mrzb .nav .a2 span{ width:31px; height:22px; background:url(img/jd25.png); margin-right:10px;}
+.mrzb .down .down-l{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; width:209px; height:356px; padding-top:5px;}
+.mrzb .down .down-l .d1 a{margin-left:5px; width:94px; line-height:25px;}
+.mrzb .down .down-l .a3{margin-left:60px;}
+.mrzb .down-r{width:1000px;}
+.mrzb .down-r li{border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.mrzb .down-r .li1{width:158px; height:180px; }
+.mrzb .down-r .li1 .a1{ margin-left:45px; display:block;}
+.mrzb .down-r li p{width:135px; line-height:18px; margin-left:10px;height:36px;}
+.mrzb .down-r li i{display:block; line-height:23px; margin-left:10px; color:red; font-family:"微软雅黑";}
+.mrzb .down-r .li3{width:157px; height:180px; }
+.mrzb .down-r .li3 .a1{ margin-left:38px; display:block;}
+.mrzb .down-r .li4{width:208px; height:180px; border-right:none;}
+.mrzb .down-r .li4 a{border-bottom:1px dotted #ccc;}
+.mrzb .down-r .li4 .a9,.mrzb .down-r .li4 .a10{border:none;}
+.mrzb .down-r .li5 .a1{margin-top:24px; }
+.mrzb .down-r .li5{width:208px; height:180px; border-right:none;}
+.mrzb .down-r .li5 i{margin-top:6px; line-height:27px; margin-left:10px; color:#0CF; font-size:16px; display:block;}
+.mrzb .down-r .li5 p{width:110px; line-height:18px; margun-left:10px;}
+/*母婴玩具*/
+.mywj .nav{height:48px; border-bottom:2px solid #ccc;}
+.mywj .nav .tb{ width:26px; height:33px; background:url(img/6F.png); margin-top:10px; margin-right:34px;}
+.mywj .nav h2{ margin-top:15px; line-height:34px; font-size:22px; font-weight:bold; width:150px;}
+.mywj .nav .a1{width:158px; margin-top:18px; line-height:30px; text-align:center;}
+.mywj .nav a b{position:absolute; width:10px; height:5px; background:url(img/jd18.png); bottom:0; left:50%; margin-left:-5px; display:none;}
+.mywj .nav a:hover,.mywj .nav .cur{color:red; border-bottom:2px solid red;}
+.mywj .nav a:hover b{display:block;}
+.mywj .nav .cur b{display:block;}
+.mywj .down .down-l{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; width:209px; height:286px; padding-top:5px;}
+.mywj .down .down-l .d1 a{margin-left:5px; width:94px; line-height:25px;}
+.mywj .down .down-l .a3{margin-left:60px;}
+.mywj .down-r{width:1000px;}
+.mywj .down-r li{border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.mywj .down-r .li1{width:158px; height:180px; }
+.mywj .down-r .li1 .a1{ margin-left:35px; display:block;}
+.mywj .down-r li p{width:135px; line-height:18px; margin-left:10px;height:36px;}
+.mywj .down-r li i{display:block; line-height:23px; margin-left:10px; color:red; font-family:"微软雅黑";}
+.mywj .down-r .li3{width:157px; height:180px; }
+.mywj .down-r .li3 .a1{ margin-left:38px; display:block;}
+.mywj .down-r .li4{width:208px; height:180px; border-right:none;}
+.mywj .down-r .li4 a{border-bottom:1px dotted #ccc;}
+.mywj .down-r .li4 .a9,.mywj .down-r .li4 .a10{border:none;}
+.mywj .down-r .li5{width:198px; height:100px; border-right:none; padding-top:10px; padding-left:10px; line-height:24px;}
+.mywj .down-r .li2 .sd{top:17px; left:20px;}
+.mywj .down-r .li2 .sd .b1{display:block; line-height:24px; font-size:20px; font-weight:bold; }
+.mywj .down-r .li2 .sd .b2{display:block; line-height:20px; font-size:14px; font-weight:bold; }
+.mywj .down-r .li2 .sd .b3{display:block; line-height:20px; font-size:14px; font-weight:bold; color:red; }
+.mywj .down-r .li7{width:262px; height:110px;}
+.mywj .down-r .li8{width:264px; height:110px;}
+.mywj .down-r .li7 .b1{display:block; line-height:22px; margin-top:18px;}
+.mywj .down-r .li7 .b2{display:block; line-height:20px;}
+/*图书音像*/
+.book-left{width:1000px;}
+.book .nav{height:48px; border-bottom:2px solid #ccc;}
+.book .nav .tb{ width:26px; height:33px; background:url(img/8F.png); margin-top:10px; margin-right:34px;}
+.book .nav h2{ margin-top:15px; line-height:34px; font-size:22px; font-weight:bold; width:150px;}
+.book .nav .a1{width:158px; margin-top:18px; line-height:30px; text-align:center;}
+.book .nav a b{position:absolute; width:10px; height:5px; background:url(img/jd18.png); bottom:0; left:50%; margin-left:-5px; display:none;}
+.book .nav a:hover,.book .nav .cur{color:red; border-bottom:2px solid red;}
+.book .nav a:hover b{display:block;}
+.book .nav .cur b{display:block;}
+.book .down .down-l{ border-bottom:1px solid #ccc; border-right:1px solid #ccc; width:209px; height:316px; padding-top:5px;}
+.book .down .down-l .d1 a{margin-left:5px; width:94px; line-height:25px;}
+.book .down .down-l .a3{margin-left:10px; margin-top:10px; display:block;}
+.book .down-r{width:790px;}
+.book .down-r li{border-right:1px solid #ccc; border-bottom:1px solid #ccc;width:158px; height:160px; }
+.book .down-r li a{display:block; text-align:center; margin-top:14px; margin-bottom:7px;}
+.book .down-r li .s1{margin-left:10px; line-height:22px; display:block;}
+.book .down-r li .s1 .p2{line-height:19px; font-family:"微软雅黑"; color:red;}
+.book .down-r li .s1 .p2 i{ font-size:8px;}
+.book .down-r .li1{ margin-right:473px;}
+.book .down-r .li2 {width:157px;}
+.book .down-r .li2 a{margin-bottom:0;}
+.book .down-r .li3{border-right:none;}
+.book .down .dtt{top:0; left:369px; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.book .down .dtt .s1{top:17px; left:21px;; }
+.book .down .dtt .s1 .p1{line-height:26px; font-size:20px; font-weight:bold;}
+.book .down .dtt .s1 .p2{line-height:18px; font-size:14px;}
+.book .down .dtt .s1 .p3{line-height:21px; font-size:14px; color:red;}
+.book .down .dtt .s2 i{ width:36px; height:5px; background:#999; margin:0 1px;}
+.book .down .dtt .s2{left:50%; margin-left:-76px; bottom:6px;}
+.book .down .dtt .s2 .frist{background:#9FD185;}
+.book-r{width:210px; margin-top:18px; border-bottom:1px solid #ccc;}
+.book-r .head{line-height:30px; border-bottom:2px solid #aaa;height:30px; }
+.book-r .head a{padding:0 8px;position:relative;}
+.book .head a:hover{border-bottom:2px solid #e4393c; color:#e4393c;}
+.book-r .head a:hover span{display:block;}
+.book-r .head .cur{border-bottom:2px solid #e4393c; color:#e4393c;}
+.book-r .head .cur span{display:block;}
+.book-r .head a span{position:absolute; bottom:0;left:50%; margin-left:-5px;width:0;  border:5px solid transparent; border-bottom:5px solid red; display:none;}
+
+.book-r .head .dzs{padding:0 7px;}
+.book-r ul{border-left:1px solid #f1f1f1; padding-top:4px; padding-bottom:17px;}
+.book-r ul li{line-height:18px; padding-top:12px;}
+.book-r ul li .num{width:16px; height:16px; border:1px solid #ccc; color:#ccc; text-align:center; border-radius:10px; margin:0 5px;}
+.book-r ul li .numa{color:#e83978;border:1px solid #e83978;}
+.book-r ul li .price{margin-right:4px; color:#e83978;}
+/*热门晒单*/
+.rmsd{margin-top:20px;}
+.rmsd-l{ border-top:2px solid #C8C8C8; border-left:1px solid #ccc; margin-right:10px; margin-bottom:10px;}
+.rmsd ul{border-bottom:1px solid #C8C8C8; border-right:1px solid #ccc;}
+.rmsd-l ul li{margin:0 10px; }
+.rmsd-l li h4{line-height:29px;}
+.rmsd-l .li1{width:424px; height:80px;}
+.rmsd-l .li{border-bottom:1px dotted #ccc;}
+.rmsd-l li .s1 i{ top:10px; right:6px; width:19px; height:18px; background:url(img/jd40.png) no-repeat top right;}
+.rmsd-l li .s2 .p1{ margin-top:10px; line-height:24px; color:#005EA7;}
+.rmsd-l li .s2 .p2{ line-height:18px; color:#999; width:280px;}
+.rmsd-l li .ii{ bottom:27px; right:16px; width:22px; height:17px; background:url(img/jd41.png);}
+.rmsd-l .ul2{width:443px;}
+.rmyd-up{border:1px solid #ccc; border-top:1px solid #ccc; width:308px;}
+.read1{line-height:29px; padding:0 8px; margin-bottom:5px; display:block;}
+.read1 a{color:#06F; display:block;}
+.read2 .a1{margin:0 9px 5px 10px;}
+.read2 ul{line-height:25px;border:none;}
+.read2 ul .a2{color:#00F;}
+.read2 ul li i{width:2px; height:2px; background:#00F; margin-top:12px; margin-right:5px;}
+.dyss h3{margin-top:4px; line-height:22px; }
+.dyss .in1{width:215px; padding-left:25px; height:23px; border:1px solid #ccc; margin-right:5px;}
+.dyss b{width:16px; height:12px; background:url(img/jd43.png); position:absolute; top:5px; left:8px;}
+.dyss .in2{width:63px; height:25px; background:#ED6B6D; color:#FFF;line-height:25px; text-align:center; font-weight:bold; border-radius:3px;}
+/*footer*/
+.footer{padding-top:11px; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.footer dl{ background:url(img/jd44.png) no-repeat 24px 8px; padding-left:64px; width:128px; }
+.footer dl dt{line-height:30px; }
+.footer dl dd{line-height:20px;}
+.china{height:169px; width:210px; background:url(img/20130330B_1.png) 0 -130px; margin-bottom:18px; margin-left:20px;}
+.china h3{line-height:35px; margin-left:20px; margin-bottom:9px;}
+.china p{margin-left:20px; width:185px; line-height:18px;}
+.china a{line-height:18px; display:block; margin-left:150px; color:#03F;}
+.bottom{margin-top:10px; text-align:center;}
+.bottom .p1 a{margin-left:11px; margin-right:12px; display:inline-block; line-height:38px;}
+.bottom .p2 a{margin:0 7px; display:inline-block; line-height:20px;}
+.bottom .p3 a{margin:10px 7px; display:inline-block;}
+</style>
+</head>
+<body>
+	<!--top-->
+    <div class="top">
+    	<div class="w clearfix">
+        	<div class="top-l fl">
+            	<span class="s1"></span>
+                <a href="#">收藏京东</a>
+                <span class="s2"></span>
+                <a href="#">关注京东</a>
+                <span class="s3"></span>
+                <a href="#">北京【更换】</a> 
+            </div>
+            <div class="top-r clearfix fr">
+            	<a href="#" class="fl">你好，请登录</a>
+                <a href="#" class="fl a2">免费注册</a>
+                <a href="#" class="fl a3">我的订单</a>
+                <a href="#" class="fl a4 clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">会员俱乐部</i>
+                </a>
+                <a href="#" class="fl a5 clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">企业频道</i>
+                </a>
+                <a href="#" class="fl a6 clearfix pr">
+                	<span class="fl pa"></span>
+                	<i class="fl">手机京东</i>
+                    <b class="fl"></b>
+                </a>
+                <a href="#" class="fl a7 clearfix">
+                	<i class="fl">客户服务</i>
+                    <b class="fl"></b>
+                </a>
+                <a href="#" class="fl a7 clearfix">
+                    <i class="fl">网站导航</i>
+                    <b class="fl"></b>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--logo-->
+    <div class="logo w clearfix pr">
+    	<h1 class="fl">
+        	<a href="#">京东</a>
+        </h1>
+        <span class="dd"></span>
+        <div class="soso fl clearfix">
+        	<input type="text" placeholder="流量充值" class="so1 fl" >
+            <input type="button" value="搜索" class="so2 fl" >
+            <p class="rmss clearfix">
+            	<i class="fl">热门搜索：</i>
+                <a href="#" class="fl red">上新满减</a>
+                <a href="#" class="fl">潮流换新</a>
+                <a href="#" class="fl">潮流换新</a>
+                <a href="#" class="fl">潮流换新</a>
+                <a href="#" class="fl">潮流换新</a>
+                <a href="#" class="fl">潮流换新</a>
+            </p>
+        </div>
+        <ul class="myjd fl clearfix">
+        	<li class="fl myjd-1 clearfix">
+            	<span class="fl"></span>
+                <a href="#" class="fl">我的京东</a>
+                <i class="fl"></i>
+            </li>
+            <li class="fl myjd-2 clearfix pr">
+            	<span class="fl s1"></span>
+                <a href="#" class="fl">去购物车结算</a>
+                <i class="fl i1"></i>
+                <div class="pa gws clearfix">
+                	<span></span>
+                    <i>1220</i>
+                    <b></b>
+                </div>
+            </li>
+        </ul>
+        <a href="#" class="fr clearfix khd">
+        	<img src="img/jd12.png" class="fl"/>
+            <span class="fl">
+            	<p>客户端</p>
+                <p>首次下载</p>
+                <p class="red">满59送59</p>
+            </span>
+        </a>
+    </div>
+    <!--商品分类-->
+    <div class="w clearfix">
+        <div class="classify fl">
+            <a href="#" class="ff">全部商品分类</a>
+            <ul class="upd">
+            	<li class="clearfix first">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl">整车、汽车用品</span>
+                    <a href="#" class="fr"><img src="img/d1.png" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="fl main">
+        	<span class="nrj"></span>
+        	<div class="clearfix main_h">
+            	<a href="#" class="head fl">首页</a>
+                <a href="#" class="fl">首页</a>
+                <a href="#" class="fl">首页</a>
+                <a href="#" class="fl">首页</a>
+                <a href="#" class="fl">首页</a>
+                <a href="#" class="fl">首页</a>
+                <a href="#" class="fl last">首页</a>
+                <span class="fr img"><img src="img/d2.png" /></span>
+            </div>
+            <div class="main_b clearfix">
+            	<div class="main_bl fl">
+                	<a href="#" class="xue">
+                    	<img src="img/xuejing.png" />
+                        <span class="dingwei clearfix">
+                        	<i class="fl">1</i>
+                            <i class="fl">2</i>
+                            <i class="fl">3</i>
+                            <i class="fl">4</i>
+                            <i class="fl cur">5</i>
+                            <i class="fl">6</i>
+                        </span>
+                    </a>
+                    <div class="xd clearfix">
+                    	<a href="#" class="fl xd1 pr">
+                        	<img src="img/d5.png" />
+                            <span class="pa s1">
+                            	<p class="p1">潮流饰品春季上新</p>
+                                <p class="p2">两件7折</p>
+                            </span>
+                        </a>
+                        <a href="#" class="fl xd2 pr">
+                        	<img src="img/d5.png" />
+                            <span class="pa s1">
+                            	<p class="p1">潮流饰品春季上新</p>
+                                <p class="p2">两件7折</p>
+                            </span>
+                        </a>
+                        <a href="#" class="fl xd3 pr">
+                        	<img src="img/d5.png" />
+                            <span class="pa s1">
+                            	<p class="p1">潮流饰品春季上新</p>
+                                <p class="p2">两件7折</p>
+                            </span>
+                        </a>
+                        <span class="xyh"></span>
+                        <span class="dyh"></span>
+                    </div>
+                </div>
+                <div class="main_br fr">
+                	<a href="#" class="hp"><img src="img/d6.png" /></a>
+                    <div class="jdkb">
+                    	<p class="clearfix">
+                        	<span class="fl jd">京东快报</span>
+                             <a href="#" class="fr more">更多&gt;</a>
+                        </p>
+                        <div class="kuang clearfix">
+                        	<ul class="fl kuang_l uni">
+                            	<li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                            </ul>
+                            <ul class="fl uni">
+                            	<li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                                <li>开发大家爱疯了</li>
+                            </ul>
+                        </div>
+                        <ul class="xtb clearfix">
+                        	<li class="fl">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                                <span class="sj"></span>
+                            </li>
+                            <li class="fl">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                                <span class="sj"></span>
+                            </li>
+                            <li class="fl">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                                <span class="sj"></span>
+                            </li>
+                            <li class="fl">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                                <span class="sj"></span>
+                            </li>
+                            <li class="fl sec">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                            </li> 
+                            <li class="fl sec">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                            </li>
+                            <li class="fl sec">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                            </li>
+                            <li class="fl sec">
+                            	<a href="#"><img src="img/zhu.png" /></a>
+                                <span class="ms">话费</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--生活的橱窗-->
+    <div class="chuang w">
+    	<div class="bt clearfix">
+            <h2 class="fl">生活的橱窗</h2>
+            <p class="fl">每一天展示精彩</p>
+        </div>
+        <ul class="clearfix tuij">
+        	<li class="li1 fl pr">
+            	<a href="#" class="a"><img src="img/jd13.png"/></a>
+                <span class="tm pa"></span>
+                <span class="zi pa">
+                	<p class="p1">品牌街</p>
+                    <p class="p2">荣耀x2免费抽</p>
+                    <p class="p3">无人机送货</p>
+                    <a href="#" class="a a1">·更多品牌</a>
+                    <a href="#" class="a a2">·进入品牌街</a>
+                </span>
+            </li>
+            <li class="li2 fl clearfix">
+            	<span class="fl bz">
+                	<p>天天特价</p>
+                    <i>Thinkpad超级</i>
+                    <b>满4000减200</b>
+                </span>
+                <a href="#" class="fr"><img src="img/jd14.png"/></a>
+            </li>
+            <li class="li3 fl">
+            	<a href="#" class="fr"><img src="img/jd15.png"/></a>
+                <span class="zi fl">
+                	<p class="p1">好东西</p>
+                    <p class="p2">初语春季新款</p>
+                    <p class="p3">全场低至99元</p>
+                    <a href="#" class="a a1">·针织穿出极简风</a>
+                    <a href="#" class="a a2">·逛更多&gt;</a>
+                </span>
+            </li>
+            <li class="li1 fl pr">
+            	<a href="#" class="a"><img src="img/jd13.png"/></a>
+                <span class="tm pa"></span>
+                <span class="zi pa">
+                	<p class="p1">品牌街</p>
+                    <p class="p2">荣耀x2免费抽</p>
+                    <p class="p3">无人机送货</p>
+                    <a href="#" class="a a1">·更多品牌</a>
+                    <a href="#" class="a a2">·进入品牌街</a>
+                </span>
+            </li>
+            <li class="li2 fl clearfix">
+            	<span class="fl bz">
+                	<p>天天特价</p>
+                    <i>Thinkpad超级</i>
+                    <b>满4000减200</b>
+                </span>
+                <a href="#" class="fr"><img src="img/jd14.png"/></a>
+            </li>
+            <li class="li3 fl">
+            	<a href="#" class="fr"><img src="img/jd15.png"/></a>
+                <span class="zi fl">
+                	<p class="p1">好东西</p>
+                    <p class="p2">初语春季新款</p>
+                    <p class="p3">全场低至99元</p>
+                    <a href="#" class="a a1">·针织穿出极简风</a>
+                    <a href="#" class="a a2">·逛更多&gt;</a>
+                </span>
+            </li>
+            <li class="li1 fl pr">
+            	<a href="#" class="a"><img src="img/jd13.png"/></a>
+                <span class="tm pa"></span>
+                <span class="zi pa">
+                	<p class="p1">品牌街</p>
+                    <p class="p2">荣耀x2免费抽</p>
+                    <p class="p3">无人机送货</p>
+                    <a href="#" class="a a1">·更多品牌</a>
+                    <a href="#" class="a a2">·进入品牌街</a>
+                </span>
+            </li>
+            <li class="li2 fl clearfix">
+            	<span class="fl bz">
+                	<p>天天特价</p>
+                    <i>Thinkpad超级</i>
+                    <b>满4000减200</b>
+                </span>
+                <a href="#" class="fr"><img src="img/jd14.png"/></a>
+            </li>
+        </ul>
+        <ul class="dp w clearfix">
+        	<li class="fl clearfix">
+            	<span class="fl">
+                	<p>清洁洗护新选择</p>
+                	<p class="red">全场满99减50</p>
+                </span>
+                <a href="#" class="fl"><img src="img/jd16.png"/></a>
+            </li>
+            <li class="fl clearfix li2">
+            	<span class="fl">
+                	<p>清洁洗护新选择</p>
+                	<p class="red">全场满99减50</p>
+                </span>
+                <a href="#" class="fl"><img src="img/jd16.png"/></a>
+            </li>
+            <li class="fl clearfix">
+            	<span class="fl">
+                	<p>清洁洗护新选择</p>
+                	<p class="red">全场满99减50</p>
+                </span>
+                <a href="#" class="fl"><img src="img/jd16.png"/></a>
+            </li>
+        </ul>
+    </div>
+    <!--家电通讯-->
+    <div class="jdtx w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">家电通讯</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>大家电</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>小家电</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>手机通讯</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>汽车五金</p>
+                <b></b>
+            </a>
+            <a href="#" class="fr pr a2">合约计划说明 &gt;</a>
+            <a href="#" class="fr pr a2">大家电配送 &gt;</a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd19.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl">
+               	  <a href="#"><img src="img/jd21.png"/></a>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a a1 fr"><img src="img/jd24.png"/></a>
+                  <span class="fl">
+                      <i>防雾净化利器</i>
+                      <p>清新空气，持久健康 除烟尘、净空气</p>
+                  </span>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--电脑数码-->
+    <div class="jdtx w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">电脑数码</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>笔记本</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>数码影音</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>DIY攒机</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>外设办公</p>
+                <b></b>
+            </a>
+            <a href="#" class="fr pr a2">合约计划说明 &gt;</a>
+            <a href="#" class="fr pr a2">大家电配送 &gt;</a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                    <a href="#" class="fl">手机</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd19.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl">
+               	  <a href="#"><img src="img/jd21.png"/></a>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a a1 fr"><img src="img/jd24.png"/></a>
+                  <span class="fl">
+                      <i>防雾净化利器</i>
+                      <p>清新空气，持久健康 除烟尘、净空气</p>
+                  </span>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--服饰鞋包-->
+    <div class="fsxb w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">服饰鞋包</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>品牌男装</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>品牌女装</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>鞋靴箱包</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>户外运动</p>
+                <b></b>
+            </a>
+            <a href="#" class="fr pr a2 clearfix">
+            	<span class="fl"></span>
+            	<i class="fl">海外购 &gt;</i>
+            </a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l pr">
+            	<div class="d1">
+                    <a href="#" class="a">男装</a>
+                    <a href="#" class="a">女装</a>
+                    <a href="#" class="a">服装配件</a>
+                    <a href="#" class="a">内衣</a>
+                    <a href="#" class="a">女鞋</a>
+                    <a href="#" class="a">男鞋</a>
+                    <a href="#" class="a">设计师</a>
+                    <a href="#" class="a">功能箱包</a>
+                    <a href="#" class="a">潮流女包</a>
+                    <a href="#" class="a">时尚男包</a>
+                    <a href="#" class="a">户外鞋服</a>
+                    <a href="#" class="a">户外装备</a>
+                    <a href="#" class="a">运动器械</a>
+                    <a href="#" class="a">新版运动馆</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd26.png"/></a>
+            </div>
+            <div class="down-r fl clearfix">
+                <ul class="ul1 fl">
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                </ul>
+                <ul class="ul2 fl">
+                    <li class="pr">
+                        <a href="#"><img src="img/jd29.png"/></a>
+                        <div class="d1">
+                            <p>服装春季场</p>
+                            <i>新品限时抢</i>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ul1 fl">
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                </ul>
+                <ul class="ul2 fl">
+                    <li class="pr">
+                        <a href="#"><img src="img/jd29.png"/></a>
+                        <div class="d1">
+                            <p>服装春季场</p>
+                            <i>新品限时抢</i>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ul1 fl">
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                  <li class=" li1 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd27.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                </ul>
+                <ul class="fr ul4">
+                    <li class="li1 clearfix">
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                          <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+                      </li>
+                	<li class=" li2 pr">
+                      <p>春款发布</p>
+                      <i>满减专场</i>
+                      <a href="#" class="pa a1"><img src="img/jd30.png"/></a>
+                      <span class="pa"></span>
+                  </li>
+                </ul>
+            </div>
+        </div>	
+    </div>
+    <!--美容珠宝-->
+	<div class="mrzb w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">美容珠宝</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>美容化妆</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>个人护理</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>黄金珠宝</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>钟表首饰</p>
+                <b></b>
+            </a>
+            <a href="#" class="fr pr a2 clearfix">
+            	<span class="fl"></span>
+            	<i class="fl">海外购 &gt;</i>
+            </a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd31.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl">
+               	  <a href="#"><img src="img/jd21.png"/></a>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a a1 fr"><img src="img/jd24.png"/></a>
+                  <span class="fl">
+                      <i>防雾净化利器</i>
+                      <p>清新空气，持久健康 除烟尘、净空气</p>
+                  </span>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--居家生活-->
+    <div class="mrzb w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">美容珠宝</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>美容化妆</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>个人护理</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>黄金珠宝</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>钟表首饰</p>
+                <b></b>
+            </a>
+            <a href="#" class="fr pr a2 clearfix">
+            	<span class="fl"></span>
+            	<i class="fl">海外购 &gt;</i>
+            </a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                    <a href="#" class="fl">面部护肤</a>
+                    <a href="#" class="fl">瑞士名表</a>
+                    <a href="#" class="fl">彩妆香水</a>
+                    <a href="#" class="fl">国产名表</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd31.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl">
+               	  <a href="#"><img src="img/jd21.png"/></a>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd20.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a a1 fr"><img src="img/jd24.png"/></a>
+                  <span class="fl">
+                      <i>防雾净化利器</i>
+                      <p>清新空气，持久健康 除烟尘、净空气</p>
+                  </span>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--母婴玩具-->
+    <div class="mywj w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">母婴玩具</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>母婴食品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>母婴用品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>车床玩具</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>童装孕产</p>
+                <b></b>
+            </a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                    <a href="#" class="fl">喂养用品</a>
+                    <a href="#" class="fl">尿裤湿巾</a>
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                    <a href="#" class="fl">喂养用品</a>
+                    <a href="#" class="fl">尿裤湿巾</a>
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd32.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd33.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl pr">
+               	  <a href="#"><img src="img/jd34.png"/></a>
+                  <span class="pa sd">
+                      <b class="b1">尊享超值买赠</b>
+                      <b class="b2">惠氏奶粉盛宴</b>
+					  <b class="b3">开春大抢购</b>
+                  </span>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li7 clearfix li8">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li7 clearfix">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li7 clearfix">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--食品保健-->
+    <div class="mywj w">
+    	<div class="nav clearfix">
+        	<span class="fl tb"></span>
+        	<h2 class="fl">母婴玩具</h2>
+            <a href="#" class="fl pr cur a1">
+            	<p>特价商品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>母婴食品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>母婴用品</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>车床玩具</p>
+                <b></b>
+            </a>
+            <a href="#" class="fl pr a1">
+            	<p>童装孕产</p>
+                <b></b>
+            </a>
+        </div>
+        <div class="down clearfix">
+        	<div class="clearfix fl down-l">
+            	<div class="d1">
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                    <a href="#" class="fl">喂养用品</a>
+                    <a href="#" class="fl">尿裤湿巾</a>
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                    <a href="#" class="fl">喂养用品</a>
+                    <a href="#" class="fl">尿裤湿巾</a>
+                    <a href="#" class="fl">奶粉</a>
+                    <a href="#" class="fl">营养辅食</a>
+                </div>
+                <a href="#" class="a3"><img src="img/jd32.png"/></a>
+            </div>
+            <ul class="down-r fr clearfix">
+           	  <li class="fl li1">
+               	  <a href="#" class="a a1"><img src="img/jd33.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥459.00</i>
+              </li>
+              <li class="li2 fl pr">
+               	  <a href="#"><img src="img/jd34.png"/></a>
+                  <span class="pa sd">
+                      <b class="b1">尊享超值买赠</b>
+                      <b class="b2">惠氏奶粉盛宴</b>
+					  <b class="b3">开春大抢购</b>
+                  </span>
+              </li>
+              <li class="fl li3">
+               	  <a href="#" class="a a1"><img src="img/jd22.png"/></a>
+                  <p>SKG-2025 立式原汁机 慢速榨汁机 中国红</p>
+                  <i>￥3999</i>
+              </li>
+              <li class="li4 fl clearfix">
+               	  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a9"><img src="img/jd23.png"/></a>
+                  <a href="#" class="fl a10"><img src="img/jd23.png"/></a>
+              </li>
+              <li class="fl li7 clearfix li8">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li7 clearfix">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li7 clearfix">
+               	  <a href="#" class="fl"><img src="img/jd35.png"/></a>
+                  <span class="fl">
+                      <b class="b1">宝宝狂欢购</b>
+                      <b class="red b2">大牌爆款秒杀</b>
+                  </span>
+              </li>
+              <li class="fl li5 clearfix">
+               	  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+                  <a href="#" class="a">&bull;春天在哪里， 春天在哪里。</a>
+              </li>
+          </ul>
+        </div>	
+    </div>
+    <!--图书音像-->
+    <div class="book w clearfix">
+        <div class="fl book-left">
+            <div class="nav clearfix">
+                <span class="fl tb"></span>
+                <h2 class="fl">图书音像</h2>
+                <a href="#" class="fl pr cur a1">
+                    <p>特价商品</p>
+                    <b></b>
+                </a>
+                <a href="#" class="fl pr a1">
+                    <p>文学/经营</p>
+                    <b></b>
+                </a>
+                <a href="#" class="fl pr a1">
+                    <p>生活/少儿</p>
+                    <b></b>
+                </a>
+                <a href="#" class="fl pr a1">
+                    <p>数字商品</p>
+                    <b></b>
+                </a>
+                <a href="#" class="fl pr a1">
+                    <p>音像产品</p>
+                    <b></b>
+                </a>
+                
+            </div>
+            <div class="down clearfix pr">
+                <div class="clearfix fl down-l">
+                    <div class="d1">
+                        <a href="#" class="fl">数字音乐</a>
+                        <a href="#" class="fl">文学</a>
+                        <a href="#" class="fl">电子书</a>
+                        <a href="#" class="fl">励志</a>
+                        <a href="#" class="fl">数字音乐</a>
+                        <a href="#" class="fl">文学</a>
+                        <a href="#" class="fl">电子书</a>
+                        <a href="#" class="fl">励志</a>
+                        <a href="#" class="fl">数字音乐</a>
+                        <a href="#" class="fl">文学</a>
+                        <a href="#" class="fl">电子书</a>
+                        <a href="#" class="fl">励志</a>
+                    </div>
+                    <a href="#" class="a3"><img src="img/jd36.png"/></a>
+                </div>
+                <ul class="down-r fr clearfix">
+      				<li class="fl li1">
+                    	<a href="#"> <img src="img/j37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>
+                    <li class="fl li2 li3">
+                    	<a href="#"> <img src="img/jd37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>
+                    <li class="fl li">
+                    	<a href="#"> <img src="img/j37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>
+                    <li class="fl li2">
+                    	<a href="#"> <img src="img/jd37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>
+                    <li class="fl li2">
+                    	<a href="#"> <img src="img/jd37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>
+                    <li class="fl li2">
+                    	<a href="#"> <img src="img/jd37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li>   
+                    <li class="fl li2 li3">
+                    	<a href="#"> <img src="img/jd37.png"/></a>
+                        <span class="s1">
+                            <p class="p1">张学友2014全新大碟：</p>
+                            <p class="p2">￥29.<i>00</i></p>
+                        </span>
+                        
+                     </li> 
+                </ul>
+                <div class="pa dtt pr">
+                	<a href="#" class="a"><img src="img/jd38.png"/></a>
+                    <span class="pa s1">
+                    	<p class="p1">宏辞论道 纵横天下</p>
+                        <p class="p2">外研社 京东杯</p>
+                        <p class="p3">英语辩论赛</p>
+                    </span>
+                    <span class="s2 clearfix pa">
+                    	<i class="fl frist"></i>
+                        <i class="fl"></i>
+                        <i class="fl"></i>
+                        <i class="fl"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+   		<div class="book-r fr">
+    	<div class="head clearfix">
+        	<a href="#" class="fl cur">
+            	<i>图书</i>
+                <span></span>
+            </a>
+            <a href="#" class="fl">
+            	<i>图书</i>
+                <span></span>
+            </a>
+            <a href="#" class="fl">
+            	<i>图书</i>
+                <span></span>
+            </a>
+            <a href="#" class="fl">
+            	<i>图书</i>
+                <span></span>
+            </a>
+            <a href="#" class="fl dzs">
+            	<i>电子书</i>
+                <span></span>
+            </a>
+        </div>
+        <ul>
+        	<li class="clearfix">
+            	<span class="fl num numa">1</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num numa">2</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num numa">3</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">4</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">5</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">6</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">7</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">8</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">9</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+            <li class="clearfix">
+            	<span class="fl num">10</span>
+                <span class="fl">狼图腾（修订版）</span>
+                <span class="fr price">￥23.33</span>
+            </li>
+        </ul>
+    </div>	
+    </div>
+    <!--热门晒单-->
+    <div class="w clearfix rmsd">
+    	<div class="rmsd-l clearfix fl">
+        	<ul class="fl">
+            	<li><h4>热门晒单</h4></li>
+                <li class="li1 pr li">
+                	<span class="fl s1 pr">
+                    	<a href="#" class="a"><img src="img/jd39.png"/></a>
+                        <i class="pa"></i>
+                    </span>
+                    <span class="fl s2">
+                    	<p class="p1">嘉实多（Castrol）磁护5w-30 4L启停保全合成机油润滑油</p>
+                        <p class="p2">开会时方可恢复了神佛；的减肥了萨拉多少历史的负担是国际</p>  
+                    </span>
+                    <i class="pa ii"></i>
+                </li>
+                <li class="li1 pr">
+                	<span class="fl s1 pr">
+                    	<a href="#" class="a"><img src="img/jd39.png"/></a>
+                        <i class="pa"></i>
+                    </span>
+                    <span class="fl s2">
+                    	<p class="p1">嘉实多（Castrol）磁护5w-30 4L启停保全合成机油润滑油</p>
+                        <p class="p2">开会时方可恢复了神佛；的减肥了萨拉多少历史的负担是国际</p>  
+                    </span>
+                    <i class="pa ii"></i>
+                </li>
+            </ul>
+            <ul class="fl ul2">
+            	<li><h4>热门晒单</h4></li>
+                <li class="li1 pr li">
+                	<span class="fl s1 pr">
+                    	<a href="#" class="a"><img src="img/jd39.png"/></a>
+                        <i class="pa"></i>
+                    </span>
+                    <span class="fl s2">
+                    	<p class="p1">嘉实多（Castrol）磁护5w-30 4L启停保全合成机油润滑油</p>
+                        <p class="p2">开会时方可恢复了神佛；的减肥了萨拉多少历史的负担是国际</p>  
+                    </span>
+                    <i class="pa ii"></i>
+                </li>
+                <li class="li1 pr">
+                	<span class="fl s1 pr">
+                    	<a href="#" class="a"><img src="img/jd39.png"/></a>
+                        <i class="pa"></i>
+                    </span>
+                    <span class="fl s2">
+                    	<p class="p1">嘉实多（Castrol）磁护5w-30 4L启停保全合成机油润滑油</p>
+                        <p class="p2">开会时方可恢复了神佛；的减肥了萨拉多少历史的负担是国际</p>  
+                    </span>
+                    <i class="pa ii"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="rmrd-r fl">
+        	<div class="rmyd-up">
+            	<span class="read1 clearfix">
+                	<h4 class="fl">在线阅读</h4>
+                    <a href="#" class="fr">更多在线阅读 &gt;</a>
+                </span>
+                <div class="read2 clearfix">
+                	<a href="#" class="fl a1"><img src="img/jd42.png"/></a>	
+                    <ul class="fl">
+                    	<li class="clearfix">
+                        	<i class="fl"></i>
+                            <a href="#" class="fl a2">是结果就是多少分开了哈的</a>
+                        </li>
+                        <li class="clearfix">
+                        	<i class="fl"></i>
+                            <a href="#" class="fl a2">是结果就是多少分开了哈的</a>
+                        </li>
+                        <li class="clearfix">
+                        	<i class="fl"></i>
+                            <a href="#" class="fl a2">是结果就是多少分开了哈的</a>
+                        </li>
+                        <li class="clearfix">
+                        	<i class="fl"></i>
+                            <a href="#" class="fl a2">是结果就是多少分开了哈的</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dyss">
+            	<h3>订阅促销信息</h3>
+                <p class="pa">
+                <b></b>
+                <input type="text" placeholder="请输入你的Email地址" class="in1"/>
+                <input type="button" value="订阅" class="in2"/>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer w clearfix">	
+    	<dl class="fl">
+        	<dt><a href="#" class="a">购物指南</a></dt>
+            <dd><a href="#" class="a">购物流程</a></dd>
+            <dd><a href="#" class="a">会员介绍</a></dd>
+            <dd><a href="#" class="a">团购/机票</a></dd>
+			<dd><a href="#" class="a">常见问题</a></dd>
+			<dd><a href="#" class="a">大家电</a></dd>
+			<dd><a href="#" class="a">联系客服</a></dd>
+        </dl>
+        <dl class="fl">
+        	<dt><a href="#" class="a">购物指南</a></dt>
+            <dd><a href="#" class="a">购物流程</a></dd>
+            <dd><a href="#" class="a">会员介绍</a></dd>
+            <dd><a href="#" class="a">团购/机票</a></dd>
+			<dd><a href="#" class="a">常见问题</a></dd>
+			<dd><a href="#" class="a">大家电</a></dd>
+			<dd><a href="#" class="a">联系客服</a></dd>
+        </dl>
+        <dl class="fl">
+        	<dt><a href="#" class="a">购物指南</a></dt>
+            <dd><a href="#" class="a">购物流程</a></dd>
+            <dd><a href="#" class="a">会员介绍</a></dd>
+            <dd><a href="#" class="a">团购/机票</a></dd>
+			<dd><a href="#" class="a">常见问题</a></dd>
+			<dd><a href="#" class="a">大家电</a></dd>
+			<dd><a href="#" class="a">联系客服</a></dd>
+        </dl>
+        <dl class="fl">
+        	<dt><a href="#" class="a">购物指南</a></dt>
+            <dd><a href="#" class="a">购物流程</a></dd>
+            <dd><a href="#" class="a">会员介绍</a></dd>
+            <dd><a href="#" class="a">团购/机票</a></dd>
+			<dd><a href="#" class="a">常见问题</a></dd>
+			<dd><a href="#" class="a">大家电</a></dd>
+			<dd><a href="#" class="a">联系客服</a></dd>
+        </dl>
+        <dl class="fl">
+        	<dt><a href="#" class="a">购物指南</a></dt>
+            <dd><a href="#" class="a">购物流程</a></dd>
+            <dd><a href="#" class="a">会员介绍</a></dd>
+            <dd><a href="#" class="a">团购/机票</a></dd>
+			<dd><a href="#" class="a">常见问题</a></dd>
+			<dd><a href="#" class="a">大家电</a></dd>
+			<dd><a href="#" class="a">联系客服</a></dd>
+        </dl>
+        <div class="china fl">
+        	<h3>京东自营覆盖区县</h3>
+            <p>京东已向全国1893个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+            <a href="#">查看详情 &gt;</a>
+        </div>
+    </div>
+    <div class="bottom w">
+    	<p class="p1">
+        	<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">商家入驻</a>|<a href="#">营销中心</a>|<a href="#">营销中心</a>|<a href="#">友情链接</a>|<a href="#">销售联盟</a>|<a href="#">京东社区</a>|<a href="#">京东公益</a>|<a href="#">English Site</a>
+        </p>
+        <p class="p2"><a href="#">京市公安局朝阳分局备案编号110105014669</a>|<a href="#">京ICP证070359号</a>| <a href="#"> 互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>|<a href="#"> 新出发京零 字第大120007号</a></p>
+        <p class="p2"><a href="#">音像制品经营许可证苏宿批005号</a>|<a href="#">  出版物经营许可证编号新出发(苏)批字第N-012号</a>| <a href="#"> 互联网出版许可证编号新出网证(京)字150号</a></p>
+        <p class="p2"><a href="#">网络文化经营许可证京网文[2011]0168-061号</a><a href="#">出版违法和不良信息举报电话：4006561155</a> <a href="#">违法和不良信息举报电话：4006561155</a> <a href="#"> Copyright©2004-2015京东JD.com 版权所有</a></p>
+        <p class="p2"><a href="#">京东旗下网站：360TOP  拍拍网  网银在线</a><a href="#">360TOP</a> <a href="#">拍拍网</a> <a href="#">网银在线</a></p>
+        <p class="p3">
+        	<a href="#"><img src="img/1 (1).png"/></a>
+            <a href="#"><img src="img/1 (2).png"/></a>
+            <a href="#"><img src="img/1 (3).png"/></a>
+            <a href="#"><img src="img/1 (4).png"/></a>
+        </p>
+    </div>
+</body>
+</html>

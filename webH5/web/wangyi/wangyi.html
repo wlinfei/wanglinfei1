@@ -1,0 +1,2417 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="bass.css"/>
+<style>
+/*top*/
+.TOP{min-width:960px; background:#333333; border-bottom:2px solid #606060; line-height:43px; height:43px;}
+.top .d1 .a1{ color:#fff; margin:0 9px 0 13px;}
+.top .d1 span{  border:4px solid transparent; border-top:4px solid #c2c2c2; margin-top:20px; margin-right:32px;}
+.top a{color:#fff;}
+.top .d2 .a1{ padding:0 20px; line-height:42px; height:49px; background:url(img/w2.png); }
+.top .d2 .a2 i{ padding-left:13px; }
+.top .d2 .a2 b{border:4px solid transparent; border-top:4px solid #c2c2c2; margin:20px 15px 0 8px;}
+.top .d2 .a2 em{width:2px; height:43px; background:url(img/w3.png);}
+.top .d2 .a3 b{border:4px solid transparent; border-top:4px solid #c2c2c2; margin:20px 5px 0 2px;}
+.top .d2 .a3 em{width:2px; height:43px; background:url(img/w3.png);}
+.top .d2 .a3 .s1{ width:56px; height:13px; background:url(img/nav_sprite_v28.png) 0 -399px; margin-top:16px; margin-left:8px; }
+.top .d2 .a3 .s2{ width:23px; height:15px; background:url(img/nav_sprite_v28.png) 0 -27px; margin-top:15px; margin-left:8px; }
+.top .d2 .a3 .s6{ width:47px; height:16px; background:url(img/nav_sprite_v28.png) 0 -120px; margin-top:17px; margin-left:8px; }
+/*logo*/
+.logo{border-bottom:4px solid #206f96;}
+.logo h1 a{display:block; width:122px; height:38px; background:url(img/logo.png); margin:37px 0 15px 0; text-indent:-999em;}
+.logo .dd{position:absolute; right:0; top:35px;}
+.logo .a2{ margin-left:15px;}
+/*nav*/
+.nav ul{margin-top:10px; margin-bottom:15px; padding-right:1px; border-right:1px dashed #ccc; margin-left:18px;}
+.nav ul li *{line-height:22px; width:43px;}
+.nav .ul1{margin-left:0;}
+.nav .ul3 .a2{width:55px;}
+.nav .ul6 .a3{ width:30px; }
+.nav .ul6{border:none;}
+/*nav2*/
+.nav2{width:958px; border:1px solid #ccc; background:#f9f9f9; margin:0 auto;}
+.nav2 .d p{ width:18px; height:28px; background:#e6eaed; text-align:center; line-height:14px; padding:12px 0; margin-bottom:1px; margin-left:1px;}
+.nav2 .d1 p i{right:-8px; top:50%; margin-top:-4px; border:4px solid transparent; border-left:4px solid #d1dae1; display:none;}
+.nav2 .d .cur,.nav2 .d p:hover{ background:#d1dae1; margin-top:1px;}
+.nav2 .d .cur i,.nav2 .d p:hover i{display:block;}
+.nav2 .d5 p i{left:-8px; top:50%; margin-top:-4px; border:4px solid transparent; border-right:4px solid #d1dae1; display:none;}
+.nav2 .d5 p{margin-left:0; margin-right:1px;}
+.nav2 .d2{margin-top:7px; margin-left:9px;}
+.nav2 .d2 a{display:block; line-height:24px; width:140px;color:#376a77}
+.nav2 .d3 {margin-top:7px;}
+.nav2 .d3 p a{color:#376a77; line-height:20px;}
+.nav2 .d3 p .a1{margin-right:20px;}
+.nav2 .d3 .a2{margin-right:23px;}
+.nav2 .d3 .a3{margin-right:17px;}
+.nav2 .d3 .a4{margin-right:7px;}
+.nav2 .d4{margin-left:7px;}
+/*head*/
+.head{margin-top:20px;}
+.head-l{width:310px;}
+.head-l .crsp .s1{font-size:34px; left:6px; top:50%; margin-top:-17px; font-weidth:bold; color:#FFF; opacity:0.5; background:#000;}
+.head-l .crsp .s2{font-size:34px; right:6px; top:50%; margin-top:-17px; font-weidth:bold; color:#FFF; opacity:0.5; background:#000;}
+.head-l .crsp p{position:absolute; top:180px; left:0; line-height:40px; padding-left:10px; width:300px; background:#000; opacity:0.7; color:#fff;}
+.head-l .crsp .ts{width:192px; margin:14px auto 26px;}
+.head-l .crsp .ts i{float:left; width:24px; height:5px; background:#e4e4e4; margin:0 4px; cursor:pointer;}
+.head-l .crsp .ts .cur,.head-l .crsp .ts i:hover{background:url(img/w5.png);}
+.head-l .sp .bt{width:310px; border-top:2px solid #206f96;}
+.head-l .sp .bt a{width:102px; line-height:29px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; background:#f1f1f1; text-align:center; font-size:14px;}
+.head-l .sp .bt .cur{border-left:1px solid #ccc; background:#fff; border-bottom:none; font-weight:bold;}
+.head-l .sp .bt a:hover{ background:#fff; border-bottom:none;  font-weight:bold;}
+.head-l .sp .dujia{margin-top:18px;}
+.head-l .sp .dujia .a1{margin-right:40px;}
+.head-l .sp .dujia p{line-height:30px;}
+.head-l .ul1{margin-top:10px; line-height:27px;}
+.head-l .ul1 li i{width:3px; height:3px;background:url(img/icon_v9.png) 0 -135px; margin-top:12px; margin-right:6px;}
+.head-l .ul1 li span{width:16px; height:16px; background:url(img/tab_icon_play.png); margin-top:6px; margin-right:4px;}
+.head-l .ul1 li a{margin-right:8px; font-size:14px;}
+.head-l .ul2 {margin-top:15px;}
+.head-l .ul2 .a1{font-weight:bold;}
+.head-l .sp .zhibo{margin-top:22px;}
+.head-l .sp .zhibo .a1{margin-right:40px;}
+.head-l .sp .zhibo p{line-height:34px;}
+.head-l .sp .zhibo a i{ position:absolute; width:33px; height:20px; background:url(img/w7.png); top:0; right:0;}
+.head-l .sp .zhibo a span{position:absolute; left:0; top:70px; width:130px; height:20px;}
+.head-l .sp .zhibo a span .b1{background:#000; opacity:0.3;width:130px; height:20px; position:absolute; top:0; bottom:0;}
+.head-l .sp .zhibo a span .b2{line-height:20px; margin-left:6px; margin-right:8px; color:#fff; position:relative;}
+.head-l .sp .zhibo a span .b3{width:10px; height:10px; background:url(img/icon_man.png); margin-top:5px; position:relative;}
+.head-l .sp .gg1{margin-top:21px; margin-bottom:36px; display:block;}
+.head-m{ margin:0 20px; width:310px;}
+.head-m .d1{ border-top:2px solid #206f96;}
+.head-m .d1 a{width:102px; line-height:29px; background:url(img/w8.png); text-align:center; border-right:1px solid #ccc; border-bottom:1px solid #ccc;font-size:14px;}
+.head-m .d1 .cur{border-bottom:none; border-left:1px solid #ccc; background:#fff; font-weight:bold;}
+.head-m .d1 a:hover{border-bottom:none; background:#fff; font-weight:bold;}
+.head-m .ul1{margin-top:17px; line-height:27px;}
+.head-m .ul1 li i{width:3px; height:3px;background:url(img/icon_v9.png) 0 -135px; margin-top:12px; margin-right:6px;}
+.head-m .ul1 li a{margin-right:8px; font-size:14px;}
+.head-m .ul1 li .a1{font-weight:bold;}
+.head-m .ul2{margin-top:18px;}
+.head-m .ul3{margin-top:11px; line-height:27px;}
+.head-m .ul3 li a{margin-right:0;}
+.head-m .ul3 b{width:89px; height:19px; background:url(img/taidu.png); margin:4px 12px 0 10px;}
+.head-m .ul3 em{width:1px; height:14px; background:#999; margin:7px 10px 0 11px;}
+.head-m .d2{ border-top:2px solid #206f96; margin-top:22px;}
+.head-m .d2 a{width:102px; line-height:29px; background:url(img/w8.png); text-align:center; border-right:1px solid #ccc; border-bottom:1px solid #ccc;font-size:14px;}
+.head-m .d2 .cur{border-bottom:none; border-left:1px solid #ccc; background:url(img/w9.png); height:29px;}
+.head-m .d3{height:12px; width:196px; margin:16px auto 7px; color:#ccc; font-weight:bold;}
+.head-m .d3 b{width:24px; height:5px; background:#e4e4e4; margin:0 1px; float:left; margin-top:4px; cursor:pointer;}
+.head-m .d3 .cur{background:#206f96; margin-left:13px;}
+.head-m .ul4{margin-top:0; margin-bottom:26px;}
+.head-m .ul4 .li7 span{width:17px; height:16px; background:url(img/bobo.png); margin-top:6px; margin-right:7px;}
+.head-m .ul4 .li7 .a1{margin-right:14px;}
+.head-r{ width:300px;}
+.head-r .wycp h3 .a1{width:105px; line-height:29px; padding-left:10px; background:#f2f2f2; border:1px solid #ccc; border-right:none; border-top:2px solid #206f96;}
+.head-r .wycp h3 .a2{padding-left:12px; padding-right:9px; line-height:30px;border-top:1px solid #e04f4f; border-bottom:1px solid #bf0b0b; background:#da2b2b; color:#fff;}
+.head-r .wycp h3 .a2 span{ width:20px; height:21px; background:url(img/a11.png); margin:5px 2px 0 0;}
+.head-r .wycp h3 b{position:absolute; width:2px; height:22px; background:url(img/w10.png); top:5px; left:0;}
+.head-r .wycp h3 .a3{padding-left:14px; width:98px; line-height:30px;border-top:1px solid #e04f4f; border-bottom:1px solid #bf0b0b; background:#da2b2b; color:#fff;}
+.head-r .wycp-d{padding-top:6px; border:1px solid #ccc; border-top:none;}
+.head-r .wycp-d li{padding:12px 0 14px 50px; background:url(img/w11.png) no-repeat 16px;}
+.head-r .wycp-d li a{ float:left; line-height:25px; margin-right:11px;}
+.head-r .wycp-d .li2{padding:12px 0 14px 50px; background:url(img/w12.png) no-repeat 10px #f7f7f7;}
+.head-r .gg2{margin:12px 0;}
+.head-r .gongyi{border:1px solid #ccc; width:298px; height:99px;line-height:27px; margin-bottom:12px;}
+.head-r .gongyi .p1{ padding:8px 0 0 18px; line-height:27px; font-size:14px;}
+.head-r .gongyi .p1 span{width:22px; height:22px; background:url(img/nav_sprite_v28.png) 0 -160px; margin:3px 5px 0 30px;}
+.head-r .gongyi .p2 span{ width:3px; height:3px; background:#ccc; margin:12px 9px 0;}
+.head-r .gongyi .p2 i{margin-right:10px;}
+.head-r .d4 .bt span{ width:73px; line-height:30px; border-top:1px solid #ccc; border-right:1px solid #ccc; text-align:center; color:#376a77; float:left; background:#f9f9f9; height:30px;}
+.head-r .d4 .bt .s1{border-left:1px solid #ccc;}
+.head-r .d4-down{border:1px solid #ccc; width:298px; height:217px; margin-top:-1px; background:#f9f9f9;}
+.head-r .d4 .bt .cur{height:31px; width:76px; background:#f9f9f9;}
+.head-r .d4 .bt span:hover{height:31px; background:#f9f9f9;}
+.head-r .d4-down .a1{margin:9px 0 8px 9px;}
+.head-r .d4-down p span{ width:3px; height:3px; background:#ccc; margin:10px 5px 0 13px;}
+.head-r .d4-down p a{color:#376a77; line-height:25px;}
+.head-r .gg3{ margin:12px 0;}
+.head .d5{ width:640px; height:177px; bottom:0; left:0; margin-bottom:12px;}
+.head .d5-up{border:1px solid #ccc; padding-top:3px; width:638px; height:60px;}
+.head .d5-up li{ width:319px; line-height:27px; font-size:14px;}
+.head .d5-up li span{width:3px; height:3px; background:url(img/icon_v9.png) 0 -135px; margin:12px 6px 0 10px;}
+.head .d5 .gg4{ margin-top:12px;}
+/*体育·彩票*/
+.sport-l{ width:310px; margin-right:20px;}
+.sport-l .bt{border-left:1px solid #ccc; border-top:2px solid #63F; height:32px;}
+.sport-l .bt a{ line-height:29px; width:102px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.sport-l .bt .cur,.sport-l .bt a:hover{ border-bottom:none; background:#fff;}
+.sport-l .d2{margin-top:11px; padding-bottom:9px; border-bottom:1px  dotted #ccc;}
+.sport-l .d2 .ta1{margin-top:7px; margin-right:10px; line-height:32px;}
+.sport-l .d2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.sport-l .d2 ul li i{width:16px; height:16px; background:url(img/tab_icon_play.png); margin:5px 4px 0 0;}
+.sport-l .d2 ul li a{line-height:25px;}
+.sport-l .d2 ul li .i2{width:16px; height:16px; background:url(img/tab_icon.png); margin:5px 4px 0 0;}
+.sport-l .d3{margin-top:5px;}
+.sport-l .d3 ul li span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.sport-l .d3 ul li a{line-height:27px; margin-right:8px; font-size:14px;}
+.sport-l .d3 ul li .ab{font-weight:bold;}
+.sport-l .d4{margin-top:11px; margin-bottom:33px;}
+.sport-r{border:1px solid #ccc; width:298px;}
+.sport-r .bt{border-top:2px solid #60F;}
+.sport-r .bt a{width:148px; line-height:29px; text-align:center; border-left:1px solid #ccc; border-bottom:1px solid #ccc; background:url(img/w8.png); text-align:center;}
+.sport-r .bt .cur{border:none; background:#fff; font-weight:bold;}
+.sport-r .bt a:hover{background:#fff; font-weight:bold; border-bottom:none; height:30px;}
+.sport-r .dd2{margin-top:20px;}
+.sport-r .dd2 .aa1{ margin:7px 10px 9px 13px;}
+.sport-r .dd2 .aa1 .p1{ width:130px; height:25px; background:#000; bottom:0; left:0; opacity:0.5;}
+.sport-r .dd2 .aa1 .p2{line-height:25px; color:#fff; padding-left:4px;bottom:0; left:0;}
+.sport-r .dd2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.sport-r .dd2 ul li a{line-height:25px;}
+.sport-r .dd3{margin-top:18px; border-bottom:1px dotted #ccc;}
+.sport-r .dd3 .aa1{ margin:0 2px 15px 12px;}
+.sport-r .dd3 .aa1 .p1{ width:130px; height:25px; background:#000; bottom:0; left:0; opacity:0.5;}
+.sport-r .dd3 .aa1 .p2{line-height:25px; color:#fff; padding-left:4px;bottom:0; left:0;}
+.sport-r .dd4{padding-left:13px; margin-bottom:22px;}
+.sport-r .dd4 li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.sport-r .dd4 li a{line-height:25px; margin-right:8px;}
+.sport-r .dd4 li b{font-weight:bold; margin-right:9px;line-height:25px;}
+/*财经·股票*/
+.gg5{margin-bottom:12px;}
+.caijing{ width:310px; margin-right:20px;}
+.caijing .bt{border-left:1px solid #ccc; border-top:2px solid #63F; height:32px;}
+.caijing .bt a{ line-height:29px; width:102px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.caijing .bt .cur,.sport-l .bt a:hover{ border-bottom:none; background:#fff;}
+.caijing .d2{margin-top:11px; padding-bottom:9px; border-bottom:1px  dotted #ccc;}
+.caijing .d2 .ta1{margin-top:7px; margin-right:10px; line-height:32px;}
+.caijing .d2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.caijing .d2 ul li a{line-height:25px;}
+.caijing .d3{margin-top:5px;}
+.caijing .d3 ul li span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.caijing .d3 ul li a{line-height:27px; margin-right:8px; font-size:14px;}
+.caijing .d3 ul li .ab{font-weight:bold;}
+.caijing .d4{ margin-top:11px; line-height:27px; font-size:14px;}
+.caijing .d4 p b{width:89px; height:18px; background:url(img/w21.png); margin:4px 14px 0 6px;}
+.caijing .d4 p em{width:1px; height:14px; background:#ccc; margin:6px 11px;}
+.caijing .d4 p span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.caijing .d4 p a{margin-right:8px;}
+.caijing .d4 p .a2{color:red;}
+.caijing .d4 .pp{ font-size:12px; line-height:38px;}
+.caijing .d4 .pp em{width:1px; height:12px; background:#ccc; margin:13px 8px 0 10px;}
+.caijing .d4 .pp span{width:15px; height:15px; background:url(img/tab_icon_play.png); margin:12px 2px 0 5px;}
+.caijing .gp{ margin-top:11px; padding-bottom:9px; border-bottom:1px dotted #ccc;}
+.gup .gp-r .d1{margin-top:7px; line-height:19px;}
+.gup .gp-r .d1 a{width:36px; text-align:center; border-right:1px solid #ccc; cursor:pointer;}
+.gup .gp-r .d1 .cur{border:none; background:#206f96; color:#fff;}
+.gup .gp-r .d1 .lest{border:none;}
+.gup .gp-r .p2 i{line-height:22px; color:red; margin:0 2px 0 11px;}
+.gup .gp-r .p3{line-height:29px; color:red; font-size:16px; font-weight:bold; margin-left:10px; margin-bottom:6px;}
+.gup .gp-r .p4{line-height:18px;  margin-left:14px;}
+.gup .gp-r .p5 a{width:60px; line-height:20px; text-align:center; background:#dde9fd; color:#4b6082; margin-right:4px;}
+.gup .soso{margin-top:9px; margin-bottom:26px; }
+.gup .soso .in1{ width:48px; line-height:21px; text-align:center; border:1px solid #ccc; background:#f7f7f7; margin-left:6px;}
+.gup .soso .in2{ width:106px; line-height:21px; border:1px solid #ccc; margin-left:6px;}
+.gup .soso select{width:58px; height:21px; border:1px solid #ccc;}
+.jiuxiang{margin-top:12px;}
+.jiuxiang .bt span{ width:73px; line-height:30px; border-top:1px solid #ccc; border-right:1px solid #ccc; text-align:center; color:#376a77; float:left; background:#f9f9f9; height:30px;}
+.jiuxiang .bt .s1{border-left:1px solid #ccc;}
+.jiuxiang .bt .cur{height:31px; width:76px; background:#f9f9f9; font-weight:bold;}
+.jiuxiang .bt span:hover{height:31px; background:#f9f9f9; font-weight:bold;}
+.jiuxiang-down{border:1px solid #ccc; width:298px;  margin-top:-1px; background:#f9f9f9;}
+.jiuxiang-down .a1 img{width:280px; height:168px;}
+.jiuxiang-down .a1{margin:18px 0 10px 9px;}
+.jiuxiang-down .a1 .s1{width:21px; height:37px; background:url(img/icon_v9.png); position:absolute; left:10px; top:50%; margin-top:-19px;}
+.jiuxiang-down .a1 .s2 {width:21px; height:37px; background:url(img/icon_v9.png) -8px -46px; position:absolute; right:10px; top:50%; margin-top:-19px;}
+.jiuxiang-down .a1 .p1{position:absolute; bottom:0; left:0; width:280px; height:30px; background:#000; opacity:0.5;}
+.jiuxiang-down .a1 .p2{position:absolute; bottom:0; left:0;line-height:30px; padding-left:8px; color:#fff;}
+.jiuxiang-down .tx{width:128px; margin:0 auto;}
+.jiuxiang-down .tx span{ width:24px; height:5px; background:#e4e4e4; margin:0 4px 4px; float:left;}
+.jiuxiang-down .tx .cur{background:#33F;}
+.jiuxiang-down .wz span{ width:3px; height:3px; background:#ccc; margin:10px 5px 0 13px;}
+.jiuxiang-down .wz a{font-size:14px; line-height:23px;}
+.jiuxiang-down .gg6{margin:0 0 10px 9px;}
+.jdgg{margin-bottom:12px;}
+/*汽车·导购*/
+.qiche{ width:310px; margin-right:20px;}
+.qiche .bt{border-left:1px solid #ccc; border-top:2px solid #63F; height:29px;  border-bottom:1px solid #ccc;}
+.qiche .bt a{ line-height:29px; width:102px; border-right:1px solid #ccc;  text-align:center; font-size:14px; background:#f8f8f8;}
+.qiche .bt .cur,.qiche .bt a:hover{ height:30px; background:#fff;}
+.qiche .d2{margin-top:11px; padding-bottom:9px; border-bottom:1px  dotted #ccc;}
+.qiche .d2 .ta1{margin-top:7px; margin-right:10px; line-height:32px;}
+.qiche .d2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.qiche .d2 ul li a{line-height:25px;}
+.qiche .d3{margin-top:5px;}
+.qiche .d3 ul li span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.qiche .d3 ul li a{line-height:27px; margin-right:8px; font-size:14px;}
+.qiche .d3 ul li .ab{font-weight:bold;}
+.qiche .d4{ margin-top:9px; margin-left:8px; line-height:20px; margin-bottom:45px;}
+.qiche .d4  b{width:102px; height:20px; background:url(img/w26.png); margin-right:12px;}
+.qiche .d4  em{width:1px; height:12px; background:#ccc; margin:4px 8px 0 10px;}
+.qiche .d4 span{width:15px; height:15px; background:url(img/tab_icon_play.png); margin:3px 2px 0 5px;}
+.wangyi{margin:22px 0 12px 0;}
+/*科技·数码*/
+.dingzi{margin-left:5px; margin-bottom:12px;}
+.keji{ width:310px; margin-right:20px;}
+.keji .bt{border-left:1px solid #ccc; border-top:2px solid #63F; height:32px;}
+.keji .bt a{ line-height:29px; width:102px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.keji .bt .cur,.sport-l .bt a:hover{ border-bottom:none; background:#fff;}
+.keji .bt .a2{background:url(img/w31.png) no-repeat 20px 4px; padding-left:40px; text-align:left; width:62px;}
+.keji .bt .a3{background:url(img/w32.png) no-repeat 17px 4px;padding-left:40px; text-align:left; width:62px;}
+.keji .d2{margin-top:11px; padding-bottom:9px; border-bottom:1px  dotted #ccc;}
+.keji .d2 .ta1{margin-top:7px; margin-right:10px; line-height:32px;}
+.keji .d2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.keji .d2 ul li a{line-height:25px;}
+.keji .d3{margin-top:5px;}
+.keji .d3 ul li span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.keji .d3 ul li a{line-height:27px; margin-right:8px; font-size:14px;}
+.keji .d3 ul li .ab{font-weight:bold;}
+.keji .d4{ margin-top:11px; line-height:27px; font-size:14px;}
+.keji .d4 p b{width:89px; height:18px; background:url(img/w21.png); margin:4px 14px 0 6px;}
+.keji .d4 p em{width:1px; height:14px; background:#ccc; margin:6px 11px;}
+.keji .d4 p span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.keji .d4 p a{margin-right:8px;}
+.keji .d4 p .a2{color:red;}
+.keji .d4 .pp{ font-size:12px; line-height:38px;}
+.keji .d4 .pp em{width:1px; height:12px; background:#ccc; margin:13px 8px 0 10px;}
+.keji .d4 .pp span{width:15px; height:15px; background:url(img/tab_icon_play.png); margin:12px 2px 0 5px;}
+.jiaoyou{width:298px; height:278px; border:1px solid #ccc; border-top:2px solid #36F; margin-top:12px; margin-bottom:12px;}
+.jiaoyou h3{height:29px; border-bottom:1px solid #ccc;}
+.jiaoyou h3 span{line-height:29px; border-left:1px solid #ccc;  width:126px; padding-left:22px; font-size:12px; background:url(img/w8.png);}
+.jiaoyou h3 span .a1{font-weight:bold; font-size:14px;}
+.jiaoyou h3 .cur{height:30px; background:#fff; border-left:none;}
+.jiaoyou h3 span .a2 b{width:9px; height:14px; background:url(img/w34.png); margin:8px 4px 0 11px;}
+.jiaoyou .d2{ margin-top:18px; margin-left:13px; margin-bottom:5px;}
+.jiaoyou .d2 a{margin-right:1px; margin-bottom:1px;}
+.jiaoyou .d2 a .p1{width:90px; height:25px; background:#000; opacity:0.7; position:absolute; bottom:0;left:0;}
+.jiaoyou .d2 a .p2{ line-height:25px; bottom:0;left:0; padding:0 4px; color:#fff;  position:absolute; width:82px;}
+.jiaoyou .p3{ line-height:20px; margin-left:13px;}
+/*北京房产*/
+.shuning{margin-bottom:12px;}
+.fangchan{ width:310px; margin-right:20px;}
+.fangchan .bt{border-bottom:1px solid #ccc; border-top:2px solid #63F; height:29px;}
+.fangchan .bt a{ line-height:29px; width:102px; border-right:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.fangchan .bt .cur{border-left:1px solid #ccc;}
+.fangchan .bt .cur,.fangchan .bt a:hover{ height:30px; background:#fff; font-weight:bold;}
+.fangchan .bt .cur i{ border:5px solid transparent; border-top:5px solid #000; margin:12px 5px 0 7px;}
+.fangchan .d2{margin-top:11px; padding-bottom:9px; border-bottom:1px  dotted #ccc;}
+.fangchan .d2 .ta1{margin-top:7px; margin-right:10px; line-height:32px;}
+.fangchan .d2 ul li span{width:3px; height:3px; background:#ccc; margin:12px 5px 0 0;}
+.fangchan .d2 ul li a{line-height:25px;}
+.fangchan .d3{margin-top:5px;}
+.fangchan .d3 ul li span{width:3px; height:3px; background:#ccc; margin:12px 6px 0 0;}
+.fangchan .d3 ul li a{line-height:27px; margin-right:8px; font-size:14px;}
+.fangchan .d3 ul li i{line-height:27px; margin-right:8px; font-size:14px;}
+.fangchan .d3 ul li .ab{font-weight:bold;}
+.fangchan .d3 em{width:1px; height:14px; background:#ccc; margin:7px 3px 0;}
+.fangchan .d4 .pp{ font-size:12px; line-height:38px;}
+.fangchan .d4 .pp em{width:1px; height:12px; background:#ccc; margin:13px 8px 0 10px;}
+.fangchan .d4 .pp span{width:15px; height:15px; background:url(img/tab_icon_play.png); margin:12px 2px 0 5px;}
+.shangcheng{border:1px solid #ccc; border-top:none; padding-bottom:9px;}
+.shangcheng .bt{border-bottom:1px solid #ccc; border-top:2px solid #63F; height:29px; width:298px; margin-top:12px;}
+.shangcheng .bt a{ line-height:29px; width:98px; border-right:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.shangcheng .bt .cur{ width:100px;}
+.shangcheng .bt .a3{border-right:none;}
+.shangcheng .bt .cur,.shangcheng .bt a:hover{ height:30px; background:#fff; font-weight:bold;}
+.guijs{ padding:18px 0 7px 0; border-bottom:1px dashed #ccc; margin-left:9px;}
+.shangcheng .dd3 a{line-height:42px; margin:0 4px 0 13px;}
+.chexian{margin-left:9px;}
+/*nnav*/
+.nnav{ overflow:hidden;}
+.nnav-bt{border-bottom:1px solid #ccc; border-top:2px solid #63F; height:29px; margin-top:12px; margin-right:-110px;}
+.nnav-bt a{ line-height:29px; width:102px; border-right:1px solid #ccc; text-align:center; font-size:14px; background:#f8f8f8;}
+.nnav-bt .cur{border-left:1px solid #ccc;}
+.nnav-bt .cur,.nnav-bt a:hover{ height:30px; background:#fff; font-weight:bold;}
+.nnav-bt .cur i{ border:5px solid transparent; border-top:5px solid #000; margin:12px 5px 0 7px;}
+.nnav-tp a{ margin-top:18px; margin-right:8px; margin-bottom:93px;}
+.nnav-tp a .p1{position:absolute; bottom:0; left:0; width:150px; height:20px; background:#000; opacity:0.6;}
+.nnav-tp a .p2{position:absolute; bottom:0; left:0; width:144px; line-height:20px; padding-left:6px; color:#fff;}
+/*mainnav*/
+.footer{min-width:960px; background:#f6f6f6; border-top:1px solid #ccc; padding-top:28px;}
+.mainnav{overflow:hidden;}
+.wy{width:972px;}
+.wy li{width:150px; height:150px; float:left; background:#E8E8E8; margin-right:12px; margin-bottom:12px; overflow:hidden; font-size:12px;}
+.wy .l1{background:url(img/wy1.png) no-repeat ;}
+.wy .l2 h2{ width:116px; line-height:37px; margin-left:12px; font-weight:bold; float:left;}
+.wy .l2 a{width:58px; margin-left:12px; margin-bottom:13px; float:left;}
+.wy .cur { background:#206F96; color:#FFF;}
+.wy .cur a{color:#FFF;}
+.wy .l2:hover{ background:#206F96; }
+.wy .l2:hover a{color:#FFF; }
+.wy .l2 a:hover{text-decoration:underline;}
+.footer .ckdt{ line-height:45px; border-bottom:1px solid #ccc;}
+.footer .ckdt span{width:16px; height:16px; background:url(img/tab_icon_play.png); margin:13px 12px 0 5px;}
+.footer3{padding-top:40px; padding-bottom:47px;}
+.footer3 li{margin:0 46px 0 3px; line-height:26px;}
+.bottom{min-width:960px;background:#000; line-height:39px; border-bottom:2px solid #fff; text-align:center; color:#fff;}
+.bottom span{margin:0 13px;}
+</style>
+</head>
+<body>
+	<!--top-->
+    <div class="TOP">
+    	<div class="top clearfix w">
+        	<div class="fl d1 clearfix">
+            	<a href="#" class="fl a1">应用</a>
+                <span class="fl"></span>
+                <a href="#" class="fl">设为首页</a>
+            </div>
+            <div class="fr clearfix d2">
+            	<a href="#" class="fl a1">登录</a>
+            	<a href="#" class="fl clearfix a2">
+                	<i class="fl">注册免费邮箱</i>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s1 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s2 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s2 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s2 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s2 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                	<span class="s6 fl"></span>
+                    <b class="fl"></b>
+                    <em class="fl"></em>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--logo-->
+    <div class="clearfix logo w pr">
+    	<h1 class="fl">
+         	<a href="#">网易</a>
+        </h1>
+        <div class="dd">
+            <a href="#" class="fr a2"><img src="img/top_ad2.png"/></a>
+            <a href="#" class="fr a3"><img src="img/top_ad1.png"/></a>
+
+        </div>
+    </div>
+    <!--nav-->
+    <div class="nav w clearfix">
+    	<ul class="fl ul1">
+        	<li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+        </ul>
+        <ul class="fl">
+        	<li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">新闻</h3>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a>
+                <a href="#" class="fl">军事</a> 
+            </li>
+        </ul>
+        <ul class="fl ul3">
+        	<li class="clearfix">
+            	<h3 class="fl">科技</h3>
+                <a href="#" class="fl">酒香</a>
+                <a href="#" class="fl a2">智能硬件</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">手机</h3>
+                <a href="#" class="fl">移动</a>
+                <a href="#" class="fl a2">手机库</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">数码</h3>
+                <a href="#" class="fl">家电</a>
+                <a href="#" class="fl a2">电脑</a>
+    
+            </li>
+        </ul>
+        <ul class="fl">
+        	<li class="clearfix">
+            	<h3 class="fl">汽车</h3>
+                <a href="#" class="fl">购车</a>
+                <a href="#" class="fl">选车</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">旅游</h3>
+                <a href="#" class="fl">探索</a>
+                <a href="#" class="fl">健康</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">房产</h3>
+                <a href="#" class="fl">家居</a>
+                <a href="#" class="fl">买房</a>
+    
+            </li>
+        </ul>
+        <ul class="fl">
+        	<li class="clearfix">
+            	<h3 class="fl">汽车</h3>
+                <a href="#" class="fl">购车</a>
+                <a href="#" class="fl">选车</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">旅游</h3>
+                <a href="#" class="fl">探索</a>
+                <a href="#" class="fl">健康</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">房产</h3>
+                <a href="#" class="fl">家居</a>
+                <a href="#" class="fl">买房</a>
+    
+            </li>
+        </ul>
+        <ul class="fl ul6">
+        	<li class="clearfix">
+            	<h3 class="fl">汽车</h3>
+                <a href="#" class="fl">购车</a>
+                <a href="#" class="fl a3">选车</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">旅游</h3>
+                <a href="#" class="fl">探索</a>
+                <a href="#" class="fl a3">健康</a> 
+            </li>
+            <li class="clearfix">
+            	<h3 class="fl">房产</h3>
+                <a href="#" class="fl">家居</a>
+                <a href="#" class="fl a3">买房</a>
+    
+            </li>
+        </ul>
+    </div>
+    <!--nav2-->
+    <div class="nav2 clearfix">
+    	<div class="fl d d1">
+        	<p class="pr cur">教育<i class="pa"></i></p>
+            <p class="pr">教育<i class="pa"></i></p>
+            <p class="pr">教育<i class="pa"></i></p>
+        </div>
+        <div class="fr d d5">
+        	<p class="pr cur">教育<i class="pa"></i></p>
+            <p class="pr">教育<i class="pa"></i></p>
+            <p class="pr">教育<i class="pa"></i></p>
+        </div>
+        <div class="d2 fl">
+        	<a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+        </div>
+        <div class="d3 fl">
+        	<p class="clearfix">
+            	<a href="#" class="fl">英语四六级冲刺密卷</a>
+                <a href="#" class="fl a2">《态度公开课》开讲了 500明星汇集云音乐</a>
+                <a href="#" class="fl a3">才23岁就被父母催婚</a>
+                <a href="#" class="fl a4">私人订制</a>
+                <a href="#" class="fl">免费看房</a>
+            </p>
+            <a href="#" class="k"><img src="img/w4.png"/></a>
+            <p class="clearfix">
+            	<a href="#" class="fl">英语四六级冲刺密卷</a>
+                <a href="#" class="fl a2">《态度公开课》开讲了 500明星汇集云音乐</a>
+                <a href="#" class="fl a3">才23岁就被父母催婚</a>
+                <a href="#" class="fl a4">私人订制</a>
+                <a href="#" class="fl">免费看房</a>
+            </p>
+        </div>
+        <div class="d2 fl d4">
+        	<a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+            <a href="#">背单词能上瘾？来试试</a>
+        </div>
+    </div>
+    <!--head-->
+    <div class="head w clearfix pr">
+    	<div class="head-l fl">
+        	<div class="crsp pr">
+            	<a href="#" class="k"><img src="img/wangyi.jpg"/></a>
+                <span class="pa s1">&lt;</span>
+                <span class="pa s2">&gt;</span>
+                <p>开始看好的时刻速度集合点击</p>
+                <div class="ts clearfix">
+                	<i></i>
+                    <i></i>
+                    <i class="cur"></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+            <div class="sp">
+            	<div class="bt clearfix">
+                	<a href="#" class="fl cur">视频</a>
+                    <a href="#" class="fl">资讯 娱乐</a>
+                    <a href="#" class="fl">纪实 公开课</a>
+                </div>.
+                <div class="dujia clearfix">
+                	<a href="#" class="fl a1">
+                    	<img src="img/w6.png"/>
+                        <p>宁为太平犬不做乱世人</p>
+                    </a>
+                    <a href="#" class="fl">
+                    	<img src="img/w6.png"/>
+                        <p>宁为太平犬不做乱世人</p>
+                    </a>
+                </div>
+                <ul class="ul1">
+                	<li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                </ul>
+                <ul class="ul1 ul2">
+                	<li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl a1">二人转演员涉毒呈搭档李咏</a>
+                        <a href="#" class="fl a1">李晨疑订婚</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <span class="fl"></span>
+                        <a href="#" class="fl a1">曝邓小平谈钓鱼岛录音</a>
+                        <a href="#" class="fl">动画还原高雄劫狱</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <a href="#" class="fl a1">公开课</a>
+                        <a href="#" class="fl">关于泰迪熊的奇怪故事</a>
+                        <a href="#" class="fl">监狱哲学</a>
+                    </li>
+                    <li class="clearfix">
+                    	<i class="fl"></i>
+                        <a href="#" class="fl a1">公开课</a>
+                        <a href="#" class="fl">关于泰迪熊的奇怪故事</a>
+                        <a href="#" class="fl">监狱哲学</a>
+                    </li>
+                </ul>
+                <div class="zhibo clearfix">
+                	<a href="#" class="fl a1 pr">
+                    	<img src="img/w6.png"/>
+                        <p>看见啊好看的</p>
+                        <i></i>
+                        <span class="clearfix">
+                        	<b class="b1"></b>
+                        	<b class="fr b2">2096</b>
+                            <b class="fr b3"></b>
+                        </span>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w6.png"/>
+                        <p>看见啊好看的</p>
+                        <i></i>
+                        <span class="clearfix">
+                        	<b class="b1"></b>
+                        	<b class="fr b2">2096</b>
+                            <b class="fr b3"></b>
+                        </span>
+                    </a>
+                </div>
+                <a href="#" class="gg1"><img src="img/300x100.jpg"/></a>
+            </div>	
+        </div>
+        <div class="head-m fl">
+        	<div class="clearfix d1">
+            	<a href="#" class="fl cur">新闻</a>
+                <a href="#" class="fl">图片BOLON</a>
+                <a href="#" class="fl">军事</a>
+            </div>
+            <ul class="ul1">
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl a1">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+             </ul>
+            <ul class="ul1 ul2">
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl a1">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+             </ul>
+            <ul class="ul1 ul2">
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl a1">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+             </ul>
+            <ul class="ul1 ul3">
+                <li class="clearfix">
+                    <b class="fl b1"></b>
+                    <a href="#" class="fl">数读</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">美式慈善：总统要带头</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl a1">财经</a>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">港姐看了沙拉和啊好看</a>
+                </li>
+             </ul>
+            <div class="clearfix d2">
+            	<a href="#" class="fl cur"></a>
+                <a href="#" class="fl">热点排行</a>
+                <a href="#" class="fl">精彩跟帖</a>
+            </div>
+            <div class="d3 clearfix">
+            	<span class="fl">&lt;</span>
+                <b class="cur"></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <span class="fr">&gt;</span>
+                
+            </div>
+            <ul class="ul1 ul4">
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix">
+                    <i class="fl"></i>
+                    <a href="#" class="fl">习近平夫妇获赠的两匹蒙古马入境</a>
+                    <a href="#" class="fl">茶话会</a>
+                </li>
+                <li class="clearfix li7">
+                    <span class="fl"></span>
+                    <a href="#" class="fl a1">BOBO直播</a>
+                    <a href="#" class="fl">新生代小花旦，谁是下一站女神</a>
+                </li>
+             </ul>
+        </div>
+        <div class="fl head-r">
+        	<div class="wycp">
+            	<h3 class="clearfix">
+                	<a href="#" class="fl a1">网易产品</a>
+                    <a href="#" class="fl a2 clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl">新闻</i>
+                    </a>
+                    <a href="#" class="fl a3 pr">
+                        <b></b>
+                        <i>属于你的新闻</i>
+                    </a>
+                </h3>
+                <ul class="wycp-d">
+                	<li class="clearfix">
+                    	<a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                    </li>
+                    <li class="clearfix li2">
+                    	<a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                    </li>
+                    <li class="clearfix li2">
+                    	<a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                        <a href="#">免费邮</a>
+                        <a href="#">VIP邮箱</a>
+                        <a href="#">企业邮</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">易信</a>
+                    </li>	
+                </ul>
+            </div>
+            <a href="#" class="gg2 k"><img src="img/w13.png"/></a>
+            <div class="gongyi">
+                <p class="p1 clearfix">
+                    <i class="fl">公益·传媒</i>
+                    <span class="fl"></span>
+                    <b class="fl">打年兽百万年货赢回家</b>
+                </p>
+                <p class="p2 clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">[公益]</i>
+                    <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                </p>
+                <p class="p2 clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">[公益]</i>
+                    <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                </p>
+            </div>
+            <div class="d4">
+            	<div class="bt clearfix">
+                	<span class="s1">习酒</span>
+                    <span class="cur">习酒</span>
+                    <span>习酒</span>
+                    <span>习酒</span>
+                </div>
+                <div class="d4-down">
+                	<a href="#" class="k a1">
+                    	<img src="img/w14.png"/>
+                    </a>
+                    <p class="clearfix">
+                        <span class="fl"></span>
+                        <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                    </p>
+                        <p class="clearfix">
+                        <span class="fl"></span>
+                        <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                    </p>
+                </div>
+            </div>
+            <a href="#" class="gg3 k"><img src="img/w13.png"/></a>
+
+        </div>
+        <div class="d5 pa">
+        	<ul class="d5-up clearfix">
+            	<li class="fl clearfix">
+                	<span class="fl"></span>
+                    <a hraf="#" class="fl">最直观车型对比工具</a>
+                    <a hraf="#" class="fl">优质单身男女都在这里</a>
+                </li>
+                <li class="fl clearfix">
+                	<span class="fl"></span>
+                    <a hraf="#" class="fl">最直观车型对比工具</a>
+                    <a hraf="#" class="fl">优质单身男女都在这里</a>
+                </li>
+                <li class="fl clearfix">
+                	<span class="fl"></span>
+                    <a hraf="#" class="fl">最直观车型对比工具</a>
+                    <a hraf="#" class="fl">优质单身男女都在这里</a>
+                </li>
+                <li class="fl clearfix">
+                	<span class="fl"></span>
+                    <a hraf="#" class="fl">最直观车型对比工具</a>
+                    <a hraf="#" class="fl">优质单身男女都在这里</a>
+                </li>
+            </ul>
+             <a href="#" class="gg4 k"><img src="img/w16.png"/></a>
+        </div>
+    </div>
+    <!--体育·彩票-->
+    <div class="sport w clearfix">
+    	<div class="sport-l fl">
+        	<div class="bt clearfix">
+            	<a href="#" class="fl cur">体育 彩票</a>
+                <a href="#" class="fl">体育 彩票</a>
+                <a href="#" class="fl">体育 彩票</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w17.png"/>
+                    <p>伊莲娜抢体育画报花魁</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl i2"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl i2"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">NBA-火箭负快船</a>
+                        <a href="#" class="fl ab">书豪特训遭弃</a>
+                        <a href="#" class="fl ab">或重返火箭</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3 d4">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sport-l fl">
+        	<div class="bt clearfix">
+            	<a href="#" class="fl cur">体育 彩票</a>
+                <a href="#" class="fl">体育 彩票</a>
+                <a href="#" class="fl">体育 彩票</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w17.png"/>
+                    <p>伊莲娜抢体育画报花魁</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl i2"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <i class="fl i2"></i>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">NBA-火箭负快船</a>
+                        <a href="#" class="fl ab">书豪特训遭弃</a>
+                        <a href="#" class="fl ab">或重返火箭</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3 d4">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">沙国际十大歌手打的话</a>
+                        <a href="#" class="fl">十几个就看电视是德国</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sport-r fl">
+            <div class="bt clearfix">
+                <a href="#" class="fl cur">时尚大家</a>
+                <a href="#" class="fl">男性健康</a>
+            </div>
+            <div class="dd2 clearfix">
+            	<a href="#" class="fl aa1 pr">
+                	<img src="img/w18.jpg"/>
+                    <p class="p1 pa"></p>
+                    <p class="p2 pa">全球最牛的</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">2016年春季十大流行色</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">2016年春季十大流行色</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">2016年春季十大流行色</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">2016年春季十大流行色</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bt clearfix">
+                <a href="#" class="fl cur">网易视频</a>
+                <a href="#" class="fl">我是模特</a>
+            </div>
+            <div class="dd3 clearfix">
+            	<a href="#" class="fl aa1 pr">
+                	<img src="img/w18.jpg"/>
+                    <p class="p1 pa"></p>
+                    <p class="p2 pa">全球最牛的</p>
+                </a>
+                <a href="#" class="fl aa1 pr">
+                	<img src="img/w18.jpg"/>
+                    <p class="p1 pa"></p>
+                    <p class="p2 pa">全球最牛的</p>
+                </a>
+                <a href="#" class="fl aa1 pr">
+                	<img src="img/w18.jpg"/>
+                    <p class="p1 pa"></p>
+                    <p class="p2 pa">全球最牛的</p>
+                </a>
+                <a href="#" class="fl aa1 pr">
+                	<img src="img/w18.jpg"/>
+                    <p class="p1 pa"></p>
+                    <p class="p2 pa">全球最牛的</p>
+                </a>
+            </div>
+            <ul class="fl dd4">
+                <li class="clearfix">
+                    <span class="fl"></span>
+                    <b class="fl">纪录片</b>
+                    <a href="#" class="fl">大练兵：中国导弹能否打到美国？</a>
+                </li>
+                <li class="clearfix">
+                    <span class="fl"></span>
+                    <a href="#" class="fl">宋美龄婚恋：与张学良暧昧</a>
+                    <a href="#" class="fl">解密金门战役</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--财经·股票-->
+    <div class="w clearfix">
+    	<div class="fl clearfix">
+        	<a href="#" class="k gg5"><img src="img/w19.png"/></a>
+            <div class="caijing fl">
+        		<div class="bt clearfix">
+            	<a href="#" class="fl cur">财经</a>
+                <a href="#" class="fl">产经</a>
+                <a href="#" class="fl">商业</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w20.png"/>
+                    <p>十几个记得深刻</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                        <a href="#" class="fl ab">央行不在提“定力”</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d4">
+            	<p class="clearfix">
+                	<b class="fl"></b>
+                    <i class="fl">图集</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">网友试吃转基因大米</a>
+                </p>
+                <p class="clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">特别策划</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">中缅天然气管道运行遇尴尬</a>
+                    <a href="#" class="fl a2">招聘</a> 
+                </p>
+                <p class="clearfix pp">
+                	<a href="#" class="fr">财经视频</a>
+                    <em class="fr"></em>
+                    <a href="#" class="fr">行情</a>
+                    <em class="fr"></em>
+                    <span class="fr"></span>
+                    <a href="#" class="fr">进入财经频道</a>
+                </p>
+            </div>
+        </div>
+        	<div class="caijing fl gup">
+        		<div class="bt clearfix">
+                    <a href="#" class="fl cur">股票</a>
+                    <a href="#" class="fl">基金</a>
+                    <a href="#" class="fl">理财</a>
+            	</div>
+                <div class="gp clearfix">
+                    <a href="#" class="fl">
+                        <img src="img/w22.png"/>
+                    </a>
+                    <div class="gp-r fl">
+                        <div class="clearfix d1">
+                            <a href="#" class="fl cur">上证</a>
+                            <a href="#" class="fl">深证</a>
+                            <a href="#" class="fl lest">沪深</a>
+                        </div>
+                        <p class="clearfix p2">
+                            <i class="fl">15.71</i>
+                            <i class="fl">0.50%</i>
+                        </p>
+                        <p class="p3">3173.42</p>
+                        <p class="p4">7*24小时万三开户</p>
+                        <p class="p5 clearfix">
+                            <a href="#" class="fl">股票开户</a>
+                            <a href="#" class="fl">股票转户</a>
+                        </p>
+                    </div>
+            	</div>
+                <div class="d3">
+                    <ul class="">
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                            <a href="#" class="fl ab">央行不在提“定力”</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d4">
+                    <p class="clearfix">
+                        <span class="fl"></span>
+                        <i class="fl">必读</i>
+                        <em class="fl"></em>
+                        <a href="#" class="fl">牛市来了</a>
+                        <a href="#" class="fl">你的炒股工具也该升级了</a> 
+                    </p>
+                    <p class="clearfix">
+                        <span class="fl"></span>
+                        <i class="fl">必读</i>
+                        <em class="fl"></em>
+                        <a href="#" class="fl">牛市来了</a>
+                        <a href="#" class="fl">你的炒股工具也该升级了</a> 
+                    </p>
+            	</div>
+                <div class="clearfix soso">
+                    <input type="button" value="查询" class="in1 fr"/> 
+                    <input type="text" placeholder="代码/拼音/名称" class="in2 fr"/>
+                    <select class="fr">
+                    	<option>全部</option>
+                    </select>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="fl">
+        	<a href="#" class="k"><img src="img/w23.png"/></a>
+            <div class="jiuxiang">
+            	<div class="bt clearfix">
+                	<span class="s1 cur">酒香</span>
+                    <span class="">热图</span>
+                    <span>关注</span>
+                    <span>置业</span>
+                </div>
+                <div class="jiuxiang-down">
+                	<a href="#" class="k a1 pr">
+                    	<img src="img/w14.png"/>
+                        <span class="s1"></span>
+                        <span class="s2"></span>
+                        <p class="p1"></p>
+                        <p class="p2">活动开了会离开的好看</p>
+                    </a>
+                    <p class="tx clearfix ">
+                    	<span class="cur"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="clearfix wz">
+                        <span class="fl"></span>
+                        <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                    </p>
+                    <p class="clearfix wz">
+                        <span class="fl"></span>
+                        <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                    </p>
+                    <p class="clearfix wz">
+                        <span class="fl"></span>
+                        <a href="#" class="fl">是看见好看；时候的看了多少</a>
+                    </p>
+                    <a href="#" class="k gg6"><img src="img/w24.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="k w jdgg"><img src="img/jd.png"/></a>
+    <!--汽车·导购-->
+    <div class="clearfix w">
+        <div class="qiche fl">
+          	<div class="bt clearfix">
+            	<a href="#" class="fl cur">汽车</a>
+                <a href="#" class="fl">行业</a>
+                <a href="#" class="fl">车模 图赏</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w25.png"/>
+                    <p>计划过多久</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看实则到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的身体还好邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的个邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的退货邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的阿姨邻居看到就</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                        <a href="#" class="fl ab">央行不在提“定力”</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d4 clearfix">
+            	<b class="fl"></b>
+                <a href="#" class="fl">进入汽车频道</a>
+                <span class="fl"></span>
+                <em class="fl"></em>
+                <a href="#" class="fl">图片</a>
+                <em class="fl"></em>
+                <a href="#" class="fl">图片</a>
+            </div>
+        </div>
+        <div class="qiche fl">
+          	<div class="bt clearfix">
+            	<a href="#" class="fl cur">汽车</a>
+                <a href="#" class="fl">行业</a>
+                <a href="#" class="fl">车模 图赏</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w25.png"/>
+                    <p>计划过多久</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看实则到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的身体还好邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的个邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的退货邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的阿姨邻居看到就</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                        <a href="#" class="fl ab">央行不在提“定力”</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d4 clearfix">
+                <a href="#" class="fr">图片</a>
+                <em class="fr"></em>
+                <a href="#" class="fr">图片</a>
+                <em class="fr"></em>
+                <a href="#" class="fr">图片</a>
+                <em class="fr"></em>
+                <a href="#" class="fr">图片</a>
+                <em class="fr"></em>
+                <a href="#" class="fr">图片</a>
+            </div>
+        </div>
+        <div class="fl">
+        	<a href="#" class="k"><img src="img/w27.png"/></a>
+            <a href="#" class="k wangyi"><img src="img/w28.png"/></a>
+        </div>	
+    </div>
+    <!--科技·数码-->
+    <div class="w clearfix">
+    	<div class="fl">
+        	<a href="#" class="k dingzi"><img src="img/w29.png"/></a>
+            <div class="keji fl">
+        		<div class="bt clearfix">
+            	<a href="#" class="fl cur">科技</a>
+                <a href="#" class="fl a2">iPhone</a>
+                <a href="#" class="fl a3">Android</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w30.png"/>
+                    <p>集合看话费日</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多就看这里看i；到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少开关可以的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居；哦吼；好看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">开的开的多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                        <a href="#" class="fl ab">央行不在提“定力”</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d4">
+            	<p class="clearfix">
+                	<b class="fl"></b>
+                    <i class="fl">图集</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">网友试吃转基因大米</a>
+                </p>
+                <p class="clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">特别策划</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">中缅天然气管道运行遇尴尬</a> 
+                </p>
+                <p class="clearfix pp">
+                	<a href="#" class="fr">财经视频</a>
+                    <em class="fr"></em>
+                    <a href="#" class="fr">行情</a>
+                    <em class="fr"></em>
+                    <span class="fr"></span>
+                    <a href="#" class="fr">进入财经频道</a>
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="fl">
+        	<a href="#" class="k dingzi"><img src="img/w29.png"/></a>
+            <div class="keji fl">
+        		<div class="bt clearfix">
+            	<a href="#" class="fl cur">科技</a>
+                <a href="#" class="fl">iPhone</a>
+                <a href="#" class="fl">Android</a>
+            </div>
+            <div class="d2 clearfix">
+            	<a href="#" class="fl ta1">
+                	<img src="img/w30.png"/>
+                    <p>集合看话费日</p>
+                </a>
+                <ul class="fl">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多就看这里看i；到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少开关可以的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居；哦吼；好看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">开的开的多少的邻居看到就</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">多少的邻居看到就</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d3">
+            	<ul class="">
+                	<li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                        <a href="#" class="fl ab">央行不在提“定力”</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                    <li class="clearfix">
+                    	<span class="fl"></span>
+                        <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                        <a href="#" class="fl">时即可点击电视了</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d4">
+            	<p class="clearfix">
+                	<b class="fl"></b>
+                    <i class="fl">图集</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">网友试吃转基因大米</a>
+                </p>
+                <p class="clearfix">
+                	<span class="fl"></span>
+                    <i class="fl">特别策划</i>
+                    <em class="fl"></em>
+                    <a href="#" class="fl">中缅天然气管道运行遇尴尬</a> 
+                </p>
+                <p class="clearfix pp">
+                	<a href="#" class="fr">财经视频</a>
+                    <em class="fr"></em>
+                    <a href="#" class="fr">行情</a>
+                    <em class="fr"></em>
+                    <span class="fr"></span>
+                    <a href="#" class="fr">进入财经频道</a>
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="fl">
+        	<a href="#"><img src="img/w33.png"/></a>
+            <div class="jiaoyou">
+            	<h3 class="clearfix">
+                	<span class="fl clearfix cur">
+                    	<a href="#" class="fl a1">花田交友</a>
+                        <a href="#" class="fl a2 clearfix">
+                        	<b class="fl"></b>
+                            <i class="fl">手机版</i>
+                        </a>
+                    </span>
+                    <span class="fl clearfix">
+                    	<a href="#" class="fl a1">同城约会</a>
+                        <a href="#" class="fl a2 clearfix">
+                        	<b class="fl"></b>
+                            <i class="fl">APP</i>
+                        </a>
+                    </span>
+                </h3>
+                <div class="clearfix d2">
+                	<a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                    <a href="#" class="fl pr">
+                    	<img src="img/w35.jpg"/>
+                        <p class="p1"></p>
+                        <p class="clearfix p2">
+                        	<span class="fl">北京</span>
+                            <span class="fr">29岁</span>
+                        </p>
+                    </a>
+                </div>
+                <p class="p3">啥好看历史的订单；是</p>
+                <p class="p3">啥好看历史的订单；是</p>	
+            </div>
+        </div>
+    </div>
+    <!--北京房产-->
+    <div class="w clearfix">
+    	<div class="fl clearfix">
+        	<a href="#" class="k shuning"><img src="img/y1.png"/></a>
+            <div class="fangchan fl">
+        		<div class="bt clearfix">
+                    <a href="#" class="fl cur clearfix">
+                        <i class="fr"></i>                    
+                        <b class="fr">北京房产</b> 
+                    </a>
+                    <a href="#" class="fl a2">买房 电商</a>
+                    <a href="#" class="fl a3">楼盘大全</a>
+            	</div>
+                <div class="d2 clearfix">
+                        <a href="#" class="fl ta1">
+                            <img src="img/y2.png"/>
+                            <p>世界第一悬桥看风景</p>
+                        </a>
+                        <ul class="fl">
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多就看这里看i；到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少开关可以的邻居看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少的邻居；哦吼；好看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">开的开的多少的邻居看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少的邻居看到就</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="d3">
+                    <ul class="">
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                            <a href="#" class="fl ab">央行不在提“定力”</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">买房</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">看电视的；好；是；爱德华；哈；额if</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">热点</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">时即可阿尔金额非点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">图集</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">时挖人饭后俄方即可点击电视了</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d4">
+                    <p class="clearfix pp">
+                        <a href="#" class="fr">海外职业</a>
+                        <em class="fr"></em>
+                        <a href="#" class="fr">房产资讯</a>
+                        <em class="fr"></em>
+                        <a href="#" class="fr">电商</a>
+                        <em class="fr"></em>
+                        <span class="fr"></span>
+                        <a href="#" class="fr">买房</a>
+                    </p>
+                </div>
+        	</div>
+            <div class="fangchan fl">
+        		<div class="bt clearfix">
+                    <a href="#" class="fl cur clearfix">
+                        <i class="fr"></i>                    
+                        <b class="fr">北京房产</b> 
+                    </a>
+                    <a href="#" class="fl a2">买房 电商</a>
+                    <a href="#" class="fl a3">楼盘大全</a>
+            	</div>
+                <div class="d2 clearfix">
+                        <a href="#" class="fl ta1">
+                            <img src="img/y2.png"/>
+                            <p>世界第一悬桥看风景</p>
+                        </a>
+                        <ul class="fl">
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多就看这里看i；到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少开关可以的邻居看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少的邻居；哦吼；好看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">开的开的多少的邻居看到就</a>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl"></span>
+                                <a href="#" class="fl">多少的邻居看到就</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="d3">
+                    <ul class="">
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl ab">实体经济现过冷迹象</a>
+                            <a href="#" class="fl ab">央行不在提“定力”</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <a href="#" class="fl">看见好看的疯狂减肥的</a>
+                            <a href="#" class="fl">时即可点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">买房</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">看电视的；好；是；爱德华；哈；额if</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">热点</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">时即可阿尔金额非点击电视了</a>
+                        </li>
+                        <li class="clearfix">
+                            <span class="fl"></span>
+                            <i class="fl">图集</i>
+                            <em class="fl"></em>
+                            <a href="#" class="fl">时挖人饭后俄方即可点击电视了</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d4">
+                    <p class="clearfix pp">
+                        <a href="#" class="fr">海外职业</a>
+                        <em class="fr"></em>
+                        <a href="#" class="fr">房产资讯</a>
+                        <em class="fr"></em>
+                        <a href="#" class="fr">电商</a>
+                        <em class="fr"></em>
+                        <span class="fr"></span>
+                        <a href="#" class="fr">买房</a>
+                    </p>
+                </div>
+        	</div>
+        </div>
+        <div class="fl">
+        	<a href="#" class="k"><img src="img/y3.png"/></a>
+            <div class="shangcheng">
+                <div class="bt clearfix">
+                    <a href="#" class="fl cur clearfix">网易商城</a>
+                    <a href="#" class="fl a2">彩票</a>
+                    <a href="#" class="fl a3">惠惠</a>
+                </div>
+                <a href="#" class="k guijs"><img src="img/y4.png"/></a>
+                <div class="clearfix dd3">
+                	<a href="#" class="fl">点卡</a>
+                    <a href="#" class="fl">点卡</a>
+                    <a href="#" class="fl">点卡</a>
+                    <a href="#" class="fl">点卡</a>
+                    <a href="#" class="fl">点卡</a>
+                    <a href="#" class="fl">点卡</a>
+                </div>
+                <a href="#" class="k chexian"><img src="img/y5.png"/></a>
+            </div>
+        </div>
+    </div>
+    <!--nnav-->
+    <div class="nnav w">
+    	<div class="nnav-bt clearfix">
+            <a href="#" class="fl cur">懂生活</a>
+            <a href="#" class="fl">看客</a>
+            <a href="#" class="fl">我们单身</a>
+            <a href="#" class="fl">懂生活</a>
+            <a href="#" class="fl">看客</a>
+            <a href="#" class="fl">我们单身</a>
+            <a href="#" class="fl">懂生活</a>
+            <a href="#" class="fl">客</a>
+            <a href="#" class="fl">我们单身</a>
+            <a href="#" class="fl">看 </a>
+        </div>
+        <div class="clearfix nnav-tp">
+        	<a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+            <a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+            <a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+            <a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+            <a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+            <a href="#" class="fl pr">
+            	<img src="img/y6.png"/>
+                <p class="p1"></p>
+                <p class="p2">记得看就看到合肥</p>
+            </a>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="mainnav w">
+            <ul class="wy clearfix">
+                <li class="l1"></li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2 cur">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+                <li class="l2">
+                    <h2>新闻</h2>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">国内</a>
+                    <a href="#">本地新闻</a>  
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix ckdt w">
+        	<span class="fr"></span>
+            <a href="#" class="fr">查看网易地图</a>
+        </div>
+        <div class="clearfix w footer3">
+        	<ul class="fl">
+            	<li>ICP证粤B2-20090191</li> 
+                <li>信用中国增值电信业务经营许可证B2-20090058</li> 
+				<li>互联网出版许可证</li> 
+                <li>互联网新闻信息服务许可证</li> 
+                <li>广东省通信管理局</li>
+            </ul>
+            <ul class="fl">
+            	<li>ICP证粤B2-20090191</li> 
+                <li>信用中国增值电信090058</li> 
+				<li>互联网出版许可证</li> 
+                <li>互联网新闻信息服务许可证</li> 
+                <li>广东省通信管理局</li>
+            </ul>
+            <ul class="fl">
+            	<li>ICP证粤B2-20090191</li> 
+                <li>信用中国增值电信业</li> 
+				<li>互联网出版许可证</li> 
+                <li>互联网新闻信息服务许可证</li> 
+                <li>广东省通信管理局</li>
+            </ul>
+            <ul class="fl">
+            	<li>ICP证粤B2-20090191</li> 
+                <li>信用中国增值电信业务经营许可</li> 
+				<li>互联网出版许可证</li> 
+                <li>互联网新闻信息服务许可证</li> 
+                <li>广东省通信管理局</li>
+            </ul>
+        </div>
+        <div class="bottom">
+        	<span>@1997-2015网易公司版权所有</span><span>About NetEase</span>|<span>公司简介</span>|<span>联系方式</span>|<span>招聘信息</span>|<span>公司简介</span>|<span>联系方式</span>|<span>招聘信息</span>|<span>公司简介</span>|<span>联系方式</span>|<span>招聘信息</span>
+            
+        </div>
+    </div>
+</body>
+</html>

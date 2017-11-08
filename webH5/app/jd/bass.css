@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+p,body,h1,h2,h3,h4,h5,h6,ol,ul,dl,dd,input,textarea{margin:0; padding:0;}
+a{ text-decoration:none; color:#333;}
+img{ vertical-align:top; border:none;}
+li{ list-style:none;}
+input,textarea{outline:none; background:none; border:none;}
+textarea{resize:none;}
+th,td{padding:0;}
+table{border-collapse:collapse;}
+
+body{font-size:12px;color:#333;}
+.fl{float:left;}
+.fr{float:right;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.clearfix:after{content:''; display:block; clear:both;}
+i,em{ font-style:normal;}
+.k{display:block;}
+.w{ width:1170px; margin:0 auto;}
+.red{color:red;}

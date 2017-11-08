@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       #box{
+            width:303px;
+            height:450px;  border-radius: 8px;
+            position:relative;
+            border:1px solid #fff;
+            background:rgba(0,0,0,0.2);
+            margin:20px auto;
+        }
+        #div1{
+            position:absolute; bottom:5px; left:0;
+            border:1px solid #000;
+            border-radius:5px;
+            width:300px; height:40px;
+            background:#666;
+
+        }
+        #div1 span{
+            line-height: 40px;
+            text-align: center;
+            width:300px; height:40px;
+            display:block; font-size:20px; font-weight:bold;
+            color:#999;
+        }
+        #div1 #mask{
+            position:absolute; top:0; left:0;
+            background:-webkit-linear-gradient(-45deg,rgba(0,0,0,0) 40%,rgba(255,255,255,1) 50%,rgba(0,0,0,0) 60%);
+            color:rgba(0,0,0,0);
+            -webkit-background-clip:text;
+            transition:1s all linear;
+        }
+       #div1 i{
+           width:60px; height:40px; background:rgba(9,9,9,0.5);
+           border-radius: 4px;
+           position:absolute; top:0; left:2px;
+           transition:1s all linear;
+       }
+        #div1:hover #mask{
+            background-position:150px;
+        }
+        #div1:hover i{
+            left:240px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="div1">
+            <i></i>
+            <span>开始滑动解锁</span>
+            <span id="mask">开始滑动解锁</span>
+        </div>
+    </div>
+</body>
+</html>

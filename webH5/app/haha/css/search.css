@@ -1,0 +1,17 @@
+body{background:#F3EFEF;padding:3% 2% 0}
+.ser_box{width:100%;height:55px;}
+.ser_inp{overflow:hidden;float:left;width:80%;border:1px solid #CACACA;background:#fff;line-height: 55px;border-radius:2px;font-size: 20px;}
+.ser_inp input{border:0;width:70%;float:left}
+.ser_inp .ser_span{color:#ccc;font-size: 30px;box-sizing: border-box;padding:15px;display: block;float:left}
+.ser_click{float:right;background:#FCCD00;color:#fff;width:18%;height:55px;border-radius: 2px;line-height: 55px;text-align: center;font-size: 20px;}
+.all_c{width:100%;overflow: hidden;}
+.left{width:50%;float:left;}
+.right{width:50%;float:left;}
+.left p{color:#FCCD00;height:30%;padding-top:32%;font-size: 20px;font-weight: 900;}
+.right p{color:#FCCD00;height:30%;padding-top:28%;font-size: 20px;font-weight: 900;}
+
+@-webkit-keyframes change_color{
+	0%{opacity: 1;}
+	50%{opacity: 0.3;}
+	100%{opacity: 1;}
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="bass.css">
+    <style>
+        body,html{
+            min-width:320px; max-width: 640px;
+            margin:0 auto; background:#f8f8f8;
+        }
+        #ming{
+            display:-webkit-box; width:100%;
+            -webkit-box-orient:vertical;
+            margin:0 auto;
+        }
+        .header{
+            height:63px; background:#7dccf3;
+            position:relative;
+            z-index: 10;
+        }
+        .conntent{
+            -webkit-box-flex:1; overflow: auto;
+        }
+        .footer{
+            height:52px; background:#f0f0f0;
+            width:100%;
+        }
+        .header .top{
+            height:19px; width:100%;
+            display:-webkit-box;
+        }
+        .top .top1,.top .top2{
+            width:26%;
+        }
+        .top .top1 img,.top .top2 img {
+            width: 100%;
+        }
+        .top .top3{
+            -webkit-box-flex: 1; line-height:19px;
+            text-align: center; color:#fff;
+        }
+        .soso{
+            display:-webkit-box; width:100%;
+        }
+        .soso h1{
+            width:40px; height:40px; background:url("img/so1.png");
+            text-indent:-999px;;
+        }
+        .soso .TXT{
+            -webkit-box-flex:1;
+            -webkit-box-pack:center;
+        }
+        .soso .TXT input{
+            width:calc(100% - 10px); background:rgba(255,255,255,0.4);
+            height:30px; margin-top:8px; border-radius:10px;
+            text-align: center; color:#fff;
+        }
+        .Img,img{
+            width:100%;
+        }
+        .conntent .nav{
+            width:100%;
+            display: -webkit-box;
+            border-bottom:2px solid #ccc;
+        }
+        .conntent .nav li{
+            -webkit-box-flex:1;
+            background:#e0e0e0; height:100px;
+            text-align: center; line-height:34px;
+        }
+        .conntent .nav li img{
+            width:48px; height:48px;
+            display:block; margin:12px auto 0;
+        }
+        .conntent .nav li a{
+            display:block;
+        }
+        .conntent .play{
+            width:100%;
+        }
+        .conntent .play h3{
+            margin-top:10px; line-height:24px; margin-left:15px;
+        }
+        .conntent .play .play1{
+            width:calc(100% - 8px); display:block; margin:0 4px 8px;
+            float:left;
+        }
+        .conntent .play  img{
+            width:100%; display:block;
+        }
+        .conntent .play .play2{
+            width:calc(50% - 8px); display:block; margin:0 4px 8px;
+            float:left;
+        }
+        .conntent .last h3{
+            line-height:26px; padding-left:15px; border-bottom:1px solid #f0f0f0;
+        }
+        .conntent .last ul{
+            width:100%; background:#fcfcfc;
+            box-sizing:border-box;
+        }
+        .conntent .last ul li{
+            width:calc(50% - 8px); float:left; border-bottom:1px solid #f0f0f0;
+            padding:8px 4px;
+        }
+        .conntent .last ul .liLine{
+            border-right:1px solid #f0f0f0;
+            width:calc(50% - 9px);
+        }
+        .conntent .last ul li img{
+            width:calc(100% - 8px);
+        }
+        .conntent .last ul li p{
+            line-height:21px; font-size:16px;
+        }
+        .conntent .last ul li div{
+            line-height:37px; color:red;
+        }
+        .conntent .More{
+            line-height:43px; text-align: center;
+            display: block; color:#00a1cd;
+        }
+        .footer ul{
+            height:100%;
+            border-top:2px solid #ccc;
+        }
+        .footer ul li{
+            width:25%; float:left; text-align: center;
+            height:100%;
+        }
+        .footer ul li img{
+            width:23px;
+        }
+        .morebox{
+            text-align: center; height:0; width:100%;
+            overflow: hidden;
+        }
+        .morebox img{
+            width:32px; height:32px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var oDiv=document.querySelectorAll('.conntent')[0];
+            var oMB=document.querySelectorAll('.morebox')[0];
+            var H=-oDiv.offsetHeight-180;
+            var x=0;
+            var y=0;
+            var dl='';
+            oDiv.addEventListener('touchstart',function(ev){
+                oDiv.style.transition='none';
+                var downY=ev.targetTouches[0].pageY;
+                var disY=downY-y;
+                function fnMove(ev){
+                    y=ev.targetTouches[0].pageY-disY;
+                    if(y<60&&y>0){
+                        oMB.style.height=y+'px';
+                    }
+                    if(y<0&&y>H){
+                        oDiv.style.transform='translate3d('+x+'px,'+y+'px,0)';
+                        oDiv.style.webkitTransform='translate3d('+x+'px,'+y+'px,0)';
+                    }
+                }
+                function fnEnd(ev){
+                    if(y>0){
+                        y=0;
+                        oMB.style.height=0;
+                        oMB.style.transition='0.2s all ease';
+                    }
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                ev.preventDefault();
+            },false)
+        },false);
+    </script>
+</head>
+<body>
+    <div id="ming">
+        <header class="header">
+            <div class="top">
+                <div class="top1"><img src="img/top1.png"/></div>
+                <div class="top3">9:00</div>
+                <div class="top2"><img src="img/top2.png"/></div>
+            </div>
+            <div class="soso">
+                <h1>log</h1>
+                <div class="TXT">
+                    <input type="text" placeholder="搜索目的、帖子、景点">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <div class="morebox">
+            <img src="img/roller.gif"/>
+        </div>
+        <div class="conntent">
+            <div class="Img"><img src="img/1.png"/></div>
+            <ul class="nav">
+                <li><img src="img/nav1.png"/><a href="javaScript:;">看攻略</a></li>
+                <li><img src="img/nav1.png"/><a href="javaScript:;">抢折扣</a></li>
+                <li><img src="img/nav1.png"/><a href="javaScript:;">订酒店</a></li>
+                <li><img src="img/nav1.png"/><a href="javaScript:;">我在那</a></li>
+            </ul>
+            <div class="play">
+                <h3>旅游推荐</h3>
+                <div class="clearfix">
+                    <a href="javaScript:;" class="play1"><img src="img/play1.png"/></a>
+                    <a href="javaScript:;" class="play2"><img src="img/play2.png"/></a>
+                    <a href="javaScript:;" class="play2"><img src="img/play2.png"/></a>
+                </div>
+            </div>
+            <div class="last">
+                <h3>折扣游</h3>
+                <ul class="clearfix">
+                    <li class="liLine">
+                        <a href="javaScript:;" class=""><img src="img/play3.png"/></a>
+                        <p>塞班岛5-6天（三天跟团欢乐自由行）</p>
+                        <div class="clearfix">
+                            <b class="fl">4.7折</b>
+                            <b class="fr">5669元/起</b>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javaScript:;" class=""><img src="img/play3.png"/></a>
+                        <p>塞班岛5-6天（三天跟团欢乐自由行）</p>
+                        <div class="clearfix">
+                            <b class="fl">4.7折</b>
+                            <b class="fr">5669元/起</b>
+                        </div>
+                    </li>
+                    <li class="liLine">
+                        <a href="javaScript:;" class=""><img src="img/play3.png"/></a>
+                        <p>塞班岛5-6天（三天跟团欢乐自由行）</p>
+                        <div class="clearfix">
+                            <b class="fl">4.7折</b>
+                            <b class="fr">5669元/起</b>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javaScript:;" class=""><img src="img/play3.png"/></a>
+                        <p>塞班岛5-6天（三天跟团欢乐自由行）</p>
+                        <div class="clearfix">
+                            <b class="fl">4.7折</b>
+                            <b class="fr">5669元/起</b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="javaScript:;" class="More">查看全部 &gt</a>
+            <footer class="footer">
+                <ul>
+                    <li><img src="img/footer1.png"/></li>
+                    <li><img src="img/footer1.png"/></li>
+                    <li><img src="img/footer1.png"/></li>
+                    <li><img src="img/footer1.png"/></li>
+                </ul>
+            </footer>
+        </div>
+
+
+    </div>
+</body>
+</html>

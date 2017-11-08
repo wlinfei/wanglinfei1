@@ -1,0 +1,5 @@
+body{background:#F3EFEF}
+.more_content{width:100%;box-sizing: border-box;padding:5%}
+.more_content p{margin:0;width:100%;height:60px;line-height: 60px;background:#fff;border-radius: 5px;border:1px solid #D3D3D3;box-sizing: border-box;padding-left:10%;padding-right:5%;color:#767676;font-size: 18px;font-weight: 900;}
+.more_content p .mm{display:block;float:right;margin-top:20px}
+.more_content .fen{margin-bottom:20px;}

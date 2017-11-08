@@ -1,0 +1,10 @@
+/*.shirt_center{display:block;color:#fff;font-size: 25px;font-weight: 900;margin-left:15px;float:left;height:65px;line-height: 65px;width:100%;position:fixed;text-align: center;background:black}*/
+body{background:#F3EFEF;}
+.shirt_center{text-align: center;color:#fff;line-height: 65px;}
+.shirt_center .s_te{font-size: 25px;font-weight: 900;}
+.shirt_content{box-sizing:border-box;padding:2.5% 0 0 2.5%;width:100%;min-height:100%;overflow: hidden;}
+.shirt_content .con{margin-right:2.5%;margin-bottom:2.5%;width:30%;float:left;overflow: hidden;}
+.shirt_content .con img{width:100%;height:100px}
+.shirt_content .con .s_text{display:block;color:#6F6F6F;width:100%;box-sizing: border-box;padding:4% 4% 0 4%;text-align: center;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.shirt_content .con .s_price{color:#FDAF13;text-align: center;}
+.shirt_content .loding{position:fixed;width:40%;height:40%;left:30%;top:20%;}

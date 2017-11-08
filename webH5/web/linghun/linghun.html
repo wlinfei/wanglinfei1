@@ -1,0 +1,614 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="bass.css"/>
+<style>
+body{background:url(img/con_bg.jpg) no-repeat center 55px #1C1A25;}
+.dzyhl2{width:31px; height:122px; background:url(img/changyou1.png); position:fixed; left:0;top:50%; margin-top:-80px; cursor:pointer;}
+/*top*/
+.TOP{main-with:1000px; background:#F8F7F7;}
+.top{background:#F8F7F7; font-weight:bold;}
+.top h1 a{ width:87px; height:36px; background:url(img/xiaologo.png) no-repeat; padding-right:13px; margin:7px 0 7px 13px; border-right:1px solid #ccc; display:block; text-indent:-999px;}
+.top .kf a{line-height:50px; border-right:1px solid #ccc; padding-left:25px; padding-right:15px;}
+.top .kf a span{ border:4px solid transparent; border-top:4px solid #000; margin-left:5px; margin-top:23px;}
+.top .kf .a1{padding-left:29px; padding-right:17px; border-left:1px solid #ccc;}
+.top .kf .a3{margin-right:10px;}
+.top .zc a{margin:0 10px; line-height:50px;}
+.top .zc a span{width:24px; height:24px; background:url(img/xubitu.png); margin-top:11px; margin-right:6px;}
+.top .zc .a2 span{background-position:-40px 0;}
+.top .zc .a3 span{background-position:-80px 0;}
+.bjx{height:5px;  background:url(img/cy1.png); min-width:1000px;}
+/*header-main*/
+.mainnav{top:0; left:0;}
+.mainnav h1 a{width:186px; height:63px; background:url(img/xubitu.png) 0 -40px; display:block; margin-top:21px; text-indent:-999px; margin-left:3px; margin-right:25px;}
+.mainnav ul li{margin-top:36px; margin-left:19px; opacity:0.8;}
+.mainnav ul li .a1{padding:0 5px; line-height:19px; font-size:16px; display:block; color:#FFF;}
+.mainnav ul li .a2{ line-height:11px; text-align:center; display:block; color:#FFF;}
+.dzyhl{width:31px; height:122px; background:url(img/changyou1.png); position:absolute; left:0; top:245px; opacity:0.6; cursor:pointer;}
+.yxxz .yxxz-l .a1{width:215px; height:108px; border-top:1px solid #000; border-bottom:1px solid #000; background:url(img/xubitu.png) 0 -120px; text-align:center;}
+.yxxz .yxxz-l .a1 span{color:#FFF; font-size:33px; font-weight:bold; display:block; margin-top:34px;}
+.yxxz .yxxz-l .a1 i{ color:#FFF; margin-top:6px;}
+.yxxz-l .a{border-top:1px solid #000; border-bottom:1px solid #000; line-height:71px; padding-top:37px; text-align:center; width:101px; height:71px;background:url(img/xubitu.png) -216px -120px; color:#FFF; opacity:0.8;}
+.yxxz-r{ width:381px; height:109px; background:url(img/sever.png) no-repeat 13px 7px #1B1924;}
+.yxxz-r .s1{ top:13px; left:97px; }
+.yxxz-r .s1 a{line-height:22px; color:#fff; }
+.yxxz-r .s2{ width:381px; height:43px; background:url(img/xy3.png);left:0; bottom:0; line-height:42px;}
+.yxxz-r .s2 .i1{margin-left:6px; color:#FFF;}
+.yxxz-r .s2 .i1 b{color:red; text-decoration:underline;}
+.yxxz-r .s2 .a1{width:14px; height:14px; background:url(img/xubitu.png)-120px 0; margin:14px 3px 0;}
+.yxxz-r .s2 .i2{ color:#FFF; margin-left:25px; margin-right:10px;}
+.yxxz-r .s2 .a2{ width:41px; height:41px; background:url(img/xubitu.png) -249px -3px; margin-left:5px;}
+/*main-a1*/
+.main-a1l .d1{top:10px; left:10px;}
+.main-a1l a img{border:1px solid #630; border-right:none;}
+.main-a1l .d1 .a1{width:27px; height:63px; background:url(img/xubitu.png) 0 -249px; margin-bottom:10px;}
+.main-a1l .d2{bottom:10px; right:12px; }
+.main-a1l .d2 i{ width:15px; height:15px; border-radius:7px; background:#3A3E47; margin-left:3px; display:block; float:left; cursor:pointer;}
+.main-a1l .d2 .cur{background:#F03;}
+.main-a1r{width:381px; border:1px solid #1D2025;background:#322e3f;}
+.main-a1r .shang{ width:381px; height:57px; background:url(img/xy5.png);}
+.main-a1r .shang .a1{width:94px; line-height:56px; border-bottom:1px solid #333; text-align:center; font-size:14px; font-family:"黑体"; color:#fff;}
+.main-a1r .shang .cur,.main-a1r .shang a:hover{background:url(img/xy6.png);}
+.main-a1r .gg{top:75px; left:17px; width:347px; height:35px; background:url(img/xy7.png); }
+.main-a1r .gg a{font-size:16px; font-family:"黑体"; color:#fe4100; line-height:35px; padding-left:43px;}
+.main-a1r .ul1{margin:56px 18px 17px 24px; line-height:26px; font-size:14px; font-family:"黑体"; color:#9ca7ca;}
+.main-a1r .ul1 li a{color:#9ca7ca; margin-left:7px;}
+.main-a1r .ul1 .gd {line-height:18px;}
+.main-a1r .ul1 .gd span{width:13px; height:13px; background:url(img/xubitu.png) -82px -249px; margin-top:3px;}
+/*main-a2*/
+.main-a2{background:#1B1924;}
+.main-a2 a{margin:33px 8px 31px 0; border-left:1px solid #433B4F; border-right:1px solid #433B4F;}
+.main-a2 .a4{margin-right:0;}
+/*职业介绍*/
+.zyjs{background:#1B1924;}
+.zyjs-l{border:1px solid #433B4F; margin-right:20px; margin-bottom:30px;}
+.zyjs-l .d1{width:656px; height:59px; background:url(img/xy9.png);}
+.zyjs-l .d1 a{font-size:16px; width:130px; line-height:59px; text-align:center; color:#FFF;}
+.zyjs-l .d1 .cur,.zyjs-l .d1 a:hover{background:url(img/xy10.png);}
+.hdzx{width:322px; margin-bottom:10px;}
+.hdzx h4{background:url(img/xubitu.png) -105px -249px; font-size:20px; color:#f3ca90; line-height:32px; margin-bottom:14px; padding-left:42px;}
+.hdzx .nws span{height:37px; left:0; bottom:0; position:absolute; background:#000; opacity:0.4; width:322px;}
+.hdzx .nws i{line-height:37px; font-size:14px; margin-left:6px; color:#fff; position:absolute; left:0; bottom:0; }
+.zyjs-r ul li{width:319px; height:25px; background:url(img/xy13.png); margin-bottom:3px;}
+.zyjs-r ul li a{color:#a6b2d8; line-height:25px; padding-left:28px;}
+.zyjs-r ul li i{width:55px; color:#a6b2d8; line-height:25px; text-align:center;}
+/*main-a4*/
+.main-a4{background:#1B1924;padding-bottom:8px;}
+.main-a4l{margin-right:20px; width:215px;}
+.main-a4l .kjrk{background:url(img/xy14.png); padding-left:2px; padding-bottom:18px; margin-bottom:23px;}
+.main-a4l .kjrk dt{line-height:42px; text-align:center; font-size:16px; color:#dbca90; margin-bottom:16px; width:215px;}
+.main-a4l .kjrk dd{padding-left:22px; line-height:28px; width:64px; float:left;}
+.main-a4l .kjrk dd span{width:2px; height:2px; background:#9587ab; margin-top:13px;}
+.main-a4l .kjrk dd a{float:left; font-size:14px; color:#9587ab;}
+.main-a3{margin-bottom:20px;}
+.main-a3 .s1{width:9px; height:15px; background:url(img/next.png); left:4px; top:114px;}
+.main-a3 .s2{width:9px; height:15px; background:url(img/prev.png); right:4px; top:114px;}
+.main-a3 .s3{width:205px; height:36px; background:url(img/xy16.png); display:block; margin-top:4px; margin-left:4px;}
+.main-a3 .s3 a{margin-left:50px; line-height:36px; font-size:16px; color:#b1a1ca; display:block; }
+/*玩家交流*/
+.wjjl{ width:423px; margin-right:20px; height:346px; margin-bottom:22px;}
+.wjjl h3 span{width:49px; height:31px; background:url(img/xubitu.png) -92px -283px; }
+.wjjl h3 i{line-height:30px; font-size:20px; color:#f3ca90; margin-bottom:11px;}
+.wjjl .gl a{ width:104px; line-height:46px; border:1px solid #322B3C; margin-left:-1px; font-size:14px; color:#a295b7; text-align:center;}
+.wjjl .gl .a4{border-top:none; border-right:none;line-height:46px; width:108px;}
+.wjjl .gl .a4 span{width:13px; height:13px; background:url(img/xubitu.png) -81px -249px; margin:16px 3px 18px 20px;}
+.wjjl .gl .cur,.wjjl .gl .a1:hover{ background:#322B3C; color:#FFF; font-weight:bold;}
+.wjjl .gl1 .nei{ width:424px; height:260px; background:#322B3C; position:absolute; top:46px; left:-1px;}
+.wjjl .gl1 .nei .aa1{margin:23px 18px 0 16px;}
+.wjjl .gl1 .nei ul{margin-top:21px;}
+.wjjl .gl1 .nei ul li a{display:inline-block; line-height:26px; font-size:14px; color:#a295b7; width:240px;}
+/*游戏资料*/
+.yxzl{width:322px; margin-bottom:22px;}
+.yxzl h3 span{width:28px; height:31px; background:url(img/xubitu.png) -327px -11px; margin-right:15px;}
+.yxzl h3 i{line-height:30px; font-size:20px; color:#f2c27e; margin-bottom:11px;}
+.yxzl ul{ border:1px solid #594F67; color:#FFF; padding:0 17px; width:286px; background:#26212D;}
+.yxzl ul li{margin-top:3px; border-bottom:1px dashed #9587ab; }
+.yxzl ul li .s1{width:78px; height:26px; background:url(img/xy19.png);   margin-right:20px; margin-top:13px;}
+.yxzl ul li .s1 i{width:70px; line-height:26px; text-align:center; font-size:14px; display:block;}
+.yxzl ul li a{float:left; font-size:14px; color:#9587ab;line-height:55px;}
+.yxzl ul li b{ float:left; width:2px; height:15px; background:#9587ab; margin:20px 3px;}
+.yxzl ul .li4{border:none;}
+.yxzl ul .li5{width:279px; height:39px; margin-top:5px; border:3px solid #4B3F5C; margin-bottom:18px; }
+.yxzl ul .li5 .a4{font-size:22px; color:#b1a1ca; line-height:39px; text-align:center; width:279px;}
+/*媒体专区*/
+.mtzq{ width:423px; margin-right:20px; height:370px;}
+.mtzq h3 span{width:43px; height:31px; background:url(img/xubitu.png) -383px -11px; margin-top:17px;}
+.mtzq h3 i{line-height:62px; font-size:20px; color:#f3ca90;}
+.mtzq .gl a{ width:104px; line-height:46px; border:1px solid #322B3C; margin-left:-1px; font-size:14px; color:#a295b7; text-align:center;}
+.mtzq .gl .a4{border-top:none; border-right:none;line-height:46px; width:108px;}
+.mtzq .gl .a4 span{width:13px; height:13px; background:url(img/xubitu.png) -81px -249px; margin:16px 3px 18px 20px;}
+.mtzq .gl .cur,.mtzq .gl .a1:hover{ background:#322B3C; color:#FFF; font-weight:bold;}
+.mtzq .gl1 .nei{ width:424px; height:260px; background:#322B3C; position:absolute; top:46px; left:-1px;}
+.mtzq .gl1 .nei .aa1{margin:23px 18px 0 16px;}
+.mtzq .gl1 .nei ul{margin-top:21px;}
+.mtzq .gl1 .nei ul li a{display:inline-block; line-height:26px; font-size:14px; color:#a295b7; width:240px;}
+/*视觉欣赏*/
+.sjxs{width:322px;}
+.sjxs h3 .ss1{width:33px; height:31px; background:url(img/xubitu.png) -450px -11px; margin-top:17px; margin-right:11px;}
+.sjxs h3 i{ line-height:62px; font-size:20px; color:#f3ca90;}
+.sjxs .inin .bta{ width:104px; height:46px; border-left:1px solid #433B4F; border-top:1px solid #433b4f; text-align:center; line-height:46px; font-size:14px; color:#a295b7; display:block;}
+.sjxs .inin .a3{border-top:none; width:111px;}
+.sjxs .inin .a3 b{ width:13px; height:13px; background:url(img/xubitu.png) -82px -249px; margin:16px 2px 0 20px;}
+.sjxs .inin ul{ width:320px; height:257px; left:0; top:46px; border:1px solid #433B4F; display:none; background:#322B3C;}
+.sjxs .inin .div .bta,.sjxs .inin .bta:hover{background:#322B3C; color:#FFF; position:relative; z-index:10;}
+.sjxs .inin .div ul,.sjxs .inin div:hover ul{display:block;}
+.sjxs .inin ul li a{display:block; margin:23px 10px 0;}
+/*footer*/
+.footer{background:#1B1924; text-align:center;}
+.footer .d1 .s1{ width:348px; height:1px; background:#908C9B; display:inline-block;}
+.footer .d1 .s2{width:29px; height:13px; background:url(img/xy22.png); display:inline-block; margin-bottom:-7px;}
+.footer .d1 .s4{width:29px; height:13px; background:url(img/xy23.png); display:inline-block;margin-bottom:-7px;}
+.footer .d1 .s3{font-size:16px; color:#908c9b; display:inline-block; line-height:16px;}
+.footer .d2{padding:14px 0 22px; font-size:16px; line-height:31px; color:#908c9b;}
+.sss{margin-bottom:-15px;}
+.footer2{background:#181818; padding-top:10px; text-align:center; color:#FFF; padding:25px 0 27px;}
+.footer2 i{ display:inline-block;}
+.footer2 .i4 p{text-align:left;font-size:10px; color:#666; line-height:24px;}
+.footer2 .i1{width:48px; height:52px; background:url(img/xy25.png); margin-bottom:-15px; margin-right:5px;}
+.footer2 .i3{width:30px; height:38px; background:url(img/xy26.png); margin-left:20px; margin-right:15px;}
+.foot{main-width:1000px; background:#181818;}
+</style>
+</head>
+<body>
+	<span class="dzyhl2"></span>
+	<!--top-->
+    <div class="TOP">
+        <div class="clearfix w top">
+            <h1 class="fl"><a href="http://www.changyou.com/">畅游</a></h1>
+            <div class="fr kf clearfix">
+                <a href="#" class="fl clearfix a1">
+                    <i class="fl">客服</i>
+                    <span class="fl"></span>
+                </a>	
+                <a href="#" class="fl clearfix">
+                    <i class="fl">畅游全服务</i>
+                    <span class="fl"></span>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                    <i class="fl">畅游全游戏</i>
+                    <span class="fl"></span>
+                </a>
+            </div>
+            <div class="zc clearfix fr">
+                <a href="#" class="fl clearfix">
+                    <span class="fl"></span>
+                    <i class="fl">注册</i>
+                </a>
+                <a href="#" class="fl clearfix a2">
+                    <span class="fl"></span>
+                    <i class="fl">充值</i>
+                </a>
+                <a href="#" class="fl clearfix a3">
+                    <span class="fl"></span>
+                    <i class="fl">畅游+</i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bjx "></div>
+    <!--header-main-->
+    <div class="header-main w pr">
+        <a href="#" class="k"><img src="img/header.png"/></a>
+        <div class="w clearfix mainnav pa">
+            <h1 class="fl"><a href="##">灵魂回响</a></h1>
+            <ul class="fr clearfix">
+                <li class="fl">
+                    <a href="#" class="a1">首页</a>
+                    <a href="#" class="a2">HOME</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">新闻公告</a>
+                    <a href="#" class="a2">NEWS</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">游戏特色</a>
+                    <a href="#" class="a2">FFATURES</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">新手指南</a>
+                    <a href="#" class="a2">NEWBIE</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">首页</a>
+                    <a href="#" class="a2">HOME</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">新闻公告</a>
+                    <a href="#" class="a2">NEWS</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">游戏特色</a>
+                    <a href="#" class="a2">FFATURES</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">新手指南</a>
+                    <a href="#" class="a2">NEWBIE</a>
+                </li>
+                <li class="fl">
+                    <a href="#" class="a1">新手指南</a>
+                    <a href="#" class="a2">NEWBIE</a>
+                 </li>
+            </ul>
+        </div>
+        <span class="dzyhl"></span>
+		<div class="yxxz clearfix">
+        	<div class="yxxz-l fl">
+            	<a href="3" class="a1 fl">
+                	<span>游戏下载</span>
+                    <i>DOWNLOAD</i>
+                </a>
+                <a href="#" class="a a2 fl">账号注册</a>
+                <a href="#" class="a a3 fl">账号充值</a>
+                <a href="#" class="a a4 fl">兑换中心</a>
+                <a href="#" class="a a5 fl">新手指南</a>
+      		 </div>
+            <div class="yxxz-r fl pr">
+            	<span class="s1 pa">
+                	<a href="#" class="k">电信一区 <i class="red">【元素殿堂】</i> 欢迎进驻</a>
+                    <a href="#" class="k">电信一区 <i class="red">【元素殿堂】</i> 欢迎进驻</a>
+                </span>
+                <span class="s2 pa clearfix">
+                	<i class="fl i1">距离你上次访问有<b>200</b>条更新</i>
+                    <a href="#" class="fl a1"></a>
+                    <i class="fl i2">关注:</i>
+                    <a href="#" class="a2 fl"></a>
+                    <a href="#" class="a2 fl"></a>
+                    <a href="#" class="a2 fl"></a>
+                </span>
+            </div> 
+       	</div>
+    </div>
+    <!--main-a1-->
+    <div class="main-a1 w clearfix">
+    	<div class="main-a1l fl pr">
+        	<a href="#" class="k"><img src="img/xy4.png"/></a>
+            <div class="d1 pa">
+            	<a href="#" class="a1 k"></a>
+                <a href="#" class="a1 k"></a>
+            </div>
+            <div class="d2 pa clearfix">
+            	<i class="cur"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="main-a1r fl pr">
+        	<div class="shang clearfix">
+            	<a href="#" class="fl a1">综合</a>
+                <a href="#" class="fl a1 cur">综合</a>
+                <a href="#" class="fl a1">综合</a>
+                <a href="#" class="fl a1">综合</a>
+            </div>
+            <span class="gg pa">
+            	<a href="#" class="k">4月8日积极十点多；哈德好说的</a>
+            </span>
+            <ul class="ul1">
+            	<li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix">
+                	<i class="fl">【新闻】</i>
+                    <a href="#" class="fl">还是科技的活动回复刘德华</a>
+                    <b class="fr">08/06</b>
+                </li>
+                <li class="clearfix gd">
+                	<a href="#" class="fr">更多信息</a>
+                	<span class="fr"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--main-a2-->
+    <div class="w clearfix main-a2">
+    	<a href="#" class="fl"><img src="img/xy8.png"/></a>
+        <a href="#" class="fl"><img src="img/xy8.png"/></a>
+        <a href="#" class="fl"><img src="img/xy8.png"/></a>
+        <a href="#" class="fl a4"><img src="img/xy8.png"/></a>	
+    </div>
+    <!--职业介绍-->
+    <div class="zyjs w clearfix">
+    	<div class="zyjs-l fl">
+        	<div class="clearfix d1">
+            	<a href="#" class="fl">神射手</a>
+                <a href="#" class="fl">神射手</a>
+                <a href="#" class="fl">神射手</a>
+                <a href="#" class="fl cur">战士</a>
+                <a href="#" class="fl">神射手</a>
+            </div>
+            <a href="#" class="k"><img src="img/xy11.png"/></a>
+        </div>
+        <div class="fl zyjs-r">
+            <div class="hdzx">
+                <h4>活动中心</h4>
+                <div class="nws pr">
+                    <a hef="#" class="k"><img src="img/xy12.png"/></a>
+                    <span></span>
+                    <i>女武神的密宝</i>
+                </div>
+            </div>
+            <ul>
+            	<li class="clearfix">
+                    <a href="#" class="fl">神谕者的成长礼</a>
+                    <i class="fr">进行中</i>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">神谕者的成长礼</a>
+                    <i class="fr">进行中</i>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">神谕者的成长礼</a>
+                    <i class="fr">进行中</i>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">神谕者的成长礼</a>
+                    <i class="fr">进行中</i>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">神谕者的成长礼</a>
+                    <i class="fr">进行中</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--main-a4-->
+    <div class="main-a4 clearfix w">
+    	<div class="main-a4l fl">
+        	<dl class="kjrk clearfix">
+            	<dt class="fl">快捷入口</dt>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+                <dd class="clearfix">
+                	<span class="fl"></span>
+                    <a href="#">账号管理</a>
+                </dd>
+            </dl>
+            <div class="main-a3 pr">
+            	<a href="#" class="k"><img src="img/xy15.png"/></a>
+                <span class="pa s1"></span>
+                <span class="pa s2"></span>
+                <span class="s3">
+                	<a href="#">媒体合作区</a>
+                </span>
+            </div>
+            <a href="#" class="k"><img src="img/xy17.png"/></a>
+        </div>
+        <!--玩家交流-->
+        <div class="fl wjjl">
+        	<h3 class="clearfix">
+             	<span class="fl"></span>
+                <i class="fl">玩家交流</i>
+            </h3>
+            <div class="gl clearfix">
+            	<div class="fl gl1 pr">
+                    <a href="#" class="cur k">玩家攻略 </a>
+                    <div class="nei clearfix">
+                    	<a href="#" class="fl aa1"><img src="img/xy18.png"/></a>
+                        <ul class="fl">
+                        	<li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="fl a1">玩家攻略</a>
+                <a href="#" class="fl a1">玩家攻略</a>
+                <a href="#" class="fl a4 clearfix a1">
+                	<span class="fl"></span>
+                    <i class="fl">玩家攻略</i>
+                </a>
+            </div>
+        </div>
+        <!--游戏资料-->
+        <div class="yxzl fl">
+        	<h3 class="clearfix">
+            	<span class="fl"></span>
+                <i class="fl">游戏资料</i>
+            </h3>
+            <ul>
+            	<li class="clearfix">
+                	<span class="fl s1">
+                    	<i>新手入门</i>
+                    </span>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl s1">
+                    	<i>新手入门</i>
+                    </span>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                </li>
+                <li class="clearfix">
+                	<span class="fl s1">
+                    	<i>新手入门</i>
+                    </span>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                </li>
+                <li class="clearfix li4">
+                	<span class="fl s1">
+                    	<i>新手入门</i>
+                    </span>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                    <b></b>
+                    <a href="#">注册账号</a>
+                </li>
+                <li class="li5">
+                	<a href="#" class="k a4">进入资料站</a>
+                </li>
+            </ul>
+        </div>
+        <!--媒体专区-->
+        <div class="fl mtzq">
+        	<h3 class="clearfix">
+             	<span class="fl"></span>
+                <i class="fl">媒体专区</i>
+            </h3>
+            <div class="gl clearfix">
+            	<div class="fl gl1 pr">
+                    <a href="#" class="cur k">17173 </a>
+                    <div class="nei clearfix">
+                    	<a href="#" class="fl aa1"><img src="img/xy20.png"/></a>
+                        <ul class="fl">
+                        	<li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="fl a1">新浪爱问</a>
+                <a href="#" class="fl a1">太平洋游戏</a>
+                <a href="#" class="fl a4 clearfix a1">
+                	<span class="fl"></span>
+                    <i class="fl">玩家攻略</i>
+                </a>
+            </div>
+        </div>
+        <!--视觉欣赏-->
+        <div class="sjxs fl">
+        	<h3 class="clearfix">
+            	<span class="ss1 fl"></span>
+                <i class="fl">视觉欣赏</i>
+            </h3>
+            <div class="inin clearfix">
+            	<div class="fl pr div">
+                	<a href="#" class="bta">游戏视频</a>
+                    <ul class="pa clearfix">
+                    	<li class="fl">
+                        	<a href="#"><img src="img/xy21.png"/></a>
+                        </li>
+                        <li class="fl">
+                        	<a href="#"><img src="img/xy21.png"/></a>
+                        </li>
+                        <li class="fl">
+                        	<a href="#"><img src="img/xy21.png"/></a>
+                        </li>
+                        <li class="fl">
+                        	<a href="#"><img src="img/xy21.png"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fl pr">
+                	<a href="#" class="bta">游戏视频</a>
+                    <ul class="pa">
+                    
+                    </ul>
+                </div>
+                <div class="fl pr">
+                	<a href="#" class="bta a3 clearfix">
+                    	<b class="fl"></b>
+                        <i class="fl">更多信息</i>
+                    </a>
+                    <ul class="pa">
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="w footer">
+    	<div class="d1 clearfix">
+        	<span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3">健康游戏公告</span>
+            <span class="s4"></span>
+            <span class="s1"></span>
+        </div>
+        <div class="d2">
+        <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活</p>
+        <p>本游戏适合18周岁以上的成年人用户，未满18周岁的未成年用户请在家长的监督下进行游戏。</p>
+        </div>
+        <span class="k sss"><img src="img/xy24.png"/></span>
+    </div>
+    <div class="foot">
+    <div class="w footer2">
+    	<i class="i1"></i>
+        <i>
+        	<p>畅游</p>
+            <p>changyou</p>
+        </i>
+        <i class="i3"></i>
+        <i class="i4">
+        	<p>北京畅游时代数码技术有限公司版权所有 COPYRIGHT © 2014 CHANGYOU.COM LIMITED. ALL RIGHTS RESERVED</p>
+
+<p>京网文[2014]0949-249号 | 京ICP证：070525</p>
+        </i>
+    </div>
+    </div>
+</body>
+</html>

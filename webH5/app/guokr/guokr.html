@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="bass.css">
+    <style>
+        .guokr-warp{
+            width:16rem;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            margin:0 auto;
+            height:100%;
+        }
+        .header{
+            width:16rem;
+            height:2.25rem; background:url("img/bg.png");
+            display: -webkit-box; position: fixed;
+            top:0; left:50%; margin-left:-8rem;
+            z-index: 10;
+        }
+        .header .nav,.header .pc{
+            width:2.5rem; height:100%;
+        }
+        .header .nav a,.header .pc a{
+            width:2.5rem; height:100%;background:url("img/nav.png");
+            display:block; background-size:contain;
+        }
+        .header .pc{
+            width:2.5rem; height:100%;
+        }
+        .header .pc a{
+            background:url("img/pc.png");background-size:contain;
+        }
+        .header .title{
+            -webkit-box-flex: 1; line-height:2.25rem;text-align:center;
+            font-size:1rem; color:#fff;
+        }
+        .section{
+            -webkit-box-flex: 1;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            margin-top:2.25rem;
+        }
+        .section .gradient{
+            width:100%; height:0.25rem; display: block;
+            background:linear-gradient(#c2fef2,#63bba5 2px,#70baa9);
+        }
+        .section .contains{
+            -webkit-box-flex: 1;
+        }
+        .section .contains .user{
+            width:16rem; background:#fafafa; height:2rem;
+        }
+        .section .contains .user .line{
+            width:2px; height:1.5rem; background:#999; margin-top:0.2rem;
+        }
+        .section .contains .user .add{
+            width:calc(8rem - 2px);
+        }
+        .section .contains .user .add span{
+            width:1.5rem; height:1.5rem; background:url("img/add.png");
+            background-size:contain; margin:0.4rem 0.5rem 0 1.45rem;
+        }
+        .section .contains .user .add b{
+            line-height:2rem; font-size:0.5rem;
+        }
+        .section .contains .user .login{
+            width:8rem;
+        }
+        .section .contains .user .login span{
+            width:1.5rem; height:1.5rem; background:url("img/add.png");
+            background-size:contain; margin:0.4rem 0.5rem 0 1.45rem;
+        }
+        .section .contains .user .login b{
+            line-height:2rem; font-size:0.5rem;
+        }
+        .section .contains .news{
+            width:16rem; background:#ffffff;
+        }
+        .section .contains .news1{
+            overflow: hidden; width:16rem;
+        }
+        .section .contains .news1 ul{
+            width:112rem; overflow: hidden;
+            transform:translateX(-16rem); height:7.75rem;
+            -webkit-transform:translateX(-16rem);
+        }
+        .section .contains .news1 ul li{
+            width:16rem; line-height:7.75rem;
+            text-align: center; color:#fff; float:left;
+            font-size:2.5rem;
+        }
+        .section .contains .news1 ul li img{
+            width:16rem; display: block;
+        }
+        .section .contains .news1 .dd{
+            width:calc(16rem - 0.8rem); line-height:2rem;
+            margin:0 0.4rem; border-bottom:2px solid #ccc;
+            font-size:0.75rem; font-weight:bold;
+        }
+        .section .contains .news1 .dd a{
+            margin-left:5px; width:13rem;display: block;
+            white-space:nowrap ; text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .section .contains .news1 .last{
+            border:none;
+        }
+        .section .contains .news .hot_ask{
+            width:16rem;
+        }
+        .section .contains .news .hot_ask {
+            width:16rem;
+        }
+        .section .contains .news .hot_ask .top{
+            width:16rem; height:2rem;border-top:0.15rem solid #54c1ac;
+            border-bottom:1px solid #ccc;
+        }
+        .section .contains .news .hot_ask .top h3{
+            line-height:2rem; margin-left:0.75rem;
+        }
+        .section .contains .news .hot_ask .top a{
+            width:1.5rem; height:1.5rem; background:url("img/hot1.png");
+            background-size:contain; margin:0.25rem 0.75rem 0 0;
+        }
+        .section .contains .news .hot_ask .move{
+            width:16rem; overflow: hidden; font-size:0.7rem;
+        }
+        .section .contains .news .hot_ask .move_top{
+            width: 16rem;
+            height:2.05rem; border-bottom:2px solid #ccc;
+        }
+        .section .contains .news .hot_ask .move_top a{
+            line-height:2rem; width:3.1rem; text-align: center;
+        }
+        .section .contains .news .hot_ask .move_top .active{
+            border-bottom:4px solid #cd3750;
+        }
+        .section .contains .news .hot_ask .move_down{
+            width:64rem; overflow: hidden;
+        }
+        .section .contains .news .hot_ask .move_down ul{
+            width:16rem; float:left;
+        }
+        .section .contains .news .hot_ask .move_down .ul2{
+            width:16rem; height:100%;text-align: center; font-size:50px;
+        }
+        .section .contains .news .hot_ask .move_down ul li{
+            margin:0 0.4rem; width:calc(16rem - 0.8rem);
+            border-bottom:1px solid #ccc;
+        }
+        .section .contains .news .hot_ask .move_down ul .last{
+            border-bottom:none; height:2rem;
+        }
+        .section .contains .news .hot_ask .move_down ul li a{
+            line-height:2rem; width:100%;
+            white-space:nowrap; text-overflow: ellipsis;
+            overflow: hidden; font-weight:bold; margin-left:4px;
+        }
+        .section .contains .news .hot_ask .move_down ul .first .p1{
+            line-height:2rem;font-weight:bold; margin-left:4px;
+        }
+        .section .contains .news .hot_ask .move_down ul .first .p2 a{
+            width:5.2rem; margin-bottom:0.8rem; margin-right:0.65rem;
+        }
+        .section .contains .news .hot_ask .move_down ul .first .p2 img{
+            width:5.2rem;
+        }
+        .section .contains .news .hot_ask .move_down ul .first .p2 span{
+            width:8.1rem; line-height:1.25rem; font-size:0.6rem;
+        }
+        .footer{
+            height:3.75rem; background:url("img/bg.png");
+            display: -webkit-box;
+        }
+        .footer .line{
+            width:0.25rem; height:2rem; margin-top:0.75rem;
+            background:url("img/line.png");
+        }
+        .footer .PC,.footer .app{
+            -webkit-box-flex: 1;color:#fff;
+        }
+        .footer .PC span{
+            width:1.5rem; height:1.35rem;background: url("img/footer.png");
+            float: left; background-size:contain ; margin-top:1.25rem; margin-right:0.5rem; margin-left:2rem;
+        }
+        .footer .PC b{
+            float: left; line-height:1.35rem;margin-top:1.25rem;
+            width:2rem;
+        }
+        .footer .app span{
+            width:1.5rem; height:1.35rem;background: url("img/footer2.png");
+            float: left; background-size:contain ; margin-top:1.25rem; margin-right:0.5rem; margin-left:1.5rem;
+        }
+        .footer .app b{
+            float: left; line-height:1.35rem;margin-top:1.25rem;
+            width:2.5rem;
+        }
+        .res {
+            width:16rem; border-top:2px solid #ccc;
+            height:3rem;
+        }
+        .res a{
+            width:5rem; margin:0.9rem auto 0;
+            display: block;line-height:1.5rem; font-size:0.7rem;
+        }
+        .res span{
+            width:1.5rem; height:1.5rem; background:url("img/c3.png");
+            background-size:contain; margin-right:0.5rem;
+        }
+    </style>
+    <script>
+        (function(win,doc){
+            function fontSize(){
+                var font=20/320*doc.documentElement.clientWidth;
+                if(font>40){
+                    font=40;
+                }else if(font<20){
+                    font=20
+                }
+                doc.documentElement.style.fontSize=font+'px';
+            }
+            fontSize();
+            win.addEventListener('resize',fontSize,false);
+        })(window,document);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oUl=document.getElementById('swiper');
+            var aLi=oUl.children;
+            var iNow=1;
+            var x=-aLi[0].offsetWidth;
+            var bready=false;
+            oUl.addEventListener('touchstart',function(ev){
+                //alert(1);
+                if(bready){
+                    return;
+                }
+                bready=true;
+                oUl.style.transition='none';
+                oUl.style.webkitTransition='none';
+                var disX=ev.targetTouches[0].pageX-x;
+                var downX=ev.targetTouches[0].pageX;
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                }
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    var upX=ev.changedTouches[0].pageX;
+                    oUl.style.transition='0.4s all linear';
+                    oUl.style.webkitTransition='0.4s all linear';
+                    if(Math.abs(upX-downX)>100){
+                        if(upX<downX){
+                            iNow++;
+                            if(iNow==aLi.length){
+                                iNow=aLi.length-1;
+                            }
+                        }else {
+                            iNow--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                        }
+                    }
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                    function tEnd(){
+                        bready=false;
+                        oUl.style.transition='none';
+                        oUl.style.webkitTransition='none';
+                        if(iNow==aLi.length-1){
+                            iNow=1;
+                        }
+                        if(iNow==0){
+                            iNow=aLi.length-2;
+                        }
+                        x=-iNow*aLi[0].offsetWidth;
+                        oUl.style.transform='translateX('+x+'px)';
+                        oUl.style.webkitTransform='translateX('+x+'px)';
+                    }
+                    oUl.addEventListener('transitionend',tEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                ev.preventDefault();
+            },false);
+        },false);
+        document.addEventListener('DOMContentLoaded',function(){
+            function move(obj){
+                var aDiv=obj.getElementsByTagName('div');
+                var aA=aDiv[0].getElementsByTagName('a');
+                var w=aDiv[1].children[0].offsetWidth;
+                for(var i=0; i<aA.length; i++){
+                    aA[i].index=i;
+                    aA[i].addEventListener('touchstart',function(){
+                        for(var i=0; i<aA.length; i++){
+                            aA[i].classList.remove('active');
+                        }
+                        this.classList.add('active');
+                        aDiv[1].style.transition='0.4s all ease';
+                        aDiv[1].style.transform='translateX('+-this.index*w+'px)';
+                    },false);
+                }
+            }
+            var oMove=document.getElementById('move');
+            move(oMove);
+            var oMove2=document.getElementById('move2');
+            move(oMove2);
+        },false);
+    </script>
+</head>
+<body>
+    <div class="guokr-warp">
+        <header class="header">
+            <div class="nav">
+                <a href="javaScript:;"></a>
+            </div>
+            <div class="title">
+                <h2>Guokr.com</h2>
+            </div>
+            <div class="pc">
+                <a href="javaScript:;"></a>
+            </div>
+        </header>
+        <section class="section">
+            <span class="gradient"></span>
+            <div class="contains">
+                <div class="user clearfix">
+                    <div class="add fl clearfix">
+                        <span class="fl"></span>
+                        <b class="fl">用户登录</b>
+                    </div>
+                    <i class="line fl"></i>
+                    <div class="login fl">
+                        <span class="fl"></span>
+                        <b class="fl">用户注册</b>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news1">
+                        <ul id="swiper">
+                            <li style="background:#933fff;">4</li>
+                            <li style="background:#5bff9e;"><img src="img/c1.png"/></li>
+                            <li style="background:#2bd6ff;">1</li>
+                            <li style="background:#cdff5a;">2</li>
+                            <li style="background:#ff81f3;">3</li>
+                            <li style="background:#933fff;">4</li>
+                            <li style="background:#5bff9e;"><img src="img/c1.png"/></li>
+                        </ul>
+                        <div class="dd"><a href="javaScript:;">解读科学观点时，你应该知道的20个问题 </a></div>
+                        <div class="dd"><a href="javaScript:;">运动出点汗，更好来谈判</a></div>
+                        <div class="dd"><a href="javaScript:;">关掉就习惯，本性不在难以</a></div>
+                        <div class="dd"><a href="javaScript:;">男女搭配，破案不利</a></div>
+                        <div class="dd"><a href="javaScript:;">关掉就习惯，本性不在难以</a></div>
+                        <div class="dd"><a href="javaScript:;">解读科学观点时，你应该知道的20个问题</a></div>
+                        <div class="dd last"><a href="javaScript:;">男女搭配，破案不利</a></div>
+                    </div>
+                    <div class="hot_ask">
+                        <div class="clearfix top">
+                            <h3 class="fl">热门问答</h3>
+                            <a href="javaScript:;" class="fr"></a>
+                        </div>
+                        <div class="move" id="move">
+                            <div class="move_top clearfix">
+                                <a href="javaScript:;" class="fl active">科技</a>
+                                <a href="javaScript:;" class="fl">生活</a>
+                                <a href="javaScript:;" class="fl">人文</a>
+                                <a href="javaScript:;" class="fl">自然</a>
+                            </div>
+                            <div class="move_down">
+                                <ul>
+                                    <li class="first">
+                                        <p class="p1">如果把探测器撞到火星上会怎么样？</p>
+                                        <p class="p2 clearfix">
+                                           <a href="javaScript:;" class="fl"><img src="img/c2.png"/></a>
+                                            <span class="fl">首条量子通信商用干线"沪杭干线"属于什么技术水平？量子通信已经可以商用了吗？</span>
+                                        </p>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">磁场是运动的电场吗？</a>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">半影月食会对月圆之夜变身的狼人有何影响？</a>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">磁场是运动的电场吗？</a>
+                                    </li>
+                                    <li  class="last">
+                                        <a href="javaScript:;">半影月食会对月圆之夜变身的狼人有何影响？</a>
+                                    </li>
+                                </ul>
+                                <ul class="ul2" style="background:#ffbd1f">1</ul>
+                                <ul class="ul2" style="background:#3799ff">2</ul>
+                                <ul class="ul2" style="background:#b4ff44">3</ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hot_ask">
+                        <div class="clearfix top">
+                            <h3 class="fl">热门问答</h3>
+                            <a href="javaScript:;" class="fr"></a>
+                        </div>
+                        <div class="move" id="move2">
+                            <div class="move_top clearfix">
+                                <a href="javaScript:;" class="fl active">科技</a>
+                                <a href="javaScript:;" class="fl">生活</a>
+                                <a href="javaScript:;" class="fl">人文</a>
+                                <a href="javaScript:;" class="fl">自然</a>
+                            </div>
+                            <div class="move_down">
+                                <ul>
+                                    <li class="first">
+                                        <p class="p1">如果把探测器撞到火星上会怎么样？</p>
+                                        <p class="p2 clearfix">
+                                            <a href="javaScript:;" class="fl"><img src="img/c2.png"/></a>
+                                            <span class="fl">首条量子通信商用干线"沪杭干线"属于什么技术水平？量子通信已经可以商用了吗？</span>
+                                        </p>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">磁场是运动的电场吗？</a>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">半影月食会对月圆之夜变身的狼人有何影响？</a>
+                                    </li>
+                                    <li >
+                                        <a href="javaScript:;">磁场是运动的电场吗？</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="javaScript:;">半影月食会对月圆之夜变身的狼人有何影响？</a>
+                                    </li>
+                                </ul>
+                                <ul class="ul2" style="background:#ffbd1f">1</ul>
+                                <ul class="ul2" style="background:#3799ff">2</ul>
+                                <ul class="ul2" style="background:#b4ff44">3</ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="res">
+                <a href="javaScript:;" class="clearfix">
+                    <span class="fl"></span>
+                    <b href="javaScript:;" class="fl">返回顶部</b>
+                </a>
+            </div>
+            <span class="gradient"></span>
+        </section>
+        <footer class="footer">
+            <div class="PC clearfix">
+                <span></span>
+                <b>PC版</b>
+            </div>
+            <div class="line">
+            </div>
+            <div class="app clearfix">
+                <span></span>
+                <b>移动应用</b>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+.conte{width:100%;position: relative;}
+.conte .cont_p{font-size: 20px;color:#000000;font-weight:900;width:100%;box-sizing: border-box;height:60px;line-height: 60px;padding:0 20px;border-bottom: 1px solid #BDBDBD;}
+.conte .cont_p .rig{z-index:-10;display: block;float:right;line-height: 60px;color:#A9A9A9;font-size: 20px;}
+.conte .loding{position:fixed;width:40%;height:40%;left:30%;top:20%;}

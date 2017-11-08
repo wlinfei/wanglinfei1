@@ -1,0 +1,2483 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css"/>
+<style>
+/*top*/
+.top{min-width:990px; background:#F1F1F1; height:30px;}
+.sent .p1{line-height:30px; background:url(img/y1.png) no-repeat right; padding:0 18px 0 10px;}
+.sent .diz{width:220px; height:190px; border:1px solid #ccc;; bottom:-211px; left:0; padding:10px; display:none; background:#fff;}
+.sent:hover{background:#fff; border:1px solid #ccc; border-bottom:none;}
+.sent:hover .diz{display:block; border:1px solid #ccc;}
+.sent .s1{width:87px; height:1px; background:#fff; position:absolute; bottom:0; left:0; }
+.sent .diz a{float:left; padding:5px; margin:5px;}
+.diz a:hover{background:#03C; color:#F63;}
+.top1 .dl{line-height:30px; margin-left:108px;}
+.dl .zc{margin-left:5px; color:#F00;}
+.top1-3 a{ float:left; margin-top:9px; padding:0 10px; border-left:1px solid #ccc;}
+.myjd{height:30px;}
+.myjd p{margin-top:9px; border-left:1px solid #ccc; padding-left:10px;}
+.myjd p .s1{width:9px; height:12px; background:url(img/y1.png) no-repeat left; margin:3px 10px 0 10px;}
+.myjd .d2{width:200px; height:200px; border:1px solid #ccc; right:0; bottom:-200px; display:none; background:#fff;}
+.myjd:hover .d2{display:block;}
+.myjd p .s{width:11px; height:16px; background:url(img/jd2015img.png) -2px -2px; margin-right:5px;}
+.gg1{min-width:990px; background:#000;}
+/*logo*/
+.logo{height:100px;}
+.logo .anq{width:100px; height:57px; background:url(img/anq.png); top:30px; left:171px;}
+.logo h1 a{width:270px; height:43px;background:url(img/logo.png); display:block; margin-top:29px; text-indent:-9999px;}
+.logo .ss{margin:25px 0 0 92px;}
+.ss .ip1{width:378px; height:32px; border:2px solid #B62424;}
+.ss .ip2{width:80px; height:36px; background:#BD4848; line-height:36px; text-align:center; color:#FFF; font-size:16px;}
+.ss .wx{color:#b61d1d;}
+.ss a{float:left; line-height:28px; margin-right:11px;}
+.shop{width:139px; line-height:34px; background:#F9F9F9; border:1px solid #ccc; margin-top:25px; }
+.shop .s1{width:16px; height:13px; background:url(img/jd2015img.png) -1px -59px; margin:10px 8px 19px;}
+.shop .s2{width:6px; height:9px; font-size:14px; margin-right:12px;}
+.shop .s3{line-height:14px; padding:0 5px 0 5px; background:#C81623; color:#FFF; border-radius:5px; border-bottom-left-radius:0; top:-4px; right:20px;}
+/*商品分类*/
+.dh{min-width:990px; border-bottom:2px solid #B1191A;}
+.dh h3{line-height:44px; background:#B84343; color:#fff; width:210px; float:left;}
+.dh h3 p{padding-left:10px;}
+.dh a{float:left; line-height:44px; padding:0 20px;}
+.dh .a5 span{width:36px; height:18px; background:url(img/jd2.png); position:absolute; top:0; right:-17px;}
+.fen .left{width:187px; background:#C81623; line-height:31px; color:#fff; padding-left:10px; padding-right:13px; cursor:pointer;}
+.fen .left h4{margin-right:9px;}
+.fen .left .dd{width:200px; height:300px; border:1px solid #ccc; top:0; left:200px; display:none; z-index:100; background:#fff;}
+.left li:hover .dd{display:block;}
+.fen .center{ margin:12px 10px 0;}
+.fen .center .s1{ width:40px; line-height:80px; text-align:center; color:#FFF; background:#000; opacity:0.3; left:0; top:50%; margin-top:-40px; font-size:28px;}
+.fen .center .s2{ width:40px; line-height:80px; text-align:center; color:#FFF; background:#000; opacity:0.3; right:0; top:50%; margin-top:-40px; font-size:28px;}
+.fen .center .ds{width:132px; height:18px; bottom:8px; left:50%; margin-left:-66px;}
+.fen .center .ds i{width:18px; line-height:18px; text-align:center; color:#fff; border-radius:9px; background:#3E3E3E; margin:0 2px; float:left;}
+.fen .center .ds .i2{background:#F00;}
+.fen .right{ margin-top:12px; width:249px; border-top:1px solid #ccc; border-left:1px solid #ccc;}
+.fen .right .r1{line-height:43px; border-right:1px solid #ccc; border-bottom:1px dotted #ccc; padding:0 15px;}
+.fen .right .r2{line-height:27px; border-right:1px solid #ccc; border-bottom:1px dashed #ccc; padding:8px 0 13px 15px;}
+.fen .right .r2 a{display:block;}
+.fen .right .h3{line-height:43px; padding-left:15px; border-right:1px solid #ccc; border-bottom:1px dotted #ccc;}
+.sh{width:248px; height:208px;border-right:1px solid #ccc; border-bottom:1px solid #ccc; overflow:hidden;}
+.sh .fw{width:252px; height:213px;}
+.sh .fw li{width:62px; height:70px; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.sh .fw li span{width:19px; height:24px; background:url(img/jd4.png); margin:13px auto 0; display:block;}
+.sh .fw li{text-align:center; }
+.sh .fw li a{margin-top:12px;}
+.gg2 a{margin:10px 1px 24px 0;}
+.gg2 .a4{margin-right:0;}
+.gg2 a{width:246px; background:#EEE;}
+.gg2 .a1 img{margin-top:24px;}
+.gg2 .a1 .p1{ line-height:36px; font-size:16px; margin-top:14px; font-weight:bold;}
+.gg2 .a1 .p2{ line-height:18px; font-size:14px;  font-weight:bold; width:97px; background:#FE0000; text-align:center; color:#FFF;}
+.gg2 .a1 .p3{line-height:22px; margin-right:30px; color:#666;}
+.gg2 .a3{width:247px;}
+/*猜你喜欢*/
+.like{margin-top:19px;}
+.like .bt{border-bottom:1px solid #ccc; line-height:42px;}
+.like .bt h3{line-height:42px; font-size:20px; margin-right:7px;}
+.like .bt p{line-height:38px; font-size:16px; margin-top:4px}
+.like .bt span{width:17px; height:17px; background:url(img/j1.png); margin-top:15px; margin-left:9px;}
+.like ul{border:1px solid #ccc; border-top:none;}
+.like ul li{width:197px; margin-top:20px;}
+.like ul li a{display:block; margin-left:33px; margin-bottom:10px;}
+.like ul li .pj{ border-right:1px solid #ccc;}
+.like ul li p{ width:125px; line-height:18px; padding:0 36px;}
+.like ul li i{display:block; color:#F00;font-family:"微软雅黑";  width:125px;padding:0 36px; line-height:25px; margin-bottom:10px;}
+.like ul .li5{width:199px;}
+.like ul .li5 .pj{border-right:none;}
+/*京东特色购*/
+.tese{margin-top:20px;}
+.tese h3{line-height:36px; font-size:20px;}
+.tese ul{ border-top:1px solid #ccc; border-left:1px solid #ccc; width:990px}
+.tese ul li{border-bottom:1px solid #ccc; border-right:1px solid #ccc;background:#F7F7F7; text-align:center;font-size:16px; font-weight:bold;}
+.tese ul .li1{ width:163px; height:200px; }
+.tese ul li .p1{line-height:28px; margin-top:17px;}
+.tese ul li .p2{line-height:21px; font-size:12px; color:red;}
+.tese ul .li2{width:165px; height:200px; text-align:center;}
+.tese ul .li2 .p1 i{display:inline-block; width:30px; line-height:16px; background:#DD4957; color:#FFF; text-align:center; margin-right:5px; font-size:10px;}
+.tese ul .li2 .p1 b{display:inline-block;  font-size:16px; font-weight:bold;}
+.tese ul .li1-1 a{border-bottom:1px dashed #ccc;}
+.tese ul .li1-1 .a5{border-bottom:none;}
+.tese ul .li3{width:331px; height:200px;}
+.tese ul .li3 .ys span{ width:30px; line-height:16px; background:#DD4957; color:#fff; text-align:center; font-size:14px; display:block; margin-right:5px;}
+.tese ul .li3 .ys{ margin:23px 0 0 116px;}
+.tese ul .li3 .jp{color:#F33; text-align:center; font-size:12px; line-height:34px; margin-bottom:4px;}
+.tese ul .li3 img{border-right:1px dashed #ccc;}
+.tese ul .li3 .sys{line-height:28px; margin-left:15px;}
+.gg3{display:block; margin:20px auto; width:960px;}
+/*服装鞋包*/
+.F1{margin-top:30px; height:680px;}
+.F1 h3{line-height:35px; font-size:20px;}
+.F1 .s1{width:31px; height:26px; background:url(img/j6.png); margin-right: 8px;}
+.F1 .F1-r{ border:1px solid #ccc; border-bottom:none; height:34px;}
+.F1-r h4 i{ padding:0 16px; line-height:14px; border-right:1px solid #ccc; margin:10px 0; font-size:12px;}
+.F1-r .lest i{border-right:none;}
+.F1-r h4 .nk{height:100px; width:990px; background:#F00; position:absolute; top:34px; left:-373px; display:none;}
+.h4-1{border-left:1px solid red; border-right:1px solid red; border-top:3px solid red; z-index:10;}
+.F1-r h4 .dp{display:block; height:634px; background:#fff; border-top:1px solid red;}
+.h4-1 .line{ width:60px; height:1px; background:#fff; position:absolute; top:34px; left:0;}
+.dp .left{ width:330px;}
+.dp .ul1{background:#FDE8E0;}
+.dp .ul1 li{ margin:10px 0 10px 25px; line-height:26px; width:75px;}
+.dp .ul1 li span{width:26px; height:26px; background:url(img/j8.png); margin-right:5px; }
+.dp .d3{padding:16px 0; border-bottom:1px solid #ccc; background:#FEF0EC;}
+.dp .d3 .d3-1{margin-left:25px; width:135px;}
+.dp .d3-1 a{ float:left; line-height:24px; margin-right:11px; }
+.dp .left .ag{ border-bottom:1px solid #ccc;  border-right:1px solid #ccc; width:329px; height:158px;}
+.dp .left .ag img{ right:0; top:0; }
+.dp .ag .p1{ margin-top:26px; margin-left:32px; line-height:26px; font-size:18px;}
+.dp .ag .p2{margin-left:34px; line-height:22px; font-size:14px; color:red;}
+.d4 a{border-bottom:1px solid #ccc;  border-right:1px solid #ccc;}
+.d4 .zui{ width:439px; height:158px; }
+.d4 .zui .p1{ margin-top:26px; margin-left:32px; line-height:26px; font-size:18px;}
+.d4 .zui .p2{margin-left:34px; line-height:22px; font-size:14px; color:red;}
+.d4 .zu{ width:439px; height:157px; }
+.dp .right .r1{width:219px; height:157px; border-bottom:1px solid #ccc;  border-right:1px solid #ccc; background:#F9F9F9;}
+ .dp .right .r1 .a1{position:absolute; bottom:0; right:0;}
+ .dp .right .r1 .p1{ line-height:24px; font-size:16px; padding-top:25px; margin-left:20px;}
+  .dp .right .r1 .p2{ line-height:22px; font-size:14px;  margin-left:20px; color:red;}
+  .dp .right .lest{height:158px;}
+/*个护美妆*/
+.mz{ height:515px; }
+.mz .bt span{width:31px; height:26px; background:url(img/jd7.png);margin-right:8px; float:left;}
+.mz .bt h4{line-height:35px; float:left; font-size:20px;}
+.mz-r{border-left:1px solid #000; border-right:1px solid #000; border-top:1px solid #000; height:34px;}
+.mz-r .fenl h4{margin-top:10px; padding:0 17px; font-size:12px; border-left:1px solid #ccc; border-right:1px solid #ccc; margin-left:-1px;}
+.mz-r .fenl1 h4,.mz-r .fenl h4:hover{border-left:1px solid #000; margin-top:-1px; border-top:3px solid #f00; border-left:1px solid #f00; border-right:1px solid #f00; line-height:30px; height:33px; background:#fff; position:relative; z-index:10;}
+.mz-r .lest h4{border-right:1px solid #fff;}
+.mz-r .fenl .line{width:60px; height:1px; background:#fff; left:0; bottom:0; position:absolute; }
+.mz-r .fenl:hover{} 
+.mz-r .fenl .in{width:990px; height:474px; left:-453px; top:34px; position:absolute;background:#066; display:none; border-top:1px solid #f00; }
+.mz-r .fenl:hover .in{display:block;}
+.mz .mz-r .fenl1 .in{display:block; background:#fff;}
+.in .n1 ul{width:210px; background:#DCF2F8; }
+.n1 ul li{margin:10px 0 10px 10px; line-height:26px; width:88px;}
+.n1 ul li span{ width:26px; height:26px; background:url(img/jd9.png); margin-right:5px;}
+.n1-3{padding-top:22px; padding-left:25px; background:#e8f6fa; padding-right:35px; width:150px;}
+.n1-3 .n-a{ line-height:24px; display:block;}
+.n1-3 p{margin-top:6px; padding-bottom:21px;}
+.n1-3 p a{float:left; line-height:24px; margin-right:11px;}
+.mz .mz-r .fenl1 .in .in-ul{width:780px;}
+.in .in-ul .li1{border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.in .in-ul .li1-1{ border-bottom:1px dotted #ccc;}
+.shangb{background:#F7F7F7; margin-top:10px; margin-bottom:21px; padding:0 5px; width:980px;}
+.shangb a{float:left; padding:0 10px; border-right:1px dotted #ccc; margin:13px 0;}
+.shangb .a8{border:none;}
+.jdg{margin:22px auto; position:relative; height:96px;}
+.jdg a{position:absolute; top:0; left:50%; margin-left:-62px;}
+.in-ul li .hz{top:24px; left:28px;}
+.in-ul li .hz .pp1{line-height:27px; font-size:18px; font-weight:bold;}
+.in-ul li .hz .pp2{line-height:24px; font-size:14px; font-weight:bold; color:red;}
+/*手机通讯*/
+.sjtx{height:512px;}
+.sjtx h3 p{line-height:35px; font-size:20px;}
+.sjtx h3 span{width:31px; height:25px; background:url(img/sprite_floor.png) 0 -35px; margin-top:1px; margin-right:9px; color:#fff; font-size:14px; line-height:25px;}
+.sjtx-r{border-top:1px solid #ccc; border-right:1px solid #ccc; height:34px;}
+.sjtx-r h4 .ak{display:block; font-size:12px; line-height:14px; border-left:1px solid #ccc; padding:0 17px; margin:10px 0;}
+.sjtx-r h4 .a1,.sjtx-r h4 .a2{ border-left:none;}
+.sjtx-r .h4-1 { border-left:1px solid red; border-right:1px solid red; border-top:3px solid red;}
+.sjtx-r .h4-1 .zj{position:absolute; top:34px; left:-402px; width:990px; height:100px; background:#0FF; border-top:1px solid red;}
+.sjtx-r .h4-1 .sx{width:59px; height:1px; background:#FFF; position:absolute; top:34px; left:0; z-index:10;}
+.sj-left .yyt{left:0; top:237px; padding-left:25px; background:#D4F1F1; width:305px;}
+.sj-left .yyt li{margin:10px 0;}
+.sj-left .yyt li span{width:26px; height:26px; background:url(img/jd24.png); margin-right:5px;}
+.sj-left .yyt li i{line-height:26px; width:67px;}
+.sj-left .xia{position:absolute; bottom:0; left:0; width:330px;}
+.sj-left .gl{padding:22px 0 19px 0; background:#E5F6F6; }
+.sj-left .gl .a11{line-height:22px; width:135px; float:left; margin-left:25px;}
+.sj-left .gj{ margin-left:25px; width:135px; margin-top:6px;}
+.sj-left .gj a{margin-right:11px; line-height:24px;}
+.sj-m{width:660px;}
+.sj-m .a1 img{ margin:50px 87px 0 0;}
+.sj-m .a1{ width:439px; height:237px; background:#F3F3F3; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sj-m .a1 .p1{line-height:29px; margin:24px 0 0 31px; font-size:18px; font-weight:bold;}
+.sj-m .a1 .p2{line-height:25px; margin-left:31px; font-size:14px; font-weight:bold;}
+.sj-m .a2 img{ margin-top:45px;}
+.sj-m .a2{ width:219px; height:117px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sj-m .a2 .p1{line-height:25px; margin:25px 0 0 20px; font-size:14px; font-weight:bold;}
+.sj-m .a2 .p2{line-height:22px; margin-left:20px; font-size:12px; font-weight:bold; color:red;}
+.sj-m .a3{ width:219px; height:236px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sj-m .a3 .p1{line-height:27px; margin:24px 0 0 28px; font-size:16px; font-weight:bold;}
+.sj-m .a3 .p2{line-height:22px; margin-left:28px; font-size:12px; font-weight:bold; color:red;}
+.sj-m .a3 img{ margin-top:13px; margin-left:50px;}
+/*家用电器*/
+.jydq{height:512px;}
+.jydq h3 p{line-height:35px; font-size:20px;}
+.jydq h3 span{width:31px; height:25px; background:url(img/sprite_floor.png) 0 -35px; margin-top:1px; margin-right:9px; color:#fff; font-size:14px; line-height:25px;}
+.jydq-r{border-top:1px solid #ccc; border-right:1px solid #ccc;}
+.jydq-r h4 .ak{display:block; font-size:12px; line-height:14px; border-left:1px solid #ccc; padding:0 17px; margin:10px 0;}
+.jydq-r h4 .a1,.sjtx-r h4 .a2{ border-left:none;}
+.jydq-r .h4-1 { border-left:1px solid red; border-right:1px solid red; border-top:3px solid red;}
+.jydq-r .h4-1 .zj{position:absolute; top:34px; left:-276px; width:990px; height:100px; background:#0FF; border-top:1px solid red;}
+.jydq-r .h4-1 .sx{width:59px; height:1px; background:#FFF; position:absolute; top:34px; left:0; z-index:10;}
+.jd-left .yyt{left:0; top:237px; padding-left:25px; background:#D4F1F1; width:305px;}
+.jd-left .yyt li{margin:10px 0;}
+.jd-left .yyt li span{width:26px; height:26px; background:url(img/jd24.png); margin-right:5px;}
+.jd-left .yyt li i{line-height:26px; width:120px;}
+.jd-left .xia{position:absolute; bottom:0; left:0; width:330px;}
+.jd-left .gl{padding:22px 0 19px 0; background:#E5F6F6; }
+.jd-left .gl .a11{line-height:22px; width:135px; float:left; margin-left:25px;}
+.jd-left .gj{ margin-left:25px; width:135px; margin-top:6px;}
+.jd-left .gj a{margin-right:11px; line-height:24px;}
+.jd-m{width:660px;}
+.jd-m .a1 img{ margin:50px 87px 0 0;}
+.jd-m .a1{ width:439px; height:237px; background:#F3F3F3; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.jd-m .a1 .p1{line-height:29px; margin:24px 0 0 31px; font-size:18px; font-weight:bold;}
+.jd-m .a1 .p2{line-height:25px; margin-left:31px; font-size:14px; font-weight:bold;}
+.jd-m .a2 img{ margin-top:45px;}
+.jd-m .a2{ width:219px; height:117px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.jd-m .a2 .p1{line-height:25px; margin:25px 0 0 20px; font-size:14px; font-weight:bold;}
+.jd-m .a2 .p2{line-height:22px; margin-left:20px; font-size:12px; font-weight:bold; color:red;}
+.jd-m .a3{ width:219px; height:236px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.jd-m .a3 .p1{line-height:27px; margin:24px 0 0 28px; font-size:16px; font-weight:bold;}
+.jd-m .a3 .p2{line-height:22px; margin-left:28px; font-size:12px; font-weight:bold; color:red;}
+.jd-m .a3 img{ margin-top:13px; margin-left:50px;}
+/*电脑数码*/
+.dnsm{height:512px;}
+.dnsm h3 p{line-height:35px; font-size:20px;}
+.dnsm h3 span{width:31px; height:25px; background:url(img/sprite_floor.png) 0 -35px; margin-top:1px; margin-right:9px; color:#fff; font-size:14px; line-height:25px;}
+.dnsm-r{border-top:1px solid #ccc; border-right:1px solid #ccc;}
+.dnsm-r h4 .ak{display:block; font-size:12px; line-height:14px; border-left:1px solid #ccc; padding:0 17px; margin:10px 0;}
+.dnsm-r h4 .a1,.dnsm-r h4 .a2{ border-left:none;}
+.dnsm-r .h4-1 { border-left:1px solid red; border-right:1px solid red; border-top:3px solid red;}
+.dnsm-r .h4-1 .zj{position:absolute; top:34px; left:-246px; width:990px; height:100px; background:#0FF; border-top:1px solid red;}
+.dnsm-r .h4-1 .sx{width:60px; height:1px; background:#FFF; position:absolute; top:34px; left:0; z-index:10;}
+.sm-left .yyt{left:0; top:237px; padding-left:25px; background:#D4F1F1; width:305px;}
+.sm-left .yyt li{margin:10px 0;}
+.sm-left .yyt li span{width:26px; height:26px; background:url(img/jd24.png); margin-right:5px;}
+.sm-left .yyt li i{line-height:26px; width:120px;}
+.sm-left .xia{position:absolute; bottom:0; left:0; width:330px;}
+.sm-left .gl{padding:22px 0 19px 0; background:#E5F6F6; }
+.sm-left .gl .a11{line-height:22px; width:135px; float:left; margin-left:25px;}
+.sm-left .gj{ margin-left:25px; width:135px; margin-top:6px;}
+.sm-left .gj a{margin-right:11px; line-height:24px;}
+.sm-m{width:660px;}
+.sm-m .a1 img{ margin:50px 87px 0 0;}
+.sm-m .a1{ width:439px; height:237px; background:#F3F3F3; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sm-m .a1 .p1{line-height:29px; margin:24px 0 0 31px; font-size:18px; font-weight:bold;}
+.sm-m .a1 .p2{line-height:25px; margin-left:31px; font-size:14px; font-weight:bold;}
+.sm-m .a2 img{ margin-top:45px;}
+.sm-m .a2{ width:219px; height:117px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sm-m .a2 .p1{line-height:25px; margin:25px 0 0 20px; font-size:14px; font-weight:bold;}
+.sm-m .a2 .p2{line-height:22px; margin-left:20px; font-size:12px; font-weight:bold; color:red;}
+.sm-m .a3{ width:219px; height:236px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.sm-m .a3 .p1{line-height:27px; margin:24px 0 0 28px; font-size:16px; font-weight:bold;}
+.sm-m .a3 .p2{line-height:22px; margin-left:28px; font-size:12px; font-weight:bold; color:red;}
+.sm-m .a3 img{ margin-top:13px; margin-left:50px;}
+/*运动健身*/
+.sport{height:512px; margin-bottom:20px;}
+.sport h3 p{line-height:35px; font-size:20px;}
+.sport h3 span{width:31px; height:25px; background:url(img/sprite_floor.png) 0 -35px; margin-top:1px; margin-right:9px; color:#fff; font-size:14px; line-height:25px;}
+.sport-r{border-top:1px solid #ccc; border-right:1px solid #ccc;}
+.sport-r h4 .ak{display:block; font-size:12px; line-height:14px; border-left:1px solid #ccc; padding:0 17px; margin:10px 0;}
+.sport-r h4 .a1,.sport-r h4 .a2{ border-left:none;}
+.sport-r .h4-1 { border-left:1px solid red; border-right:1px solid red; border-top:3px solid red;}
+.sport-r .h4-1 .zj{position:absolute; top:34px; left:-426px; width:990px; height:100px; background:#0FF; border-top:1px solid red;}
+.sport-r .h4-1 .sx{width:60px; height:1px; background:#FFF; position:absolute; top:34px; left:0; z-index:10;}
+.yd-left .yyt{left:0; top:227px; padding-left:10px; background:#F7EDDF; width:200px; z-index:10;}
+.yd-left .yyt li{padding:10px 0;}
+.yd-left .yyt li span{width:26px; height:26px; background:url(img/jd28.png); margin-right:5px;}
+.yd-left .yyt li i{line-height:26px; width:67px;}
+.yd-left .xia{position:absolute; bottom:0; left:0; width:210px;}
+.yd-left .gl{padding:22px 0 21px 0; background:#FAF4EC; }
+.yd-left .gl .a11{line-height:24px; width:135px; float:left; margin-left:25px;}
+.yd-left .gj{ margin-left:25px; width:160px; margin-top:6px;}
+.yd-left .gj a{margin-right:11px; line-height:24px;}
+.yd-m{width:780px;}
+.yd-m .a1 img{ margin-left:54px;}
+.yd-m .a1{ width:219px; height:236px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.yd-m .a1 .p1{line-height:26px; margin:25px 0 0 28px; font-size:16px; font-weight:bold;}
+.yd-m .a1 .p2{line-height:22px; margin-left:28px; font-size:12px; font-weight:bold; color:red;}
+.yd-m .a2 img{ margin-left:90px;}
+.yd-m .a2{ width:340px; height:236px; background:#F1F1F1; border-bottom:1px dotted #ccc; border-right:1px solid #ccc;}
+.yd-m .a2 .p1{line-height:29px; margin:24px 0 0 21px; font-size:18px; font-weight:bold;  color:red;}
+.yd-m .a2 .p2{line-height:22px; margin-left:21px; font-size:14px; font-weight:bold;}
+.yd-m .a3{ width:218px; height:236px; background:#fff; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+.yd-m .a3 .p1{line-height:25px; margin:26px 0 0 28px; font-size:14px; font-weight:bold;}
+.yd-m .a3 .p2{line-height:22px; margin-left:28px; font-size:12px; font-weight:bold; color:red;}
+.yd-m .a3 img{ margin-left:55px;}
+/*图书音像*/
+.book{height:512px;}
+.book h3{line-height:27px; font-size:18px;}
+.book h3 .s1{width:31px; height:27px; background:url(img/j15.png); margin-right:10px;}
+.book-r{border-top:1px solid #ccc; border-right:1px solid #ccc;}
+.book-r h4 .a{display:block; font-size:12px; line-height:14px; border-left:1px solid #ccc; padding:0 17px; margin:10px 0;}
+.book-r h4 .a1,.book-r h4 .a2{ border-left:none;}
+.book-r .h4-1 { border-left:1px solid red; border-right:1px solid red; border-top:3px solid red;}
+.book-r .h4-1 .zj{position:absolute; top:34px; left:-504px; width:990px; height:100px; background:#0FF; border-top:1px solid red;}
+.book-r .h4-1 .sx{width:60px; height:1px; background:#FFF; position:absolute; top:34px; left:0; z-index:10;}
+.book-r .zuo{width:210px;}
+.book-r .zuo .ul2{background:#EDF6FA; width:210px;}
+.book-r .zuo .ul2 li{padding:10px 0 10px 10px; width:88px; line-height:26px; float:left;}
+.book-r .zuo .ul2 li span{width:26px; height:26px; background:url(img/j17.png); margin-right:5px; }
+.book-r .zuo .d3{background:#F4F9FC; padding:22px 15px 21px 25px; width:170px;}
+.book-r .d3 .d4{margin-top:6px;}
+.book-r .zuo .txt1{ display:block; line-height:24px;}
+.book-r  .d3  a{line-height:24px; margin-right:11px; border:none;}
+.book-r .zj .zhong{width:440px;}
+.book-r .zj .zhong .a5{border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.book-r .zj .zhong .a5{width:439px; height:236px; background:#ECECEC;}
+.book-r .zj .zhong .a5 .pt1{ margin-top:24px; margin-left:31px; line-height:28px; font-size:18px;}
+.book-r .zj .zhong .a5 .pt2{  margin-left:31px; line-height:26px; font-size:12px;}
+.book-r .zj .zhong .a4{width:219px; height:235px; background:#FFF;}
+.book-r .zj .zhong .a4 .pt2{font-size:14px; color:red;}
+.you{border-right:1px solid #ccc; padding-left:10px; background:#FFF; padding-bottom:26px; width:329px; border-bottom:1px solid #ccc;}
+.you .zz{ padding-top:4px; width:314px; line-height:42px; font-size:18px; border-bottom:1px solid #ccc;}
+.you .ull li{ margin-top:20px; height:80px;}
+.you .ull li .a1{width:72px; text-align:center; border-right:1px dotted #ccc;}
+.you .ull li .p1{margin-top:9px;}
+.you .ull li .a2{margin:0 10px 0 25px;}
+.you .ull li span .p2{line-height:20px; margin-bottom:3px;}
+.you .ull li span .p3{width:125px; height:37px;line-height:18px; background:#F8F8F8; padding:10px 20px 8px 5px;}
+.shangb{background:#F7F7F7; margin-top:10px; margin-bottom:21px; padding:0 5px; width:980px;}
+.shangb a{float:left; padding:0 10px; border-right:1px dotted #ccc; margin:13px 0;}
+.shangb .a8{border:none;}
+/*生活服务*/
+.live h3{border-bottom:1px solid red;}
+.live h3 p{line-height:35px; font-size:20px;}
+.live h3 span{width:31px; height:25px; background:url(img/sprite_floor.png) 0 -35px; margin-top:1px; margin-right:9px; color:#fff; font-size:14px; line-height:25px;}
+.serv-l .lc{left:0; top:145px;}
+.serv-l .lcs1{width:210px; height:100%; background:#FAD5AA; opacity:0.3; position:absolute;top:0; left:0;}
+.serv-l .lcs2 p{margin:10px 0 10px 25px; line-height:25px; color:#06F;}
+.serv-l .lcs2 i{ width:26px; height:26px; background:url(img/jd22.png);margin-right:5px; }
+.live .serv-l .ly{left:0; bottom:0;}
+.serv-r{width:385px;}
+.serv-r .d1{width:191px; height:118px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; float:left;}
+.serv-r .d1 a{margin-top:43px;}
+.serv-r .d1 p{margin-top:12px; margin-left:15px; line-height:25px; font-size:16px;}
+.serv-r .d1 i{ margin-left:15px; line-height:22px; font-size:14px; color:red;}
+/*今日抄底*/
+.today .bt-r{width:681px;}
+.today .bt-r h3{ line-height:43px; font-size:20px; margin-right:7px;}
+.today .bt-r .p1{ line-height:37px; margin-top:6px; font-size:14px; }
+.bt-r .bt-ul{border-top:1px solid #ccc; border-left:1px solid #ccc;}
+.bt-r .bt-ul .li1{ width:239px; border-bottom:1px solid #ccc; border-right:1px solid #ccc; height:281px;}
+.bt-r .bt-ul .li1 a{display:block; text-align:center; margin-top:20px; display:block; margin-bottom:28px;}
+.bt-r .bt-ul .li1 p{line-height:23px; margin-left:28px;}
+.bt-r .bt-ul .li1 span{display:block; line-height:24px; color:red; margin-left:28px; font-family:"微软雅黑";}
+.bt-r .bt-ul .li2{width:219px; border-bottom:1px solid #ccc; border-right:1px solid #ccc; height:120px; padding-top:20px;}
+.bt-r .bt-ul .li2 p{width:90px; line-height:17px;}
+.bt-r .bt-ul .li2 i{display:block; line-height:32px; color:red; font-family:"微软雅黑";}
+.today .sd{width:309px;}
+.today .sd h3{line-height:43px; font-size:20px; border-bottom:1px solid #ccc;}
+.today .sd .sd-ul{ padding-top:38px; padding-bottom:3px; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+.today .sd-ul li{height:120px;width:309px;}
+.sd-ul li .ss{margin-left:7px;}
+.sd-ul li .ss .ks span{ width:28px; height:28px;background:url(img/j24.png); margin-right:8px;}
+.sd-ul li .ss .ks{line-height:28px;}
+.today .sd-ul li .pp{padding:10px 25px 8px 5px; width:134px; line-height:18px; background:#F8F8F8;}
+/*footer*/
+.footer{min-width:990px; background:#F5F5F5; margin-top:20px; margin-bottom:15px;}
+.footer .duo{padding:25px 0;}
+.duo li{margin-left:19px;}
+.duo li span{ width:39px; height:44px; background:url(img/jd25.png); margin-right:10px;}
+.duo li a{line-height:44px; font-size:20px; width:177px;}
+.footer2{ border-bottom:1px solid #ccc; margin-bottom:10px;}
+.footer2 dl{width:144px;}
+.footer2 dl dt{line-height:35px; font-size:16px; font-weight:bold;}
+.footer2 dl dd{line-height:20px;}
+.china{height:169px; width:210px; background:url(img/20130330B_1.png) 0 -130px; margin-bottom:18px; margin-left:20px;}
+.china h3{line-height:35px; margin-left:20px; margin-bottom:9px;}
+.china p{margin-left:20px; width:185px; line-height:18px;}
+.china a{line-height:18px; display:block; margin-left:150px;}
+.footer3{ text-align:center; margin-bottom:30px;}
+.footer3 .gy{ line-height:38px; margin-left:100px;}
+.footer3 .gy span{ width:1px; height:11px; background:#000; margin:14px 11px 13px 12px; }
+.footer3 .beian{line-height:18px; margin-left:75px;}
+.footer3 .beian span{ width:1px; height:11px; background:#000; margin:4px 7px; }
+.footer3 p{ line-height:18px;}
+.footer3 ul{margin-top:10px; margin-left:170px;}
+.footer3 ul .li1{margin-right:13px;}
+.footer3 ul .li1 span{ width:35px; height:32px; background:url(img/jd18.png);}
+.footer3 ul .li1 a{width:62px; height:26px; background:#EEE; padding:3px;}
+.footer3 ul .lest{ width:185px; height:32px; background:#EEE; line-height:16px; text-align:center;}
+.footer3 ul .lest a{display:block;}
+.fhdb{position:fixed; right:0; bottom:0; width:30px; height:71px;}
+.fhdb .i1{display:block; weight:30px; height:35px; background:url(img/y2.png) no-repeat center #9E9696; margin-bottom:1px;}
+.fhdb .i2{display:block; weight:30px; height:35px; background:url(img/y3.png) no-repeat center #9E9696;}
+</style>
+</head>
+<body>
+	<!--top-->
+	<div class="top">
+    	<div class="top1 w clearfix">
+        	<div class="sent fl pr">
+            	<p class="p1">送至：北京</p>
+                <div class="diz pa">
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                	<a href="#">北京</a>
+                </div>
+                <span class="s1"></span>
+            </div>
+            <div class="dl fl">
+            	<a href="#" class="fl">你好，请登录</a>
+                <a href="#" class="fl zc">免费注册</a>
+            </div>
+            <div class="top1-3 fr">
+            	<a href="#">我的订单</a>
+                <div class="myjd fl pr">
+                	<p class="clearfix">
+                    	<i class="fl">我的京东</i>
+                        <span class="s1 fl"></span>
+                    </p>
+                    <div class="d2 pa">
+                    </div>
+                </div>
+                <a href="#">京东会员</a>
+                <a href="#">企业采购</a>
+                <div class="myjd fl pr">
+                	<p class="clearfix pr">
+                    	<span class="s fl"></span>
+                    	<i class="fl">手机京东 </i>
+                        <span class="s1 fl"></span>
+                    </p>
+                    <div class="d2 pa">
+                    </div>
+                </div>
+                <div class="myjd fl pr">
+                	<p class="clearfix">
+                    	<i class="fl">关注京东</i>
+                        <span class="s1 fl"></span>
+                    </p>
+                    <div class="d2 pa">
+                    </div>
+                </div>
+                <div class="myjd fl pr">
+                	<p class="clearfix">
+                    	<i class="fl">客户服务</i>
+                        <span class="s1 fl"></span>
+                    </p>
+                    <div class="d2 pa">
+                    </div>
+                </div>
+                <div class="myjd fl pr">
+                	<p class="clearfix">
+                    	<i class="fl">网站导航</i>
+                        <span class="s1 fl"></span>
+                    </p>
+                    <div class="d2 pa">
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </div>
+    <div class="gg1">
+    	<a href="#" class="w a">
+        	<img src="img/jd1.png"/>
+        </a>
+    </div>
+    <!--logo-->
+    <div class="logo clearfix w pr">
+    	<span class="anq pa"></span>
+    	<h1 class="fl">
+        	<a href="http://www.jd.com/">京东</a>
+        </h1>
+        <div class="ss fl">
+        	<p class="clearfix">
+            	<input type="text" value="SK-II神仙水" class="ip1 fl"/>
+                <input type="submit" value="搜索" class="ip2 fl"/>
+            </p>
+            <span class="clearfix">
+            	<a href="#" class="wx">微信红包</a>
+                <a href="#">微信红包</a>
+                <a href="#">微信红</a>
+                <a href="#">三星A9</a>
+                <a href="#">微信红包</a>
+                <a href="#">笔记本电脑</a>
+                <a href="#">净水机</a>
+                <a href="#">微信红包</a>
+            </span>
+        </div>
+        <div class="shop fr pr clearfix">
+        	<span class="s1 fl"></span>
+            <a href="#" class="fl">我的购物车</a>
+            <span class="fr s2">&gt;</span>
+            <span class="s3 pa">0</span>
+        </div>
+    </div>
+    <!--商品分类-->
+    <div class="dh">
+    	<div class="w clearfix">
+        	<h3><p>全部商品分类</p></h3>
+            <a href="#">服装城</a>
+            <a href="#">服装城</a>
+            <a href="#">服装城</a>
+            <a href="#">服装城</a>
+            <a href="#" class="a5 pr">
+                <i>闪购</i>
+                <span></span>
+            </a>
+            <a href="#">服装城</a>
+            <a href="#">服装城</a>
+            <a href="#">服装城</a>
+        </div>
+    </div>
+    <div class="fen clearfix w">
+    	<ul class="left fl">
+        	<li class="clearfix pr">
+            	<h4 class="fl">家用电器</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">手机、</h4>
+                <h4 class="fl">数码、</h4>
+                <h4 class="fl">京东通讯</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">电脑、</h4>
+                <h4 class="fl">办公</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+        	<li class="clearfix pr">
+            	<h4 class="fl">家用电器</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">手机、</h4>
+                <h4 class="fl">数码、</h4>
+                <h4 class="fl">京东通讯</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">电脑、</h4>
+                <h4 class="fl">办公</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+        	<li class="clearfix pr">
+            	<h4 class="fl">家用电器</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">手机、</h4>
+                <h4 class="fl">数码、</h4>
+                <h4 class="fl">京东通讯</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">电脑、</h4>
+                <h4 class="fl">办公</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+        	<li class="clearfix pr">
+            	<h4 class="fl">家用电器</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">手机、</h4>
+                <h4 class="fl">数码、</h4>
+                <h4 class="fl">京东通讯</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">电脑、</h4>
+                <h4 class="fl">办公</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+        	<li class="clearfix pr">
+            	<h4 class="fl">家用电器</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">手机、</h4>
+                <h4 class="fl">数码、</h4>
+                <h4 class="fl">京东通讯</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+            <li class="clearfix pr">
+            	<h4 class="fl">电脑、</h4>
+                <h4 class="fl">办公</h4>
+                <span class="fr">&gt;</span>
+                <div class="dd pa"></div>
+            </li>
+        </ul>
+        <a href="#" class="a fl pr center">
+        	<img src="img/jd3.png"/>
+            <span class="s1 pa">&lt;</span>
+            <span class="s2 pa">&gt;</span>
+            <div class="ds pa">
+            	<i>1</i>
+            	<i class="i2">2</i>
+                <i>3</i>
+                <i>4</i>
+                <i>5</i>
+                <i>6</i>
+            </div>
+        </a>
+        <div class="right fr">
+        	<div class="clearfix r1">
+            	<h3 class="fl">京东快报</h3>
+                <a href="#" class="fr">更多 &gt;</a>
+            </div>
+            <div class="r2">
+            	<a href="#">[特惠] 图书每满100减30 上不封顶</a>
+            	<a href="#">[特惠] 图书每满100减30 上不封顶</a>
+            	<a href="#">[特惠] 图书每满100减30 上不封顶</a>
+            	<a href="#">[特惠] 图书每满100减30 上不封顶</a>
+            	<a href="#">[特惠] 图书每满100减30 上不封顶</a>
+            </div>
+            <h3 class="h3">生活服务</h3>
+            <div class="sh">
+            	<ul class="clearfix fw">
+                	<li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                    <li class="fl">
+                    	<span></span>
+                        <a href="#" class="a">话费</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w clearfix gg2">
+    	<a href="#" class="fl clearfix a1">
+        	<img src="img/j25.png" class="fr"/>	
+            <span class="fr">
+            	<p class="p1">行车记录仪</p>
+                <p class="p2">爆款低至9折</p>
+                <p class="p3">满399减100</p>
+            </span>
+        </a>
+    	<a href="#" class="fl clearfix a1">
+        	<img src="img/j25.png" class="fr"/>	
+            <span class="fr">
+            	<p class="p1">行车记录仪</p>
+                <p class="p2">爆款低至9折</p>
+                <p class="p3">满399减100</p>
+            </span>
+        </a>
+        <a href="#" class="fl clearfix a1 a3">
+        	<img src="img/j25.png" class="fr"/>	
+            <span class="fr">
+            	<p class="p1">行车记录仪</p>
+                <p class="p2">爆款低至9折</p>
+                <p class="p3">满399减100</p>
+            </span>
+        </a>
+        <a href="#" class="fl clearfix a1 a3">
+        	<img src="img/j25.png" class="fr"/>	
+            <span class="fr">
+            	<p class="p1">行车记录仪</p>
+                <p class="p2">爆款低至9折</p>
+                <p class="p3">满399减100</p>
+            </span>
+        </a>
+    </div>
+   	<!--猜你喜欢-->
+	<div class="w like">
+    	<div class="bt clearfix">
+        	<h3 class="fl">猜你喜欢</h3>	
+            <p class="fl">根据你的喜欢精心为你推荐</p>
+            <span class="fr"></span>
+            <a href="#" class="fr">换一批</a>
+        </div>
+        <ul class="clearfix">
+        	<li class="fl">
+            	<a href="#"><img src="img/j2.png"/></a>
+                <div class="pj">
+                    <p>级沙发上的话；发分类的十分</p>
+                    <i>￥1280.00</i>
+                </div>
+            </li>
+            <li class="fl">
+            	<a href="#"><img src="img/j2.png"/></a>
+                <div class="pj">
+                    <p>级沙发上的话；发分类的十分</p>
+                    <i>￥1280.00</i>
+                </div>
+            </li>
+            <li class="fl">
+            	<a href="#"><img src="img/j2.png"/></a>
+                <div class="pj">
+                    <p>级沙发上的话；发分类的十分</p>
+                    <i>￥1280.00</i>
+                </div>
+            </li>
+            <li class="fl">
+            	<a href="#"><img src="img/j2.png"/></a>
+                <div class="pj">
+                    <p>级沙发上的话；发分类的十分</p>
+                    <i>￥1280.00</i>
+                </div>
+            </li>
+            <li class="fl li5">
+            	<a href="#"><img src="img/j2.png"/></a>
+                <div class="pj">
+                    <p>级沙发上的话；发分类的十分</p>
+                    <i>￥1280.00</i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--京东特色购-->
+    <div class="tese w">
+    	<h3>京东特色购</h3>
+        <ul class="clearfix">
+            <li class="fl li1">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li>
+            <li class="fl"><a href="#" class="a"><img src="img/j3.png"/></a></li>
+            <li class="fl li2">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li><li class="fl li2">
+           		<p class="p1"><i>首发</i><b>大NEW</b></p>
+                <p class="p2">芒果小觅无屏电视 好评有礼</p>
+                <a href="#"><img src="img/jd32.png"/></a>	     
+            </li>
+            <li class="fl li2">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li>
+            <li class="fl li1">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li>
+            <li class="fl li1">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li>
+            <li class="fl li1 li1-1">
+            	<a href="#" class="a"><img src="img/j4.png"/></a>
+                <a href="#" class="a"><img src="img/j4.png"/></a>
+                <a href="#" class="a"><img src="img/j4.png"/></a>
+                <a href="#" class="a"><img src="img/j4.png"/></a>
+                <a href="#" class="a a5"><img src="img/j4.png"/></a>
+            </li>
+            <li class="fl li2">
+           		<p class="p1">科技精华</p>
+                <p class="p2">智能独轮火星越野自行车</p>
+                <a href="#"><img src="img/jd16.png"/></a>	     
+            </li>
+            <li class="fl  li3">
+           		<p class="ys clearfix">
+                	<span class="fl">预售</span>
+                    <i class="fl">新品抢购</i>
+                </p>
+                <p class="jp">青轴全铝机械键盘 炫酷多模式LED灯特效 269预售</p>
+                <div class="clearfix">
+                    <a href="#" class="fl"><img src="img/j26.png"/></a>
+                    <span class="fl sys">
+                    	<a href="#" class="a">ZUK Z1 正在预约</a>
+                       <a href="#" class="a">ZUK Z1 正在预约</a>
+                       <a href="#" class="a">ZUK Z1 正在预约</a>
+                       <a href="#" class="a">ZUK Z1 正在预约</a> 
+                        
+                    </span>
+                </div>	     
+            </li>
+        </ul>	
+    </div>
+    <a href="#" class="gg3"><img src="img/j5.png"/></a>
+    <!--服装鞋包-->
+    <div class="F1 w clearfix">
+    	<h3 class="fl clearfix">
+        	<span class="fl s1"></span>
+            <i class="fl">服装鞋包</i>
+        </h3>
+        <div class="fr F1-r pr clearfix"> 
+        	<h4 class="fl pr h4-1">
+            	<i class="a">大牌</i>
+            	<div class="nk dp clearfix">
+                	<div class="left fl">
+                    	<a href="#" class="a"><img src="img/j7.png"/></a>
+                        <ul class="clearfix ul1">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <b class="fl">男装</b>
+                            </li>
+                        </ul>
+                        <div class="d3 clearfix">
+                        	<div class="d3-1 fl">
+                            	<a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">服装城</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">奢侈品</a>
+                            </div>
+                            <div class="d3-1 fl">
+                            	<a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">服装城</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">女装上新</a>
+                                <a href="#">奢侈品</a>
+                            </div>
+                        </div>
+                        <a href="#" class="a zui clearfix ag pr">
+                        	<span class="fl">
+                            	<p class="p1">“赠”师表 恩师桃李满天下</p>
+                                <p class="p2">浪琴直降1000</p>
+                            </span>
+                            <img src="img/j27.png" class="fl pa"/>
+                        </a>
+                    </div>
+                    <div class="center fl d4">
+                    	<a href="#" class="a zui clearfix zu">
+                        	<span class="fl">
+                            	<p class="p1">“赠”师表 恩师桃李满天下</p>
+                                <p class="p2">浪琴直降1000</p>
+                            </span>
+                            <img src="img/j27.png" class="fl"/>
+                        </a>
+                        <a href="#" class="a"><img src="img/j11.png"/></a>
+                        <a href="#" class="a zui clearfix">
+                        	<span class="fl">
+                            	<p class="p1">“赠”师表 恩师桃李满天下</p>
+                                <p class="p2">浪琴直降1000</p>
+                            </span>
+                            <img src="img/j27.png" class="fl"/>
+                        </a>
+                     </div>
+                     <div class="right fl">
+                          <div class="r1 pr">
+                            <p class="p1">简约系家居服专场</p>
+                            <p class="p2">低至69元</p>
+                            <a href="#" class="a1"><img src="img/j13.png"/></a>
+                          </div>
+                          <div class="r1 pr">
+                            <p class="p1">简约系家居服专场</p>
+                            <p class="p2">低至69元</p>
+                            <a href="#" class="a1"><img src="img/j13.png"/></a>
+                          </div>
+                          <div class="r1 pr">
+                            <p class="p1">简约系家居服专场</p>
+                            <p class="p2">低至69元</p>
+                            <a href="#" class="a1"><img src="img/j13.png"/></a>
+                          </div>
+                          <div class="r1 pr lest">
+                            <p class="p1">简约系家居服专场</p>
+                            <p class="p2">低至69元</p>
+                            <a href="#" class="a1"><img src="img/j13.png"/></a>
+                          </div>
+                     </div>       
+                </div>
+                <span class="line"></span>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">大牌</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">大牌</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">大牌</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">大牌</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">内衣服饰</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">内衣服饰</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr">
+            	<i class="a">内衣服饰</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+            <h4 class="fl pr lest">
+            	<i class="a">内衣服饰</i>
+            	<div class="nk">
+                
+                </div>
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+    <!--个护美妆-->
+    <div class="mz w ">
+    	<div class="bbot clearfix">
+    	<div class="bt fl clearfix">
+        	<span></span>
+            <h4>个护美妆</h4>
+        </div>
+        <div class="mz-r fr clearfix pr">
+        	<div class="fenl fl fenl1 pr">
+            	<h4>热门</h4>
+                <div class="in clearfix">
+                	<div class="n1 fl">
+                    	<a href="#" class="a"><img src="img/jd8.png"/></a>
+                        <ul class="clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">美妆特卖</a>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">美妆特卖</a>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">美妆特卖</a>
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">美妆特卖</a>
+                            </li>
+                        </ul>
+                        <div class="n1-3">
+                        	<a href="#" class="n-a">美妆年终囤货 买3免1 &gt;</a>
+                            <a href="#" class="n-a">美妆年终囤货 买3免1 &gt;
+</a>
+							<p  class="clearfix">
+                            	<a href="#">国际馆</a>
+                                <a href="#">国际馆</a>
+                                <a href="#">国际馆</a>
+                                <a href="#">国际馆</a>
+                                <a href="#">国际馆</a>
+                                <a href="#">国际馆</a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <ul class="in-ul clearfix fl">
+                    	<li class="fl li1 li1-1 pr">
+                        	<a href="#" class="a"><img src="img/jd10.png"/></a>
+                            <span class="pa hz">
+                            	<p class="pp1">欧莱雅护发精油</p>
+                                <p class="pp2">满199减100</p>
+                            </span>
+                        </li> 
+                        <li class="fl li1"><a href="#" class="a"><img src="img/jd11.png"/></a></li>
+                        <li class="fl li1"><a href="#" class="a"><img src="img/jd11.png"/></a></li>
+                        <li class="fl li1 pr">
+                        	<a href="#" class="a"><img src="img/jd12.png"/></a>
+                            <span class="pa hz">
+                            	<p class="pp1">欧莱雅护发精油</p>
+                                <p class="pp2">满199减100</p>
+                            </span>
+                        </li>
+                        <li class="fl li1 pr">
+                        	<a href="#" class="a"><img src="img/jd13.png"/></a>
+                            <span class="pa hz">
+                            	<p class="pp1">欧莱雅护发精油</p>
+                                <p class="pp2">满199减100</p>
+                            </span>
+                        </li>
+                        <li class="fl li1 pr">
+                        	<a href="#" class="a"><img src="img/jd13.png"/></a>
+                            <span class="pa hz">
+                            	<p class="pp1">欧莱雅护发精油</p>
+                                <p class="pp2">满199减100</p>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>
+            <div class="fenl fl lest pr">
+            	<h4>热门</h4>
+                <div class="in">
+                	
+                </div>
+                <span class="line"></span>	
+            </div>	
+        </div>
+        </div>
+   </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+	<div class="w jdg">
+    	<a href="#"><img src="img/j14.png"/></a>
+    </div>
+    <!--手机通讯-->
+    <div class="w sjtx clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">3F</span>
+            <p class="fl">手机通讯</p>
+        </h3>
+        <div class="sjtx-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="sj-left pr fl">
+                    	<a href="#" class="a"><img src="img/3F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="sj-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                        	<img src="img/j28.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">坚果手机</p>
+                                <p class="p2">漂亮得不像实力派</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        </div>
+                        <div class="clearfix">
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak a2">新品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">性价比</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">运营商</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">手机配件</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">JDPhone</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">京东170</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">汽车用品</a>
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+    <!--家用电器-->
+    <div class="w jydq clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">4F</span>
+            <p class="fl">家用电器</p>
+        </h3>
+        <div class="jydq-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="jd-left pr fl">
+                    	<a href="#" class="a"><img src="img/4F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="jd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                        	<img src="img/j28.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">坚果手机</p>
+                                <p class="p2">漂亮得不像实力派</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        </div>
+                        <div class="clearfix">
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak a2">大家电</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">生活电器</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">厨房电器</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">个护健康</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">应季电器</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">空净/净水</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">新奇特</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">高端电器</a>
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+    <!--电脑数码-->
+    <div class="w dnsm clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">5F</span>
+            <p class="fl">电脑数码</p>
+        </h3>
+        <div class="dnsm-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="sm-left pr fl">
+                    	<a href="#" class="a"><img src="img/5F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">手机</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <a href="#" class="a11">手机社区等你参与&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl red">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                                <a href="#" class="fl">手机通讯</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="jd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                        	<img src="img/j28.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">坚果手机</p>
+                                <p class="p2">漂亮得不像实力派</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<img src="img/j29.png" class="fr"/>
+                            <span class="fl">
+                                <p class="p1">一加手机2</p>
+                                <p class="p2">10点限量抢购</p>	
+                            </span>
+                        </a>
+                        </div>
+                        <div class="clearfix">
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                            <p class="p1">荣耀4x全网通套装</p>
+                            <p class="p2">低至1299元</p>	
+                            <img src="img/jd27.png" class="img3"/>
+
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak a2">电脑/平板</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">潮流影音</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">智能/外设</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">DTY硬件</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">电竞游戏</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">办公/网络</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">文具电教</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">精选配件</a>
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+	<!--运动健身-->
+    <div class="w sport clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">6F</span>
+            <p class="fl">电脑数码</p>
+        </h3>
+        <div class="sport-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="yd-left pr fl">
+                    	<a href="#" class="a"><img src="img/6F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl red">户外馆</a>
+                                <a href="#" class="fl">折叠车</a>
+                                <a href="#" class="fl">跑步鞋</a>
+                                <a href="#" class="fl">智能穿戴</a>
+                                <a href="#" class="fl">羽毛球拍</a>
+                                <a href="#" class="fl ">篮球馆</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="yd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+             <h4 class="fl pr">
+             	<a href="#" class="ak a2">大牌速递</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">潮牌新品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">运动鞋服</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">健身训练</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">休闲户外</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">智能运动</a>
+            </h4>
+        </div>
+    </div>
+    <!--居家生活-->
+    <div class="w sport clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">7F</span>
+            <p class="fl">电脑数码</p>
+        </h3>
+        <div class="sport-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="yd-left pr fl">
+                    	<a href="#" class="a"><img src="img/7F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl red">户外馆</a>
+                                <a href="#" class="fl">折叠车</a>
+                                <a href="#" class="fl">跑步鞋</a>
+                                <a href="#" class="fl">智能穿戴</a>
+                                <a href="#" class="fl">羽毛球拍</a>
+                                <a href="#" class="fl ">篮球馆</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="yd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+             <h4 class="fl pr">
+             	<a href="#" class="ak a2">大牌速递</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">潮牌新品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">运动鞋服</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">健身训练</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">休闲户外</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">智能运动</a>
+            </h4>
+        </div>
+    </div>
+    <!--母婴玩具-->
+    <div class="w sport clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">8F</span>
+            <p class="fl">电脑数码</p>
+        </h3>
+        <div class="sport-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="yd-left pr fl">
+                    	<a href="#" class="a"><img src="img/6F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl red">户外馆</a>
+                                <a href="#" class="fl">折叠车</a>
+                                <a href="#" class="fl">跑步鞋</a>
+                                <a href="#" class="fl">智能穿戴</a>
+                                <a href="#" class="fl">羽毛球拍</a>
+                                <a href="#" class="fl ">篮球馆</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="yd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+             <h4 class="fl pr">
+             	<a href="#" class="ak a2">大牌速递</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">潮牌新品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">运动鞋服</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">健身训练</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">休闲户外</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">智能运动</a>
+            </h4>
+        </div>
+    </div>
+    <!--食品保健-->
+    <div class="w sport clearfix">
+    	<h3 class="clearfix fl">
+        	<span class="fl">9F</span>
+            <p class="fl">电脑数码</p>
+        </h3>
+        <div class="sport-r fr clearfix">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="ak a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="yd-left pr fl">
+                    	<a href="#" class="a"><img src="img/9F.jpg"/></a>
+                        <ul class="pa yyt clearfix">
+                        	<li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">运动城</i>	
+                            </li>
+                            <li class="fl clearfix">
+                            	<span class="fl"></span>
+                                <i class="fl">炫酷骑行</i>	
+                            </li>	
+                        </ul>
+                        <div class="xia">
+                        <div class="clearfix gl">
+                        	<a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <a href="#" class="a11">玩出一个开学季&gt;</a>
+                            <div class="gj clearfix fl">
+                            	<a href="#" class="fl red">户外馆</a>
+                                <a href="#" class="fl">折叠车</a>
+                                <a href="#" class="fl">跑步鞋</a>
+                                <a href="#" class="fl">智能穿戴</a>
+                                <a href="#" class="fl">羽毛球拍</a>
+                                <a href="#" class="fl ">篮球馆</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="yd-m clearfix fl">
+                    	<div class="clearfix">
+                    	<a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a1">
+                            <p class="p1">专业器械爱上健身</p>
+                            <p class="p2">器械低至999</p>	
+                         	<img src="img/jd29.png"/>
+
+                        </a>
+                        <a href="#" class="fl clearfix a2">
+                        	<p class="p1">羽毛球运动嘉年华</p>
+                            <p class="p2">国际大牌满减</p>
+                        	<img src="img/jd30.png"/>
+                        </a>
+                        <a href="#" class="fl clearfix a3">
+                        	<p class="p1">户外大牌上新购</p>
+                            <p class="p2">低至2折</p>
+                        	<img src="img/jd31.png"/>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </h4>
+             <h4 class="fl pr">
+             	<a href="#" class="ak a2">大牌速递</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">潮牌新品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">运动鞋服</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">健身训练</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">休闲户外</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="ak">智能运动</a>
+            </h4>
+        </div>
+    </div>
+    <!--图书音像-->
+    <div class="w book">
+    	<h3 class="clearfix fl">
+        	<span class="s1 fl"></span>
+            <i class="fl">图书音像</i>	
+        </h3>
+        <div class="book-r fr clearfix ">
+        	<h4 class="fl pr h4-1">
+             	<a href="#" class="a a1">热门</a>
+                <span class="sx"></span>
+                <div class="zj clearfix">
+                	<div class="zuo fl">
+                    	<a href="#"><img src="img/j16.png"/></a>
+                        <ul class="ul2 clearfix">
+                        	<li class="clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">图书</a>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">音像</a>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">特色书屋</a>
+                            </li>
+                            <li class="clearfix">
+                            	<span class="fl"></span>
+                                <a href="#" class="fl">数字商品</a>
+                            </li>
+                        </ul>
+                        <div class="d3">
+                            <a href="#" class="txt1">睡前故事书&gt;</a>
+                            <a href="#" class="txt1">睡前都好得很故事书&gt;</a>
+                            <div class="d4 clearfix">
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">人文社科</a>
+                                <a href="#" class="fl">教育</a>
+                                <a href="#" class="fl">教育</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zhong clearfix fl">
+                    	<a href="#" class="fl a5 clearfix">
+                        	<span class="fl">
+                            	<p class="pt1"> 疯狂开学季</p>
+                                <p class="pt2">中公图书满200减100</p>
+                            </span>	
+                        	<img src="img/jd20.png" class="fl"/>
+                            
+                        </a>	
+                        <a href="#" class="fl a4 a5">
+                        <p class="pt1">京东大放价</p>
+                        <p class="pt2">满299减100</p>
+                        <img src="img/jd21.png"/>			
+                        </a>
+                        <a href="#" class="fl a4 a5">
+                        <p class="pt1">京东大放价</p>
+                        <p class="pt2">满299减100</p>
+                        <img src="img/jd21.png"/>			
+                        </a>	
+                    </div>
+                    <div class="you fl">
+                    	<p class="zz">热门作者</p>
+                        <ul class="ull">
+                        	<li class="clearfix">
+                            	<a href="#" class="fl a1">
+                                	<img src="img/j19.png"/>
+                                    <p class="p1">周国平</p>
+                                </a>
+                                <a href="#" class="fl a2"><img src="img/j20.png"/></a>
+                                <span class="fl">
+                                	<p class="p2">觉醒的力量</p>
+                                    <p class="p3">“觉醒是一种巨大的内在力量”</p>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="fl a1">
+                                	<img src="img/j19.png"/>
+                                    <p class="p1">周国平</p>
+                                </a>
+                                <a href="#" class="fl a2"><img src="img/j20.png"/></a>
+                                <span class="fl">
+                                	<p class="p2">觉醒的力量</p>
+                                    <p class="p3">“觉醒是一种巨大的内在力量”</p>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="fl a1">
+                                	<img src="img/j19.png"/>
+                                    <p class="p1">周国平</p>
+                                </a>
+                                <a href="#" class="fl a2"><img src="img/j20.png"/></a>
+                                <span class="fl">
+                                	<p class="p2">觉醒的力量</p>
+                                    <p class="p3">“觉醒是一种巨大的内在力量”</p>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="fl a1">
+                                	<img src="img/j19.png"/>
+                                    <p class="p1">周国平</p>
+                                </a>
+                                <a href="#" class="fl a2"><img src="img/j20.png"/></a>
+                                <span class="fl">
+                                	<p class="p2">觉醒的力量</p>
+                                    <p class="p3">“觉醒是一种巨大的内在力量”</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="a a2">文学/经营</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="a">生活/少儿</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="a">社科/科教</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="a">音像产品</a>
+            </h4>
+            <h4 class="fl pr">
+             	<a href="#" class="a">电子书</a>
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+    <!--生活服务-->
+    <div class="w live">
+    	<h3 class="clearfix">
+        	<span class="fl">11F</span>
+            <p class="fl">生活服务</p>
+        </h3>
+        <div class="serv clearfix">
+        	<div class="serv-l fl pr">
+            	<a href="#" class="a"><img src="img/jj.jpg"/></a>
+                <div class="lc pa">
+                	<span class="lcs1 "></span>
+                    <span class="lcs2">
+                    	<p class="clearfix pr">
+                            <i class="fl"></i>
+                            <b class="fl">众筹频道</b>
+                        </p>
+                      <p class="clearfix pr">
+                            <i class="fl"></i>
+                            <b class="fl">众筹频道</b>
+                        </p>
+                    </span>
+                </div>
+                <div class=" pa ly">
+                	<span class="lcs1 "></span>
+                    <span class="lcs2">
+                    	<p class="clearfix pr">
+                            <i class="fl"></i>
+                            <b class="fl">众筹频道</b>
+                        </p>
+                      <p class="clearfix pr">
+                            <i class="fl"></i>
+                            <b class="fl">众筹频道</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="serv-m fl">
+            	<a href="#" class="a"><img src="img/jd26.png"/></a>
+                <a href="#" class="a"><img src="img/jd26.png"/></a>	
+            </div>
+            <div class="fl clearfix serv-r">
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+                <div class="d1">
+                    <a href="#" class="fr ">
+                        <img src="img/jd23.png"/>
+                    </a>
+                    <span class="fl">
+                        <p>大牌免息购</p>
+                        <i>手机￥49/期</i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix shangb w">
+   		<a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (2).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#"><img src="img/jd (4).jpg"/></a>
+        <a href="#"><img src="img/jd (5).jpg"/></a>
+        <a href="#"><img src="img/jd (1).jpg"/></a>
+        <a href="#"><img src="img/jd (3).jpg"/></a>
+        <a href="#" class="a8"><img src="img/jd (5).jpg"/></a>	
+    </div>
+    <!--今日抄底-->
+    <div class="w today clearfix">
+    	<div class="bt-r clearfix fl">
+        	<div class="clearfix">
+            	<span class="tbb"></span>
+                <h3 class="fl">今日抄底</h3>
+                <p class="fl p1"> 每日有爆品 低价又超值</p>
+            </div>
+            <ul class="clearfix bt-ul">
+            	<li class="fl li1">
+                	<a href="#"><img src="img/j21.png"/></a>
+                    <p>TCL XQG60-F10102T 6公斤 大屏16</p>
+                    <span>￥1299.00</span>
+                </li>
+                <li class="fl li2 clearfix">
+                	<a href="#" class="fl"><img src="img/j22.png"/></a>
+                    <span class="fl">
+                        <p>海尔 Haier HGS-2510单杆急速出</p>
+                        <i>￥259.00</i>
+                    </span>
+                </li>
+                <li class="fl li2 clearfix">
+                	<a href="#" class="fl"><img src="img/j22.png"/></a>
+                    <span class="fl">
+                        <p>海尔 Haier HGS-2510单杆急速出</p>
+                        <i>￥259.00</i>
+                    </span>
+                </li>
+                <li class="fl li2 clearfix">
+                	<a href="#" class="fl"><img src="img/j22.png"/></a>
+                    <span class="fl">
+                        <p>海尔 Haier HGS-2510单杆急速出</p>
+                        <i>￥259.00</i>
+                    </span>
+                </li>
+                <li class="fl li2 clearfix">
+                	<a href="#" class="fl"><img src="img/j22.png"/></a>
+                    <span class="fl">
+                        <p>海尔 Haier HGS-2510单杆急速出</p>
+                        <i>￥259.00</i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="sd fl">
+        	<h3>热门晒单</h3>
+            <ul class="sd-ul">
+            	<li class=" clearfix">
+                	<a href="#" class="fl"><img src="img/j23.png"/></a>
+                    <span class="fl ss">
+                    	<p class="clearfix ks">
+                        	<span class="fl"></span>
+                            <i>康舒水手</i>
+                        </p>
+                        <p class="pp">“手机很精致够档次,大小刚刚号，……” </p>
+                    </span>
+                   
+                </li>
+                <li class=" clearfix">
+                	<a href="#" class="fl"><img src="img/j23.png"/></a>
+                    <span class="fl ss">
+                    	<p class="clearfix ks">
+                        	<span class="fl"></span>
+                            <i>康舒水手</i>
+                        </p>
+                        <p class="pp">“手机很精致够档次,大小刚刚号，……” </p>
+                    </span>
+                   
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+    	<ul class="duo clearfix w">
+        	<li class="fl clearfix">
+            	<span class="fl"></span>
+                <a href="#" class="fl">品类齐全   轻松购物</a>
+            </li>
+            <li class="fl clearfix">
+            	<span class="fl"></span>
+                <a href="#" class="fl">品类齐全   轻松购物</a>
+            </li>
+            <li class="fl clearfix">
+            	<span class="fl"></span>
+                <a href="#" class="fl">品类齐全   轻松购物</a>
+            </li>
+            <li class="fl clearfix">
+            	<span class="fl"></span>
+                <a href="#" class="fl">品类齐全   轻松购物</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer2 w clearfix">
+    	<dl class="fl">
+        	<dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>会员介绍</dd>
+            <dd>生活旅行/团购</dd>
+            <dd>常见问题</dd>
+            <dd>大家电</dd>
+            <dd>联系客服</dd>
+        </dl>
+        <dl class="fl">
+        	<dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>会员介绍</dd>
+            <dd>生活旅行/团购</dd>
+            <dd>常见问题</dd>
+            <dd>大家电</dd>
+            <dd>联系客服</dd>
+        </dl>
+        <dl class="fl">
+        	<dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>会员介绍</dd>
+            <dd>生活旅行/团购</dd>
+            <dd>常见问题</dd>
+            <dd>大家电</dd>
+            <dd>联系客服</dd>
+        </dl>
+        <dl class="fl">
+        	<dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>会员介绍</dd>
+            <dd>生活旅行/团购</dd>
+            <dd>常见问题</dd>
+            <dd>大家电</dd>
+            <dd>联系客服</dd>
+        </dl>
+        <dl class="fl">
+        	<dt>购物指南</dt>
+            <dd>购物流程</dd>
+            <dd>会员介绍</dd>
+            <dd>生活旅行/团购</dd>
+            <dd>常见问题</dd>
+            <dd>大家电</dd>
+            <dd>联系客服</dd>
+        </dl>
+        <div class="china fl">
+        	<h3>京东自营覆盖区县</h3>
+            <p>的手机发来的税率就开始的发挥科技是大黄蜂看的舒服快乐的电视的时间发货的时间</p>
+            <a href="#">查看详情 &gt;</a>
+        </div>
+    </div>
+    <div class="footer3 w">
+   		<div class="gy clearfix">
+        	<a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">关于我们</a>
+        </div>
+        <div class="clearfix beian">
+       		<a href="#" class="fl">北京市公安局朝阳区分局备案编号110105014669</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">京ICP证070359</a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 互联网药品信息服务资格证编号（京）-经营性-2014-0008 </a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 8 | 新出发京零字第大120007号 </a>
+        </div>
+        <div class="clearfix beian">
+       		<a href="#" class="fl">北京市公安局朝阳区分局备案编号110105014669</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">京ICP证070359</a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 互联网药品信息服务资格证编号（京）-经营性-2014-0008 </a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 8 | 新出发京零字第大120007号 </a>
+        </div>
+        <div class="clearfix beian">
+       		<a href="#" class="fl">北京市公安局朝阳区分局备案编号110105014669</a>
+            <span class="fl"></span>
+            <a href="#" class="fl">京ICP证070359</a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 互联网药品信息服务资格证编号（京）-经营性-2014-0008 </a>
+            <span class="fl"></span>
+            <a href="#" class="fl"> 8 | 新出发京零字第大120007号 </a>
+        </div>
+        <p>京东旗下网站：360TOP 拍拍网 网银在线</p>
+        <ul class="clearfix">
+        	<li class="fl clearfix li1">
+            	<span class="fl"></span>
+                <a href="#" class="fl">经营性网站备案信息</a>
+            </li>
+            <li class="fl clearfix li1">
+            	<span class="fl"></span>
+                <a href="#" class="fl">经营性网站备案信息</a>
+            </li>
+            <li class="fl clearfix li1">
+            	<span class="fl"></span>
+                <a href="#" class="fl">经营性网站备案信息</a>
+            </li>
+            <li class="fl clearfix li1">
+            	<span class="fl"></span>
+                <a href="#" class="fl">经营性网站备案信息</a>
+            </li>
+            <li class="fl lest">
+            	<a href="#" >暴恐音视频举报专区</a>
+                <a href="#" >互联网违法和不良信息举报中心</a>
+            </li>
+        </ul>
+    </div>
+    <span class="fhdb">
+    	<a href="#" class="i1"></a>
+        <a href="#" class="i2"></a>
+    </span>
+</body>
+</html>

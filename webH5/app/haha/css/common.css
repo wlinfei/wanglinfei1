@@ -1,0 +1,27 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;}
+a{color:#172c45;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.ind{text-indent:2em} 
+.ind10{text-indent:10px;}
+.noborder{border:0;}
+/*html{width:100%;height:100%}
+body{width:100%;height:100%}*/
+
+/*=================header========================*/
+header{z-index:10;width:100%;height:60px;background:#FCCD00;overflow: hidden;line-height: 10%;position: fixed;left:0;top:0}
+header img{margin:5px 0 0 15px;float:left}
+header .text{display:block;color:#fff;font-size: 25px;font-weight: 900;margin-left:15px;float:left;height:60px;line-height: 60px;}
+.fix{width:100%;height:60px;}
+header .sho{display: block;float:right;color:#fff;font-size: 25px;margin-right:15px;height:60px;line-height: 60px;}
+footer{width:100%;height:60px;overflow: hidden;background:#52494E;position: fixed;bottom:0;left:0}
+footer .footer_div{padding-top:10px;display:block;width:25%;height:60px;text-align: center;float:left;}
+footer .footer_div .te{color:#fff;font-size: 25px;}
+footer .footer_div p{color:#fff;font-weight: 900;}
+.foo{width:100%;height:60px;}
+footer .footer_div:hover{text-decoration: none;}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="bass.css">
+    <style>
+        .taobao_view{
+           width:16rem; margin:0 auto;
+        }
+        .top-fixed{
+            width:100%; height:37px;background:#fe5400;
+            position:absolute; top:0; left:0; z-index: auto;
+        }
+        header{
+            width:100%; height:37px;
+        }
+        .header-wrap{
+            width:100%; height:31px; background:url("img/logo.png") no-repeat left;
+            background-size:contain; padding-top:6px;
+        }
+        .search-placeholder{
+            margin-left:2rem; margin-right:0.3rem;
+            width:calc(100% - 2.3rem); border-radius:5px; line-height:25px;
+            text-align: center; background:rgba(0,0,0,0.3);
+        }
+        .search-placeholder span{
+            color:#fff; padding-left:20px; background:url("img/so.png") no-repeat left;
+        }
+        .bottom-fixed{
+            width:100%; height:43px;
+        }
+        .bottom-fixed footer{
+            width:100%;height:43px;
+            display: -webkit-box; border-top:2px solid #ccc;
+            position:fixed; bottom:0; left:0;
+        }
+        .bottom-fixed footer div{
+            -webkit-box-flex: 1; text-align: center;
+            line-height:43px;
+        }
+        .taobao-content{
+            width:16rem;
+        }
+        .section-top{
+            position:relative;  margin-top:37px;
+            width:16rem; overflow: hidden;
+        }
+        .section-top ul{
+            width:112rem; overflow: hidden;
+            transform:translateX(-16rem); height:5rem;
+            -webkit-transform:translateX(-16rem);
+        }
+        .section-top ul li{
+            width:16rem; line-height:5rem;
+            text-align: center; color:#fff; float:left;
+            font-size:2.5rem;
+        }
+        .section-top ul li img{
+            width:16rem; display: block;height:5rem;
+        }
+        .section-top .deg{
+            width:90px; height:8px; position:absolute;
+            bottom:10px; right:0;
+        }
+        .section-top .deg span{
+            width:8px; height:8px; background:#000; margin:0 5px;border-radius: 4px;
+        }
+        .section-top .deg .active{
+            background:red;
+        }
+        .nav ul{
+            width:16rem; height:6.35rem; background:#f3f3f3;
+            padding-bottom:4px;
+        }
+        .nav li{
+            width:20%; height:50%; float:left; text-align: center;
+        }
+        .nav li span{
+            width:1.8rem; height:1.8rem; margin:0.5rem auto 0;
+            display: block; background:url("img/nav1.png") no-repeat;
+            background-size:contain;
+        }
+        .nav li a{
+            display:block; line-height:0.9rem;
+        }
+        .taobao-news{
+            width:16rem;
+        }
+        .taobao-news .span1{
+            width:3.5rem; height:1.2rem; margin-top:3px;
+            background:url("img/news.png") no-repeat; border-right:1px solid #ccc;
+            background-size:contain;
+        }
+        .taobao-news p span{
+            width:2.4rem; height:1.3rem; background-size:contain;
+            background:url("img/new2.png") no-repeat; margin:2px;
+        }
+        .taobao-news p a{
+            line-height:1.6rem;font-size:0.6rem;
+        }
+    </style>
+    <script>
+        (function(win,doc){
+            function fontSize(){
+                var x=20*doc.documentElement.clientWidth/320;
+                if(x>40){
+                    x=40;
+                }
+                doc.documentElement.style.fontSize=x+'px';
+            }
+            fontSize();
+            win.addEventListener('resize',fontSize,false);
+        })(window,document);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oDiv=document.getElementById('section-top');
+            var oUl=oDiv.getElementsByTagName('ul')[0];
+            var oDeg=document.querySelector('.deg');
+            var aSpan=oDeg.children;
+            var aLi=oUl.children;
+            var w=oUl.children[0].offsetWidth;
+            var iNow=1;
+            var a=0;
+            var x=-iNow*w;
+            oDiv.addEventListener('touchstart',function(ev){
+                var disX=ev.targetTouches[0].pageX-x;
+                var downX=ev.targetTouches[0].pageX;
+                function fnMove(ev){
+                    x=ev.targetTouches[0].pageX-disX;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                }
+                function fnEnd(ev){
+                    var upX=ev.changedTouches[0].pageX;
+                    oUl.style.transition='0.4s all ease';
+                    oUl.style.webkitTransition='0.4s all ease';
+                    if(Math.abs(upX-downX)>100){
+                        if(upX<downX){
+                            iNow++;
+                            a++;
+                            if(iNow==aLi.length){
+                                iNow=aLi.length-1;
+                            }
+                        }else{
+                            iNow--;
+                            a--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                        }
+                    }
+                    x=-iNow*w;
+                    oUl.style.transform='translateX('+x+'px)';
+                    oUl.style.webkitTransform='translateX('+x+'px)';
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    function tEnd(){
+                        oUl.style.transition='none';
+                        oUl.style.webkitTransition='none';
+                        if(iNow==aLi.length-1){
+                            iNow=1;
+                        }
+                        if(iNow==-1){
+                            iNow=aLi.length-2;
+                        }
+                        x=-iNow*w;
+                        oUl.style.transform='translateX('+x+'px)';
+                        oUl.style.webkitTransform='translateX('+x+'px)';
+                        if(a==aSpan.length){
+                            a=0;
+                        }
+                        if(a==-1){
+                            a=aSpan.length-1;
+                        }
+                        for(var i=0; i<aSpan.length; i++){
+                            aSpan[i].classList.remove('active');
+                        }
+                        aSpan[a].classList.add('active');
+                    }
+                    oUl.addEventListener('transitionend',tEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+            },false);
+        },false);
+    </script>
+    </head>
+<body>
+    <div class="taobao_view">
+        <div class="top-fixed">
+            <header>
+                <div class="header-wrap">
+                    <div class="search-placeholder">
+                        <span>寻找宝贝店铺</span>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="taobao-content">
+            <section>
+                <div class="section-top" id="section-top">
+                    <ul>
+                        <li style="background:#933fff;">4</li>
+                        <li style="background:#5bff9e;"><img src="img/tao1.png"/></li>
+                        <li style="background:#2bd6ff;">1</li>
+                        <li style="background:#cdff5a;">2</li>
+                        <li style="background:#ff81f3;">3</li>
+                        <li style="background:#933fff;">4</li>
+                        <li style="background:#5bff9e;"><img src="img/tao1.png"/></li>
+                    </ul>
+                    <div class="deg clearfix">
+                        <span class="fl active"></span>
+                        <span class="fl"></span>
+                        <span class="fl"></span>
+                        <span class="fl"></span>
+                        <span class="fl"></span>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                        <li><span></span><a href="javaScript:;">天猫</a></li>
+                    </ul>
+                </div>
+                <div class="taobao-news clearfix">
+                    <span class="fl span1">
+
+                    </span>
+                    <p class="fl clearfix">
+                        <span class="fl"></span>
+                        <a href="javaScript:;" class="fl">让我看看你的身体有多城</a>
+                    </p>
+                </div>
+                <div class="Seckill">
+
+                </div>
+            </section>
+        </div>
+        <div class="bottom-fixed">
+            <footer>
+                <div>首页</div>
+                <div>物流</div>
+                <div>购物车</div>
+                <div>我的淘宝</div>
+                <div>更多</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

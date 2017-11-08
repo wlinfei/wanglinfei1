@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <style>
+        *{
+            margin:0; padding:0; list-style: none;
+        }
+        html,body{
+            width:100%; height:100%;
+        }
+        .box{
+            width:100%;height:100%;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+        }
+        .box header{
+            width:100%; line-height:30px; font-size:20px;
+            text-align: center; background:#00a1cd;
+        }
+        .box footer{
+            width:100%; line-height:30px; font-size:20px;
+            position:fixed; bottom:0; left:0;
+            text-align: center; background:#00a1cd;
+        }
+        .box section{
+            -webkit-box-flex: 1; overflow:auto;
+            width:100%;
+        }
+        .box .new{
+            width:400%; overflow: hidden;
+        }
+        .box .new dl{
+            width:25%; float:left;
+        }
+        .box .new dl dt{
+            line-height:30px; background:#ccc; text-align: center;
+        }
+        .box .new dl dd{
+            line-height:30px; border-bottom:1px solid #333; text-align: center;
+        }
+        .morebox{
+            text-align: center; height:0; width:100%;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var oDiv=document.querySelectorAll('.new')[0];
+            var oDl=document.getElementsByTagName('dl');
+            var oMB=document.querySelectorAll('.morebox')[0];
+            var x=0;
+            var y=0;
+            var dl='';
+            var iNow=0;
+            oDiv.addEventListener('touchstart',function(ev){
+                oDiv.style.transition='none';
+                oMB.style.transition='none';
+                var downX=ev.targetTouches[0].pageX;
+                var downY=ev.targetTouches[0].pageY;
+                var disX=downX-x;
+                var disY=downY-y;
+                function fnMove(ev){
+                    if(dl){
+                        if(dl=='rl'){
+                            x=ev.targetTouches[0].pageX-disX;
+                            oDiv.style.transform='translate3d('+x+'px,'+y+'px,0)';
+                            oDiv.style.webkitTransform='translate3d('+x+'px,'+y+'px,0)';
+                        }else if(dl == 'top'){
+                            y=ev.targetTouches[0].pageY-disY;
+                            if(y>50){
+                                y=50;
+                            }
+                            oMB.style.height=y+'px';
+                        }
+                    }else{
+                        if(Math.abs(ev.targetTouches[0].pageX-downX)>20){
+                            dl='rl';
+                        }else if(ev.targetTouches[0].pageY-downY>20){
+                            dl='top';
+                        }
+                    }
+
+                }
+                function fnEnd(ev){
+                    dl='';
+                    if(Math.abs(ev.changedTouches[0].pageX-downX)>100){
+                        if(ev.changedTouches[0].pageX>downX){
+                            iNow--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                        }else{
+                            iNow++;
+                            if(iNow==oDl.length){
+                                iNow=oDl.length-1;
+                            }
+                        }
+                    }
+                    x=-iNow*oDl[0].offsetWidth;
+                    y=0;
+                    oMB.style.height=0;
+                    oMB.style.transition='0.2s all ease';
+                    oDiv.style.transition='0.4s all ease';
+                    oDiv.style.transform='translate3d('+x+'px,'+y+'px,0)';
+                    oDiv.style.webkitTransform='translate3d('+x+'px,'+y+'px,0)';
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                ev.preventDefault();
+            },false)
+        },false);
+    </script>
+</head>
+<body>
+    <div class="box">
+        <header>header</header>
+        <section>
+            <div class="morebox">
+                <img src="roller.gif"/>
+            </div>
+            <div class="new">
+                <dl>
+                    <dt>新闻1</dt>
+                    <dd>0001</dd>
+                    <dd>0002</dd>
+                    <dd>0003</dd>
+                    <dd>0004</dd>
+                    <dd>0005</dd>
+                    <dd>0006</dd>
+                    <dd>0007</dd>
+                    <dd>0008</dd>
+                    <dd>0009</dd>
+                    <dd>0010</dd>
+                    <dd>0011</dd>
+                    <dd>0012</dd>
+                    <dd>0013</dd>
+                    <dd>0014</dd>
+                    <dd>0015</dd>
+                    <dd>0016</dd>
+                    <dd>0017</dd>
+                    <dd>0018</dd>
+                    <dd>0019</dd>
+                    <dd>0020</dd>
+                    <dd>0021</dd>
+                    <dd>0022</dd>
+                    <dd>0023</dd>
+                    <dd>0024</dd>
+                </dl>
+                <dl>
+                    <dt>新闻2</dt>
+                    <dd>0001</dd>
+                    <dd>0002</dd>
+                    <dd>0003</dd>
+                    <dd>0004</dd>
+                    <dd>0005</dd>
+                    <dd>0006</dd>
+                    <dd>0007</dd>
+                    <dd>0008</dd>
+                    <dd>0009</dd>
+                    <dd>0010</dd>
+                    <dd>0011</dd>
+                    <dd>0012</dd>
+                    <dd>0013</dd>
+                    <dd>0014</dd>
+                    <dd>0015</dd>
+                    <dd>0016</dd>
+                    <dd>0017</dd>
+                    <dd>0018</dd>
+                    <dd>0019</dd>
+                    <dd>0020</dd>
+                    <dd>0021</dd>
+                    <dd>0022</dd>
+                    <dd>0023</dd>
+                    <dd>0024</dd>
+                </dl>
+                <dl>
+                    <dt>新闻3</dt>
+                    <dd>0001</dd>
+                    <dd>0002</dd>
+                    <dd>0003</dd>
+                    <dd>0004</dd>
+                    <dd>0005</dd>
+                    <dd>0006</dd>
+                    <dd>0007</dd>
+                    <dd>0008</dd>
+                    <dd>0009</dd>
+                    <dd>0010</dd>
+                    <dd>0011</dd>
+                    <dd>0012</dd>
+                    <dd>0013</dd>
+                    <dd>0014</dd>
+                    <dd>0015</dd>
+                    <dd>0016</dd>
+                    <dd>0017</dd>
+                    <dd>0018</dd>
+                    <dd>0019</dd>
+                    <dd>0020</dd>
+                    <dd>0021</dd>
+                    <dd>0022</dd>
+                    <dd>0023</dd>
+                    <dd>0024</dd>
+                </dl>
+                <dl>
+                    <dt>新闻4</dt>
+                    <dd>0001</dd>
+                    <dd>0002</dd>
+                    <dd>0003</dd>
+                    <dd>0004</dd>
+                    <dd>0005</dd>
+                    <dd>0006</dd>
+                    <dd>0007</dd>
+                    <dd>0008</dd>
+                    <dd>0009</dd>
+                    <dd>0010</dd>
+                    <dd>0011</dd>
+                    <dd>0012</dd>
+                    <dd>0013</dd>
+                    <dd>0014</dd>
+                    <dd>0015</dd>
+                    <dd>0016</dd>
+                    <dd>0017</dd>
+                    <dd>0018</dd>
+                    <dd>0019</dd>
+                    <dd>0020</dd>
+                    <dd>0021</dd>
+                    <dd>0022</dd>
+                    <dd>0023</dd>
+                    <dd>0024</dd>
+                </dl>
+            </div>
+        </section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

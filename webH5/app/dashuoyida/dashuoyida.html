@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>2015 学习回顾</title>
+    <link rel="stylesheet" href="css/dashuoyida.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=M1TLtBBYdlr2bZBr1sGDorgEDssOQtTE"></script>
+</head>
+<body id="scroll">
+	<div class="warp">
+        <div class="header">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header nav-center clearfix">
+                        <button type="button" class="navbar-toggle fl" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse nav-hidden" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-question-sign"></span> 关于我们</a></li>
+                            <li><a href="https://wanglinfei1.github.io/app/dashuoyida/chanpinjieshao.html"><span class="glyphicon glyphicon-fire"></span> 产品介绍</a></li>
+                        </ul>
+                    </div>
+                    <h4><a href="javascript:;">大数医达</a></h4>
+                </div>
+            </nav>
+        </div>
+        <div class="Image">
+            <img src="img/banner.png" alt=""/>
+            <div class="banner-h">
+                <h3 class="banner-min banner-font">
+                    人工智能的一小步，
+                </h3>
+                <h3 class="banner-max banner-font">
+                    <span>医疗健康</span> “一大步”
+                </h3>
+            </div>
+        </div>
+        <div class="our">
+            <div class="our-wp">
+                <h3><span>01</span> 关于我们</h3>
+                <i class="line"></i>
+                <p>
+                    北京大数医达科技有限公司是一家在人工智能、大数据、云计算方面拥有国际领先水平的高科技企业，专注于多源异构医疗数据处理、深度挖掘与机器学习。
+                </p>
+            </div>
+            <ul>
+                <li>
+                    <img src="img/da1.png"/>
+                    <b>顶级团队</b>
+                    <p>
+                       <i>Elite</i>
+                        <i>team</i>
+                    </p>
+                </li>
+                <li>
+                    <img src="img/da2.png"/>
+                    <b>顶级团队</b>
+                    <p>
+                        <i>Elite</i>
+                        <i>team</i>
+                    </p>
+                </li>
+                <li>
+                    <img src="img/da3.png"/>
+                    <b>顶级团队</b>
+                    <p>
+                        <i>Elite</i>
+                        <i>team</i>
+                    </p>
+                </li>
+            </ul>
+            <div class="our-wp our-two">
+                <h3><span>02</span> 团队领袖--邓侃CTO</h3>
+                <i class="line"></i>
+                <p>
+                    团队领袖邓侃博士是互联网领域著名技术专家,师从大数据学科创始人 ----美国卡内基梅隆大学(CMU)计算机学院院长AndrewMoore教授,专业从事机器学习和数据挖掘,曾任Oracle主任架构师、百度搜索高级技术总监等职务。
+                </p>
+            </div>
+            <div class="our-wp our-three">
+                <h3><span>03</span> 我们的愿景</h3>
+                <i class="line"></i>
+                <p>
+                    大数医达拥有自主知识产权的医疗大数据系统，该系统把超大规模的云计算系统，深度学习和数据挖掘等大数据算法，应用到医疗领域，自动化、智能化融汇多源异构的医疗数据，把自然语言的非结构化病历，自动转化为结构化的病历，从中挖掘出医生的临床诊断和治疗经验，助力医疗大数据产业发展，促进医疗卫生健康事业进步，服务社会，造福人类。
+                </p>
+                <video id="videos"  poster="img/hd.png">
+                    <source src="img/hd.mp4" type="video/mp4">
+                    您的浏览器不支持video标签
+                </video>
+            </div>
+            <div class="our-wp our-four">
+                <h3><span>04</span> 联系我们</h3>
+                <i class="line"></i>
+                <p class="p1">地址:北京市海淀区东北旺西路8号中关村软件园一期3号楼3B区1206室</p>
+                <p>公司邮箱:service@iyoudoctor.com</p>
+                <p>公司网址:www.iyoudoctor.com</p>
+            </div>
+        </div>
+        <div id="geo" class="geol">
+
+        </div>
+        <div class="footer">
+            京ICP备16013105号-1
+        </div>
+	</div>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var oA=document.getElementById('videos');
+        oA.onclick=function(){
+            oA.play();
+            oA.controls="controls";
+        }
+    </script>
+    <script>
+        var map=new BMap.Map('geo');
+        var point=new BMap.Point(116.404, 39.915);
+        map.centerAndZoom(point,15);
+        map.addControl(new BMap.MapTypeControl());
+        map.setCurrentCity("北京");
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        map.enableScrollWheelZoom(true);
+        map.disableDragging();
+        setTimeout(function(){
+            map.enableDragging();
+        },2000);
+    </script>
+</body>
+</html>
